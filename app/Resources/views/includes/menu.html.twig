@@ -1,0 +1,110 @@
+<!-- Sidebar Menu -->
+<ul class="sidebar-menu">
+    <li class="header">NAVEGAÇÃO</li>
+    <li >
+        <a href="{{ path('perfil') }}">
+            <i class="fa fa-home"></i><span>Inicial</span>
+        </a>
+    </li>
+    {% if (is_granted('ROLE_ADMIN') or is_granted('ROLE_CGPO')) %}
+
+        <li class="treeview">
+            <a href="">
+                <i class="fa fa-gear"></i><span>Parametrização</span>
+            </a>
+            <ul class="treeview-menu">
+                <li class="active">
+                    <a href="{{ path('departamento') }}">
+                        <i class="fa fa-bank"></i><span>Departamentos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('instrumento') }}">
+                        <i class="fa fa-gear"></i><span>Instrumentos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('redeprograma') }}">
+                        <i class="fa fa-hospital-o"></i><span>Rede Programa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('despesa') }}">
+                        <i class="fa fa-bar-chart"></i><span>Despesas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('vinculo_planejamento') }}">
+                        <i class="fa fa-chain"></i><span>Vínculo Planejamento</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('componente') }}">
+                        <i class="fa fa-bars"></i><span>Componentes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('atividade') }}">
+                        <i class="fa fa-tasks"></i><span>Atividades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('tipoatividade') }}">
+                        <i class="fa fa-server"></i><span>Tipo de Atividade</span>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="{{ path('usuario') }}">
+                <i class="fa fa-users"></i><span>Cadastro de Usuários</span>
+            </a>
+        </li>
+        <li class="treeview">
+            <a href="">
+                <i class="fa fa-usd"></i><span>Ação Orçamentária</span>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ path('vincularacao_index') }}">
+                        <i class="fa fa-chain"></i><span>Vincular Ação ao Departamento</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('importacao') }}">
+                        <i class="fa fa-file-excel-o"></i><span>Importar Planilha</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('processamento_index') }}">
+                        <i class="fa fa-chain"></i><span>Processamento CGPO</span>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    <li class="treeview">
+        <a href="{{ path('planodeuso_relatorio') }}">
+            <i class="fa fa-file-excel-o"></i><span>Relatórios</span>
+        </a>
+    </li>
+
+    {% elseif is_granted('ROLE_DEPARTAMENTO') %}
+        <li>
+            <a href="{{ path('planodeuso_atividade') }}">
+                <i class="fa fa-tasks"></i><span>Atividades</span>
+            </a>
+        </li>
+        <li class="treeview">
+            <a href="{{ path('planodeuso_relatorio') }}">
+                <i class="fa fa-file-excel-o"></i><span>Relatórios</span>
+            </a>
+        </li>
+
+    {% endif %}
+
+</ul>
+</section>
+<!-- /.sidebar -->
+</aside>

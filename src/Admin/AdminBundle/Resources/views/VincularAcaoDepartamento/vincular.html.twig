@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="box box-success box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title"><span class="fa fa-chain"></span> Vincular Ação Orçamentária ao Departamento</h3>
+            <!--<div class="pull-right ">
+              legenda da tela
+            </div>-->
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Ação Orçamentária</span>
+                        {{ acaoOrcamentaria.nuAcaoOrcamentaria  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Plano Orçamentário</span>
+                        {{ acaoOrcamentaria.nuPlanoOrcamentario  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Ano</span>
+                        {{ acaoOrcamentaria.nuAnoExercicio  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Despesa</span>
+                        {{ acaoOrcamentaria.dsTipoDespesa  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-more text-bold">Denominação</span>
+                    {{ acaoOrcamentaria.dsDenominacao  }}
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua-gradient"><i class="fa fa-usd"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Valor atualizado</span>
+                                <span class="info-box-number">R$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon {% if acaoOrcamentaria.vlSaldo > 0 %}bg-green-gradient{% else %} bg-red-gradient {% endif %}"><i class="fa fa-usd"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Saldo Disponível</span>
+                                <span class="info-box-number">R$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.info-box -->
+                </div>
+                </div>
+                <div class="box box-primary box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title"><span class="fa fa-tasks"></span> Vincular</h3>
+                    </div>
+                    <div class="box-body">
+                        {{ form_start(form) }}
+                        {{ form_errors(form.arrayDepartamento) }}
+                        <div class="row">
+                            <div class="col-md-1 col-sm-6 col-xs-12">
+                                {% for departamento in form.arrayDepartamento %}
+
+                                    {{  form_label(departamento) }}
+                                    {{  form_widget(departamento) }}
+                                    {% if loop.index is divisible by(3) %}
+                                        </div><div class="col-md-1 col-sm-6 col-xs-12">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <a class="btn btn-info" href="{{ path('vincularacao_index', {nuAno: acaoOrcamentaria.nuAnoExercicio}) }}">Voltar</a>
+                {{ form_end(form)}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

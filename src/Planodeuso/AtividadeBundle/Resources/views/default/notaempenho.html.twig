@@ -1,0 +1,258 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="box box-success box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Resumo da Atividade</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Ação Orçamentária</span>
+                        {{ acaoOrcamentaria.nuAcaoOrcamentaria  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Plano Orçamentário</span>
+                        {{ acaoOrcamentaria.nuPlanoOrcamentario  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Ano</span>
+                        {% if ( acaoOrcamentaria.nuAnoExercicio >  "now"|date("Y")) %}
+                            {{ acaoOrcamentaria.nuAnoExercicio  }} - Em Planejamento
+                        {% else %}
+                            {{ acaoOrcamentaria.nuAnoExercicio  }}
+                        {% endif %}
+
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Despesa</span>
+                        {{ acaoOrcamentaria.dsTipoDespesa  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Denominação</span>
+                        {{ acaoOrcamentaria.dsDenominacao  }}
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Prioridade</span>
+                        {{ atividadePlanoUso.nuPrioridade  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Vinculo do Planejamento</span>
+                        {{ atividadePlanoUso.dsVinculoPlanejamento }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Instrumento</span>
+                        {{ atividadePlanoUso.dsTipoInstrumento }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Programa</span>
+                        {{ atividadePlanoUso.dsRedePrograma }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Componente</span>
+                        {{ atividadePlanoUso.dsTipoComponente }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Tipo de Atividade</span>
+                        {{ atividadePlanoUso.dsTipoAtividade  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">UF / Municipio</span>
+                        {{ atividadePlanoUso.sgUf  }}
+                        {% if atividadePlanoUso.noMunicipioAcentuado != '' %}
+                        / {{ atividadePlanoUso.noMunicipioAcentuado }}
+                        {% endif %}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">CNES</span>
+                        {{ atividadePlanoUso.coCnes  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-more text-bold">Proposta</span>
+                        {{ atividadePlanoUso.nuProposta  }}
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-green-gradient"><i class="fa fa-usd"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Valor da Atividade</span>
+                            <span class="info-box-number">R$ {{ atividadePlanoUso.vlTotal|number_format(2, ',', '.')  }}</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-primary box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Vincular Nota de Empenho a Atividade</h3>
+        </div>
+        <div class="box-body">
+            <div class="box-body">
+                <table id="lista" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Nº da Nota de Empenho</th>
+                        <th>Descrição</th>
+                        <th>Nº do Processo</th>
+                        <th>Valor Empenhado R$</th>
+                        <th>Vincular</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if ( atividadePlanoUso.coVinculoNotaEmpenho != "") %}
+                        <tr>
+                            <td>{{ atividadePlanoUso.nuNotaEmpenho }}</td>
+                            <td>{{ atividadePlanoUso.dsNotaEmpenho }}</td>
+                            <td>{{ atividadePlanoUso.nuProcesso }}</td>
+                            <td>{{ atividadePlanoUso.vlNotaEmpenho|number_format(2, ',', '.')  }}</td>
+                            <td><a class="btn btn-danger vincular" data-toggle="modal" data-id="{{ atividadePlanoUso.coNotaEmpenhoPlanouso }}" data-tipo="desvincular" data-descricao="{{ atividadePlanoUso.nuNotaEmpenho }}" href="#modal-confirmacao"><li class="fa fa-check"> Desvincular Nota de Empenho</li></a></td>
+                        </tr>
+                    {% else %}
+                        {% for a in notaEmpenho %}
+                            <tr>
+                                <td>{{ a.nuNotaEmpenho }}</td>
+                                <td>{{ a.dsNotaEmpenho }}</td>
+                                <td>{{ a.nuProcesso }}</td>
+                                <td>{{ a.vlEmpenhado|number_format(2, ',', '.')  }}</td>
+                                <td><a class="btn btn-success vincular" data-toggle="modal" data-id="{{ a.getId() }}" data-tipo="vincular" data-descricao="{{ a.nuNotaEmpenho }}" href="#modal-confirmacao"><li class="fa fa-check"> Vincular Nota de Empenho</li></a></td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>Nº da Nota de Empenho</th>
+                        <th>Descrição</th>
+                        <th>Nº do Processo</th>
+                        <th>Valor Empenhado R$</th>
+                        <th>Desvincular</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="{{ path('planodeuso_acao', {id: acaoOrcamentaria.id}) }}">Voltar</a>
+    <div class="modal fade" id="modal-confirmacao">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-yellow">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Atenção!</h4>
+                </div>
+                <div class="modal-body" id="descricao">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-success" href="" id="confirmar">Confirmar</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function () {
+
+            $('#lista').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
+                },
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : false,
+                'info'        : true,
+                'autoWidth'   : false
+            });
+
+            $(document).on("click", ".vincular", function () {
+                var id = $(this).data('id');
+                if ($(this).data('tipo') == 'vincular'){
+                    var descricao = 'Deseja realmente vincular a nota de empenho <strong>'+ $(this).data('descricao') + '</strong> a esta Atividade?';
+                }else if ($(this).data('tipo') == 'desvincular'){
+                    var descricao = 'Deseja realmente desvincular a nota de empenho <strong>'+ $(this).data('descricao') + '</strong> desta Atividade?';
+                }
+
+                $("#descricao").html(descricao);
+                if ($(this).data('tipo') == 'vincular') {
+                    $("#confirmar").attr("href", "{{ path("planodeuso_nota_empenho_vincular") }}/{{ atividadePlanoUso.id }}/" + id);
+                }else if ($(this).data('tipo') == 'desvincular'){
+                    $("#confirmar").attr("href", "{{ path("planodeuso_nota_empenho_desvincular") }}/{{ atividadePlanoUso.id }}/" + id);
+                }
+            });
+
+        })
+    </script>
+{% endblock %}
