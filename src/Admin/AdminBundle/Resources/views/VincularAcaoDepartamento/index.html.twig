@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="box box-success box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title"><span class="fa fa-chain"></span> Vincular Ação Orçamentária ao Departamento</h3>
+        </div>
+        <div class="table-responsive">
+        <div class="box-body">
+            <label>Ano de Exercício:</label>
+            <select name="nuAnoExercicio" id="IdAnoExercicio">
+                <option value="">Selecione o Ano</option>
+                {% for ano in anoExercicio %}
+                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.nuAnoExercicio }}</option>
+                {% endfor %}
+            </select>
+            <table id="lista" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <!-- <th>CÓD</th> -->
+                    <th>Ano de Exercício</th>
+                    <th>Ação/PO</th>
+                    <th>Despesa</th>
+                    <th>Dep. responsável</th>
+                    <th>Dep. Vinculados</th>
+                    <th>Denominação</th>
+                    <th>Dotação Atualizada</th>
+                    <th>Vincular</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <!--
+                <tfoot>
+                <tr>
+                    <<th>CÓD</th>
+                    <th>Ano de Exercício</th>
+                    <th>Ação/PO</th>
+                    <th>Despesa</th>
+                    <th>Departamento responsável</th>
+                    <th>Departamentos Vinculados</th>
+                    <th>Denominação</th>
+                    <th>Dotação Atualizada</th>
+                    <th>Vincular</th>
+
+                </tr>
+                </tfoot>
+                -->
+
+            </table>
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function () {
+            $lista = $('#lista').DataTable( {
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
+                },
+                'iDisplayLength': 10,
+                'iDisplayStart': 0,
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false,
+                "bProcessing": true,
+                {% if nuAno is not null %}  "ajax": Routing.generate('json_lista_acao', {'anoExercicio':{{ nuAno }} }), {% endif %}
+                "aoColumns" : [
+                    //{ "mData": 0 },
+                    { "mData": 1 },
+                    { "mData": 2 },
+                    { "mData": 3 },
+                    { "mData": 4 },
+                    { "mData": 5 },
+                    { "mData": 6 },
+                    { "mData": 7 },
+
+                    { "mData": null,
+                        "bSortable": false,
+                        "mRender": function(data, type, full) {
+                                return '<a class="btn btn-success" href="'+ Routing.generate('vincularacao_vincular', {'idAcao': full[0]})+'"><li class="fa fa-edit"> Vincular</li></a>';
+                        }
+                    },
+                ]
+            } );
+
+            $("#IdAnoExercicio").change(function () {
+                if ($("#IdAnoExercicio").val() != "") {
+                    $lista.ajax.url( Routing.generate('json_lista_acao', {'anoExercicio': $("#IdAnoExercicio").val()}) ).load();
+                }
+            });
+        });
+    </script>
+{% endblock %}

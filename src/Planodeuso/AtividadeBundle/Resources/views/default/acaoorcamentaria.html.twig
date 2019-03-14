@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include '@Atividade/default/cabecalho_acaoorcamentaria.html.twig' %}
+    <div class="box box-primary box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Atividades cadastradas</h3>
+        </div>
+        <div class="box-body">
+            <div class="table-responsive">
+            {#% #if (acaoOrcamentaria.vlSaldo > 0)%#}
+            <a href="{{ path('planodeuso_atividade_add', {idAcao: acaoOrcamentaria.id}) }}" class="btn btn-success pull-right"><li class="glyphicon glyphicon-plus"></li> Adicionar Atividade</a>
+            {#% endif %#}
+            <table id="lista" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <!-- <th>CÓD</th> -->
+                        <th>Prioridade</th>
+                        <th>Vinculo do Planejamento</th>
+                        <<th>Instrumento</th>
+                        <th>Programa</th>
+                        <th>Atividade</th>
+                        <th>Exercício</th>
+                        <th>Tipo de Atividade</th>
+                        <th>Valor total</th>
+                        <th>Valor Ano Vigente</th>
+                        <th align="center">Ação</th>
+                        <!-- <th>Vincular Nota de Empenho</th> -->
+                        <!-- <th>Excluir</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                {% for a in atividadePlanoUso %}
+                    <tr>
+                        <!-- <td>{{ a.id }}</td> -->
+                        <td>{{ a.nuPrioridade }}</td>
+                        <td>{{ a.dsVinculoPlanejamento }}</td>
+                        <td >{{ a.dsTipoInstrumento }}</td>
+                        <td >{{ a.dsRedePrograma }}</td>
+                        <td >{{ a.dsAtividade }}</td>
+                        <td >{{ a.nuAnoExercicioAtividade }}</td>
+                        <td >{{ a.dsTipoAtividade }}</td>
+                        <td >{{ a.vlTotal|number_format(2, ',', '.') }}</td>
+                        <td >{{ a.vlExecutarExercicio|number_format(2, ',', '.') }}</td>
+                        <td>
+                            <a class="btn btn-success" href="{{ path('planodeuso_atividade_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> </li></a>
+                        <!--
+                        </td>
+                        <td>
+                        -->
+                            <a class="btn btn-primary" href="{{ path('planodeuso_nota_empenho', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-check"> </li></a>
+                        <!--
+                        </td>
+                        <td>
+                        -->
+                            <a class="btn btn-danger excluir" data-toggle="modal" data-idacao="{{ acaoOrcamentaria.id }}" data-id="{{ a.id }}" data-descricao="{{ a.id }}" href="#modal-disabled"> <li class="fa fa-trash"> </li></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <!--
+                <tfoot>
+                    <tr>
+                        <th>CÓD</th>
+                        <th>Prioridade</th>
+                        <th>Vinculo do Planejamento</th>
+                        <th>Instrumento</th>
+                        <th>Programa</th>
+                        <th>Atividade</th>
+                        <th>Exercício</th>
+                        <th>Tipo de Atividade</th>
+                        <th>Valor total</th>
+                        <th>Valor Ano Vigente</th>
+                        <th>Editar</th>
+                        <th>Vincular Nota de Empenho</th>
+                        <th>Excluir</th>
+                    </tr>
+                </tfoot>
+                -->
+            </table>
+        </div>
+    </div>
+    </div>
+    <a class="btn btn-primary" href="{{ path('planodeuso_atividade', {nuAno: acaoOrcamentaria.nuAnoExercicio}) }}">Voltar</a>
+
+    <div class="modal fade" id="modal-disabled">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Atenção!</h4>
+                </div>
+                <div class="modal-body">
+                    Deseja realmente excluir a Atividade <strong id="modalDescricao"></strong>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-success" href="" id="confirmar">Confirmar</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function () {
+
+
+            $(document).on("click", ".excluir", function () {
+                var idAcao = $(this).data('idacao');
+                var id = $(this).data('id');
+                var descricao = $(this).data('descricao');
+
+                $("#modalDescricao").html(descricao);
+                $("#confirmar").attr("href", "{{ path("planodeuso_atividade_excluir") }}/" + idAcao + "/" + id);
+
+            });
+
+            $('#lista').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
+                },
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            });
+        })
+    </script>
+{% endblock %}
