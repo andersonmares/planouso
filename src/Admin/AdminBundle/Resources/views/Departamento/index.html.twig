@@ -37,7 +37,7 @@
                     <!-- <td>{{ d.getDtCadastro()|date("d/m/Y H:i:s") }}</td> -->
                     <!-- <td>{{ d.getDtAtualizacao()|date("d/m/Y H:i:s") }}</td> -->
                     <td width="150">
-                        <a class="btn btn-primary" href="{{ path('departamento_edit', {'id': d.getId()}) }}" data-toggle="tooltip" title="teste"><li class="fa fa-edit"> <!-- Editar --></li></a>
+                        <a class="btn btn-primary" href="{{ path('departamento_edit', {'id': d.getId()}) }}" data-toggle="tooltip" title="Editar"><li class="fa fa-edit"> <!-- Editar --></li></a>
                         <a class="btn btn-danger desativar" data-toggle="modal" data-id="{{ d.getId() }}" data-departamento="{{ d.dsDepartamento }}" href="#modal-disabled"><li class="fa fa-trash"> <!-- Desativar --></li></a>
                     </td>
                     <!-- <td><a class="btn btn-danger desativar" data-toggle="modal" data-id="{{ d.getId() }}" data-departamento="{{ d.dsDepartamento }}" href="#modal-disabled"><li class="fa fa-trash"> Desativar</li></a></td> -->

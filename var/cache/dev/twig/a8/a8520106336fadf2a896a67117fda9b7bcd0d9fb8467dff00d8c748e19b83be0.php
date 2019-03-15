@@ -16,11 +16,11 @@ class __TwigTemplate_18f7708be938869f61cec6af922a9b130d8b61eb0e12f4c4764690ea803
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_faf010bb5df27398e4748720e09d7a6ee1684a65c3f0b29198aa823e075eeb46 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_faf010bb5df27398e4748720e09d7a6ee1684a65c3f0b29198aa823e075eeb46->enter($__internal_faf010bb5df27398e4748720e09d7a6ee1684a65c3f0b29198aa823e075eeb46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
+        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52->enter($__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
 
-        $__internal_43c9c2b01c87c3f1e0b640f0f90d97663ba1c8d189857a473f4cd8e11a241270 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_43c9c2b01c87c3f1e0b640f0f90d97663ba1c8d189857a473f4cd8e11a241270->enter($__internal_43c9c2b01c87c3f1e0b640f0f90d97663ba1c8d189857a473f4cd8e11a241270_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
+        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2->enter($__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -91,44 +91,46 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
         // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/steps-wizzard.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\"/>
-    <script src=\"";
-        // line 36
+    <!-- Hint-->
+    <!-- <script src=\"";
+        // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/jQuery/jQuery-2.1.4.min.js"), "html", null, true);
         echo "\"></script>
+    <!-- Hint -->
     <script src=\"";
-        // line 37
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/input-mask/jquery.inputmask.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 38
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/input-mask/jquery.inputmask.extensions.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 39
+        // line 41
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/input-mask/jquery.inputmask.date.extensions.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 40
+        // line 42
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/input-mask/jquery.inputmask.numeric.extensions.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 41
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/maskmoney/jquery.maskMoney.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 42
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/carregarMunicipios.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 43
+        // line 45
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/angular/angular.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 44
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/fosjsrouting/router.js"), "html", null, true);
         echo "\"></script><!-- Gerador de rotas javascript -->
     <script src=\"";
-        // line 45
+        // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_js_routing_js", array("callback" => "fos.Router.setData"));
         echo "\"></script>
 
@@ -137,11 +139,11 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src=\"";
-        // line 51
+        // line 53
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/html5shiv.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 52
+        // line 54
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/respond.min.js"), "html", null, true);
         echo "\"></script>
     <![endif]-->
@@ -155,9 +157,9 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
         }
     </style>
     ";
-        // line 63
+        // line 65
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 64
+        // line 66
         echo "
 </head>
 <!--
@@ -197,7 +199,7 @@ desired effect
     </div>
     <!--logo do sistema-->
     <!--<div style=\"background-color: #247298; height: 100%;\"><img src=\"";
-        // line 102
+        // line 104
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/bg_topo.png"), "html", null, true);
         echo "\"/></div>-->
 </div>
@@ -210,12 +212,12 @@ desired effect
         <a href=\"#\" class=\"logo\">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class=\"logo-mini\"><b>";
-        // line 112
+        // line 114
         echo twig_escape_filter($this->env, ($context["title_system_mini"] ?? $this->getContext($context, "title_system_mini")), "html", null, true);
         echo "</b></span>
             <!-- logo for regular state and mobile devices -->
             <span class=\"logo-lg\"><b>";
-        // line 114
+        // line 116
         echo twig_escape_filter($this->env, ($context["title_system"] ?? $this->getContext($context, "title_system")), "html", null, true);
         echo "</b></span>
         </a>
@@ -235,12 +237,12 @@ desired effect
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
                             <!-- The user image in the navbar-->
                             <img src=\"";
-        // line 131
+        // line 133
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/male.png"), "html", null, true);
         echo "\" class=\"user-image\" alt=\"Estado\"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class=\"hidden-xs\">";
-        // line 133
+        // line 135
         echo twig_escape_filter($this->env, ucwords(twig_lower_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "pessoaFisica", array()), "getNoPessoaFisica", array(), "method"))), "html", null, true);
         echo "</span>
                         </a>
@@ -248,17 +250,17 @@ desired effect
                             <!-- The user image in the menu -->
                             <li class=\"user-header\">
                                 <img src=\"";
-        // line 138
+        // line 140
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/male.png"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"Estado\"/>
                                 <p style=\"font-size: 14px;\">
                                     ";
-        // line 140
+        // line 142
         echo twig_escape_filter($this->env, ucwords(twig_lower_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "pessoaFisica", array()), "getNoPessoaFisica", array(), "method"))), "html", null, true);
         echo "
                                     <br/><span
                                             style=\"font-size: 90%; font-weight: bold;\">";
-        // line 142
+        // line 144
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "perfilAcesso", array()), "getDsPerfilAcesso", array(), "method"), "html", null, true);
         echo "</span>
                                     <br/>
@@ -268,13 +270,13 @@ desired effect
                             <li class=\"user-footer\">
                                 <div class=\"pull-left\">
                                     <a href=\"";
-        // line 149
+        // line 151
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("changepasswd");
         echo "\" class=\"btn btn-default btn-flat\">Alterar Senha</a>
                                 </div>
                                 <div class=\"pull-right\">
                                     <a href=\"";
-        // line 152
+        // line 154
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("logout");
         echo "\" class=\"btn btn-default btn-flat\">Sair</a>
                                 </div>
@@ -295,13 +297,13 @@ desired effect
             <div class=\"user-panel\">
                 <div class=\"pull-left image\">
                     <img src=\"";
-        // line 170
+        // line 172
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/male.png"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"Usuário\" />
                 </div>
                 <div class=\"pull-left info\">
                     <p>";
-        // line 173
+        // line 175
         echo twig_escape_filter($this->env, ucwords(twig_lower_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "pessoaFisica", array()), "getNoPessoaFisica", array(), "method"))), "html", null, true);
         echo "</p>
 
@@ -309,27 +311,27 @@ desired effect
             </div>
 ";
         
-        $__internal_faf010bb5df27398e4748720e09d7a6ee1684a65c3f0b29198aa823e075eeb46->leave($__internal_faf010bb5df27398e4748720e09d7a6ee1684a65c3f0b29198aa823e075eeb46_prof);
+        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52->leave($__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52_prof);
 
         
-        $__internal_43c9c2b01c87c3f1e0b640f0f90d97663ba1c8d189857a473f4cd8e11a241270->leave($__internal_43c9c2b01c87c3f1e0b640f0f90d97663ba1c8d189857a473f4cd8e11a241270_prof);
+        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2->leave($__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2_prof);
 
     }
 
-    // line 63
+    // line 65
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_dd6881e30845d0617b309af04da518945e8d2f274ec6642d14d3e9bdfee6a190 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dd6881e30845d0617b309af04da518945e8d2f274ec6642d14d3e9bdfee6a190->enter($__internal_dd6881e30845d0617b309af04da518945e8d2f274ec6642d14d3e9bdfee6a190_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea->enter($__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_23de6d3cc1f1f18caa307d11ab6266506a3e400a5521175e24c8fcbe2ed746c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_23de6d3cc1f1f18caa307d11ab6266506a3e400a5521175e24c8fcbe2ed746c7->enter($__internal_23de6d3cc1f1f18caa307d11ab6266506a3e400a5521175e24c8fcbe2ed746c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        
-        $__internal_23de6d3cc1f1f18caa307d11ab6266506a3e400a5521175e24c8fcbe2ed746c7->leave($__internal_23de6d3cc1f1f18caa307d11ab6266506a3e400a5521175e24c8fcbe2ed746c7_prof);
+        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296->enter($__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_dd6881e30845d0617b309af04da518945e8d2f274ec6642d14d3e9bdfee6a190->leave($__internal_dd6881e30845d0617b309af04da518945e8d2f274ec6642d14d3e9bdfee6a190_prof);
+        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296->leave($__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296_prof);
+
+        
+        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea->leave($__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea_prof);
 
     }
 
@@ -345,7 +347,7 @@ desired effect
 
     public function getDebugInfo()
     {
-        return array (  320 => 63,  305 => 173,  299 => 170,  278 => 152,  272 => 149,  262 => 142,  257 => 140,  252 => 138,  244 => 133,  239 => 131,  219 => 114,  214 => 112,  201 => 102,  161 => 64,  159 => 63,  145 => 52,  141 => 51,  132 => 45,  128 => 44,  124 => 43,  120 => 42,  116 => 41,  112 => 40,  108 => 39,  104 => 38,  100 => 37,  96 => 36,  92 => 35,  86 => 32,  80 => 29,  76 => 28,  72 => 27,  68 => 26,  64 => 25,  56 => 20,  51 => 18,  43 => 13,  36 => 9,  26 => 1,);
+        return array (  322 => 65,  307 => 175,  301 => 172,  280 => 154,  274 => 151,  264 => 144,  259 => 142,  254 => 140,  246 => 135,  241 => 133,  221 => 116,  216 => 114,  203 => 104,  163 => 66,  161 => 65,  147 => 54,  143 => 53,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  118 => 43,  114 => 42,  110 => 41,  106 => 40,  102 => 39,  97 => 37,  92 => 35,  86 => 32,  80 => 29,  76 => 28,  72 => 27,  68 => 26,  64 => 25,  56 => 20,  51 => 18,  43 => 13,  36 => 9,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -393,7 +395,9 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
 
     <!--steps CSS-->
     <link href=\"{{ asset('css/steps-wizzard.css') }}\" rel=\"stylesheet\" type=\"text/css\"/>
-    <script src=\"{{ asset('js/plugins/jQuery/jQuery-2.1.4.min.js') }}\"></script>
+    <!-- Hint-->
+    <!-- <script src=\"{{ asset('js/plugins/jQuery/jQuery-2.1.4.min.js') }}\"></script>
+    <!-- Hint -->
     <script src=\"{{ asset('js/plugins/input-mask/jquery.inputmask.js') }}\"></script>
     <script src=\"{{ asset('js/plugins/input-mask/jquery.inputmask.extensions.js') }}\"></script>
     <script src=\"{{ asset('js/plugins/input-mask/jquery.inputmask.date.extensions.js') }}\"></script>
