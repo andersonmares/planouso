@@ -17,8 +17,8 @@
             <table id="lista" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
+                    <!-- <th>CÓD</th> -->
+                    <!-- <th>Ano de Exercício</th> -->
                     <th>Ação/PO</th>
                     <th>Despesa</th>
                     <th>Dep. responsável</th>
@@ -28,12 +28,14 @@
                     <th>R$ Empenhado</th>
                     <th>R$ Saldo</th>
                     <th>R$ Processado</th>
-                    <th>Atividades</th>
+                    <!-- <th>Atividades</th> -->
+                    <th>Itens</th>
                     <th>Processamento</th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
+                <!--
                 <tfoot>
                 <tr>
                     <th>CÓD</th>
@@ -51,6 +53,7 @@
                     <th>Processamento</th>
                 </tr>
                 </tfoot>
+                -->
 
             </table>
 
@@ -77,8 +80,8 @@
                 "bProcessing": true,
 
                 "aoColumns" : [
-                    { "mData": 0 },
-                    { "mData": 1 },
+                    //{ "mData": 0 },
+                    //{ "mData": 1 },
                     { "mData": 2 },
                     { "mData": 3 },
                     { "mData": 4 },
@@ -92,7 +95,7 @@
                     { "mData": null,
                         "bSortable": false,
                         "mRender": function(data, type, full) {
-                            return '<a class="btn btn-success" href="'+ Routing.generate('processamento_acao', {'id': full[0]})+'"><li class="fa fa-edit"> Processamento</li></a>';
+                            return '<a class="btn btn-success" href="'+ Routing.generate('processamento_acao', {'id': full[0]})+'"><li class="fa fa-edit"> <!-- Processamento --></li></a>';
                         }
                     },
                 ]

@@ -4,18 +4,19 @@
     {% include '@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig' %}
     <div class="box box-primary box-solid">
         <div class="box-header with-border">
-            <h3 class="box-title">Atividades cadastradas</h3>
+            <h3 class="box-title">Itens Cadastrados</h3>
         </div>
+        <div class="table-responsive">
         <div class="box-body">
             <table id="lista" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>CÓD</th>
+                        <!-- <th>CÓD</th> -->
                         <th>Prioridade</th>
                         <th>Vinculo do Planejamento</th>
                         <th>Instrumento</th>
                         <th>Programa</th>
-                        <th>Atividade</th>
+                        <th>Item</th>
                         <th>Exercício</th>
                         <th>Tipo de Atividade</th>
                         <th>Proposta</th>
@@ -29,7 +30,7 @@
                 <tbody>
                 {% for a in atividadePlanoUso %}
                     <tr>
-                        <td>{{ a.id }}</td>
+                       <!--  <td>{{ a.id }}</td> -->
                         <td>{{ a.nuPrioridade }}</td>
                         <td>{{ a.dsVinculoPlanejamento }}</td>
                         <td >{{ a.dsTipoInstrumento }}</td>
@@ -42,10 +43,11 @@
                         <td >{{ a.noMunicipioAcentuado }}</td>
                         <td >{{ a.vlTotal|number_format(2, ',', '.') }}</td>
                         <td >{{ a.vlExecutarExercicio|number_format(2, ',', '.') }}</td>
-                        <td><a class="btn btn-success" href="{{ path('processamento_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> Editar Atividade</li></a></td>
+                        <td><a class="btn btn-success" href="{{ path('processamento_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> </li></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
+                <!--
                 <tfoot>
                     <tr>
                         <th>CÓD</th>
@@ -64,8 +66,10 @@
                         <th>Editar</th>
                     </tr>
                 </tfoot>
+                -->
             </table>
         </div>
+    </div>
     </div>
 
     <a class="btn btn-primary" href="{{ path('processamento_index', {nuAno: acaoOrcamentaria.nuAnoExercicio}) }}">Voltar</a>
