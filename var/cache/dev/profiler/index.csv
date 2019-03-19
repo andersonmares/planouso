@@ -294,3 +294,5 @@ bf31ee,127.0.0.1,GET,http://127.0.0.1/js/routing?callback=fos.Router.setData,155
 958d62,127.0.0.1,GET,http://127.0.0.1/js/routing?callback=fos.Router.setData,1553014747,,200
 19bd7a,127.0.0.1,GET,http://127.0.0.1/perfil,1553015194,,200
 f8fc06,127.0.0.1,GET,http://127.0.0.1/js/routing?callback=fos.Router.setData,1553015195,,200
+e3d162,127.0.0.1,GET,http://127.0.0.1/perfil,1553015319,,200
+eed96e,127.0.0.1,GET,http://127.0.0.1/js/routing?callback=fos.Router.setData,1553015319,,200
