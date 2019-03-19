@@ -1,3 +1,0 @@
-relatorio_homepage:
-    path:     /
-    defaults: { _controller: RelatorioBundle:Default:index }

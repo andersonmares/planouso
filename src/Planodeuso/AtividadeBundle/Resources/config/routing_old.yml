@@ -1,3 +1,0 @@
-atividade_homepage:
-    path:     /
-    defaults: { _controller: AtividadeBundle:Default:index }
