@@ -2,7 +2,7 @@
 
 {% block body %}
     {% include '@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig' %}
-    <div class="box box-primary box-solid">
+   <div class="box box-primary box-solid">
         <div class="box-header with-border">
             <h3 class="box-title">Itens Cadastrados</h3>
         </div>
@@ -12,7 +12,7 @@
                 <thead>
                     <tr>
                         <!-- <th>CÓD</th> -->
-                        <th>Prioridade</th>
+                        <!-- <th>Prioridade</th> -->
                         <th>Vinculo do Planejamento</th>
                         <th>Instrumento</th>
                         <th>Programa</th>
@@ -31,7 +31,7 @@
                 {% for a in atividadePlanoUso %}
                     <tr>
                        <!--  <td>{{ a.id }}</td> -->
-                        <td>{{ a.nuPrioridade }}</td>
+                        <!-- <td>{{ a.nuPrioridade }}</td> -->
                         <td>{{ a.dsVinculoPlanejamento }}</td>
                         <td >{{ a.dsTipoInstrumento }}</td>
                         <td >{{ a.dsRedePrograma }}</td>

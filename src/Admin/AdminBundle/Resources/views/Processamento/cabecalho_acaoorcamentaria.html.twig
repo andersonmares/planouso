@@ -1,11 +1,16 @@
+<!----------------------------------------->
+
 <div class="box box-success box-solid">
     <div class="box-header with-border">
-        <h3 class="box-title">Ação orçamentária</h3>
+       <h3 class="box-title">Ação orçamentária</h3>
+        <a class="btn btn-success" data-toggle="collapse" data-target="#demo">
+            <li class="fa fa-arrows-v fa-plus"> </li>
+        </a>
         <!--<div class="pull-right ">
           legenda da tela
         </div>-->
     </div>
-    <div class="box-body">
+    <div id="demo" class="box-body">
         <div class="row">
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
@@ -15,7 +20,7 @@
                 </div>
                 <!-- /.info-box -->
             </div>
-            <div class="col-md-2 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <span class="info-box-more text-bold">Plano Orçamentário</span>
                     {{ acaoOrcamentaria.nuPlanoOrcamentario  }}
@@ -23,7 +28,7 @@
                 </div>
                 <!-- /.info-box -->
             </div>
-            <div class="col-md-2 col-sm-6 col-xs-12">
+            <div class="col-md-1 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <span class="info-box-more text-bold">Ano</span>
                     {% if ( acaoOrcamentaria.nuAnoExercicio >  "now"|date("Y")) %}
