@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba55a7b8-b542-419c-9f73-ee6bbc4624cc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
+    </list>
+    <ignored path="Código.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="D:\planouso" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Código" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cabecalho_acaoorcamentaria.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/cabecalho_acaoorcamentaria.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/edit.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3281">
+              <caret line="193" column="36" selection-start-line="193" selection-start-column="36" selection-end-line="193" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/includes/footer.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="154" selection-start-line="8" selection-start-column="154" selection-end-line="8" selection-end-column="154" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AtividadePlanoUsoType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Form/AtividadePlanoUsoType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#51#90#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cabecalho_acaoorcamentaria.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/cabecalho_acaoorcamentaria.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/public/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-ui.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/public/js/jquery-ui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1553813220483" expanded="true" signature="41309:41380" placeholder="..." />
+                <marker date="1553813220483" expanded="true" signature="41394:41418" placeholder="..." />
+                <marker date="1553813220483" expanded="true" signature="163467:163511" placeholder="..." />
+                <marker date="1553813220483" expanded="true" signature="227852:228286" placeholder="..." />
+                <marker date="1553813220483" expanded="true" signature="295618:295635" placeholder="..." />
+                <marker date="1553813220483" expanded="true" signature="315422:315438" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormBuilder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4318">
+              <caret line="264" column="7" selection-start-line="264" selection-start-column="7" selection-end-line="264" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Anderson" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="15/03/2019" />
+      </map>
+    </option>
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/AppBundle/Security/AfterLoginRedirection.php" />
+        <option value="$PROJECT_DIR$/var/logs/dev.log" />
+        <option value="$PROJECT_DIR$/web/app_dev.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Usuario/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Importacao/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/notaempenho.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/RedePrograma/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Controller/RedeProgramaController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Form/RedeProgramaType.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Atividade/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Controller/AtividadeController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Form/AtividadeType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/includes/menu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Form/TipoAtividadeType.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/TipoAtividade/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Controller/TipoAtividadeController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Componente/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Despesa/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/RedePrograma/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/VinculoPlanejamento/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Atividade/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/TipoAtividade/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Instrumento/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/VincularAcaoDepartamento/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/RelatorioBundle/Form/FiltroType.php" />
+        <option value="$PROJECT_DIR$/web/public/css/alteraTemplate.css" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Departamento/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/includes/header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/processamentoacao.html.twig" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/cabecalho_acaoorcamentaria.html.twig" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/acaoorcamentaria.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Form/AtividadePlanoUsoType.php" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Form/AtividadePlanoUsoType.php" />
+        <option value="$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/add.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/includes/footer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/cabecalho_acaoorcamentaria.html.twig" />
+        <option value="$PROJECT_DIR$/web/public/js/jquery-ui.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="854" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Planodeuso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planouso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="git&#9;ACTION&#9;Git.Init&#10;plugin&#9;ACTION&#9;null&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;identity&#9;null&#9;null" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://10.1.0.56:37259" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\planouso\app\config" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>d:\Users\anderson.oliveira\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba55a7b8-b542-419c-9f73-ee6bbc4624cc" name="Default" comment="" />
+      <created>2524571248662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>2524571248662</updated>
+      <workItem from="2524571251348" duration="2525000" />
+      <workItem from="1547738443842" duration="1809000" />
+      <workItem from="1547841411276" duration="6831000" />
+      <workItem from="1548871815747" duration="195000" />
+      <workItem from="1548872021145" duration="9481000" />
+      <workItem from="1549556448730" duration="81149000" />
+      <workItem from="1552319610416" duration="30537000" />
+      <workItem from="1552680658352" duration="3716000" />
+      <workItem from="1553011295375" duration="42607000" />
+      <workItem from="1553801340050" duration="8721000" />
+    </task>
+    <task id="LOCAL-00001" summary="Comentando o código com problema no tooltip (arquivo jQuery-2.1.4.min.js)">
+      <created>1552681234503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552681234503</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Comentando o código com problema no tooltip (arquivo jQuery-2.1.4.min.js)">
+      <created>1553012219726</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553012219726</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Comentando o código com problema no tooltip (arquivo jQuery-2.1.4.min.js)">
+      <created>1553015247991</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553015247991</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Comentando o código com problema no tooltip (arquivo jQuery-2.1.4.min.js)">
+      <created>1553015401659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553015401659</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Nova tela de cadastro de itens">
+      <created>1553864640167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1553864640167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="187571000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="854" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18830334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35872576" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35872576" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24903722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="true" />
+    <MESSAGE value="Comentando o código com problema no tooltip (arquivo jQuery-2.1.4.min.js)" />
+    <MESSAGE value="Nova tela de cadastro de itens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nova tela de cadastro de itens" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/VincularAcaoDepartamento/vincular.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Entity/VinculoPlanejamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Form/VinculoPlanejamentoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Controller/VinculoPlanejamentoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3264">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/FormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2210">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/RelatorioBundle/Resources/views/Default/gerar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/RelatorioBundle/Form/FiltroType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="297" column="9" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/includes/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/RelatorioBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/VincularAcaoDepartamento/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Query/AST/Functions/IdentityFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/js/plugins/jQuery/jQuery-2.1.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1614" selection-start-line="1" selection-start-column="1614" selection-end-line="1" selection-end-column="1614" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Atividade/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Entity/RedePrograma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/css/alteraTemplate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="154" column="50" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Form/TipoAtividadeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Repository/RedeProgramaRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Repository/TipoAtividadeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Form/RedeProgramaType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/includes/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Atividade/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Departamento/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="39" column="144" selection-start-line="39" selection-start-column="144" selection-end-line="39" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/processamentoacao.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Twig/AppExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/acaoorcamentaria.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="102" selection-start-line="11" selection-start-column="102" selection-end-line="11" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4922">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Repository/AtividadePlanoUsoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Entity/AtividadePlanoUso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="264" column="7" selection-start-line="264" selection-start-column="7" selection-end-line="264" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1967">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Entity/AcaoOrcamentaria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6579">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3281">
+          <caret line="193" column="36" selection-start-line="193" selection-start-column="36" selection-end-line="193" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Form/AtividadePlanoUsoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/includes/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="154" selection-start-line="8" selection-start-column="154" selection-end-line="8" selection-end-column="154" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Form/AtividadePlanoUsoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#90#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planodeuso/AtividadeBundle/Resources/views/default/cabecalho_acaoorcamentaria.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/AdminBundle/Resources/views/Processamento/cabecalho_acaoorcamentaria.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/js/jquery-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1553813220483" expanded="true" signature="41309:41380" placeholder="..." />
+            <marker date="1553813220483" expanded="true" signature="41394:41418" placeholder="..." />
+            <marker date="1553813220483" expanded="true" signature="163467:163511" placeholder="..." />
+            <marker date="1553813220483" expanded="true" signature="227852:228286" placeholder="..." />
+            <marker date="1553813220483" expanded="true" signature="295618:295635" placeholder="..." />
+            <marker date="1553813220483" expanded="true" signature="315422:315438" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
