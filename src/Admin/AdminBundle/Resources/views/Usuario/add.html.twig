@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="box box-success box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title"><span class="fa fa-server"></span> Tipo de Atividade</h3>
+        </div>
+        <div class="box-body">
+            <div class=" col-lg-5">
+                <div class="form-group">
+                    <label class="control-label">CPF</label><br /> {{ pessoa_fisica['cpf'] }}
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Nome</label><br /> {{ pessoa_fisica['noPessoa'] }}
+                </div>
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-7">
+
+                            {{ form_label(form.dsEmail) }}
+                            {{ form_errors(form.dsEmail) }}
+                            {{ form_widget(form.dsEmail) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-7">
+                            {{ form_label(form.nuTelefone) }}
+                            {{ form_errors(form.nuTelefone) }}
+                            {{ form_widget(form.nuTelefone) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-7">
+                            {{ form_label(form.coPerfilAcesso) }}
+                            {{ form_errors(form.coPerfilAcesso) }}
+                            {{ form_widget(form.coPerfilAcesso) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="display: {{ displayDepartamento }}" id="divDepartamento">
+                    <div class="row">
+                        <div class="col-md-7">
+                            {{ form_label(form.coDepartamento) }}
+                            {{ form_errors(form.coDepartamento) }}
+                            {{ form_widget(form.coDepartamento) }}
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <a class="btn btn-info" href="{{ path('usuario') }}">Voltar</a>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function () {
+            $("#usuario_coPerfilAcesso").change(function(){
+               if ($(this).val() == 3) {
+                   $("#divDepartamento").show();
+                   $("#usuario_coDepartamento").prop('required', true)
+               }else{
+                   $("#divDepartamento").hide();
+                   $("#usuario_coDepartamento").prop('required', false)
+               }
+            });
+
+            $("#usuario_nuTelefone").inputmask({
+                mask: ["(99) 9999-9999", "(99) 99999-9999"]
+            });
+
+        });
+    </script>
+{% endblock %}

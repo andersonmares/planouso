@@ -1,0 +1,47 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        db:
+            entity:
+                class: AppBundle\Entity\User
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: true
+            provider: db
+            form_login:
+                login_path: /
+                check_path: /
+                default_target_path: /perfil
+                #apos a validação do login o serviço de redirecionamento é acionado
+                success_handler: redirect.after.login
+            logout:
+                path: /logout
+                target: /
+    encoders:
+        AppBundle\Entity\User:
+            algorithm: bcrypt
+            cost: 12
+    access_control:
+        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_CGPO]}
+        - { path: ^/perfil, roles:  [ROLE_ADMIN, ROLE_CGPO, ROLE_DEPARTAMENTO] }
+        - { path: ^/changepasswd, roles:  [ROLE_ADMIN, ROLE_CGPO, ROLE_DEPARTAMENTO] }
+        - { path: ^/atividade, roles:  [ROLE_DEPARTAMENTO] }
+        - { path: ^/relatorio, roles:  [ROLE_ADMIN, ROLE_DEPARTAMENTO, ROLE_CGPO, ROLE_LEITOR] }
+        - { path: ^/json, roles:  [ROLE_ADMIN, ROLE_DEPARTAMENTO, ROLE_CGPO, ROLE_LEITOR] }
+        #- { path: /perfil, roles: ROLE_CGPO}
+    access_denied_url: /error/403
+            # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~

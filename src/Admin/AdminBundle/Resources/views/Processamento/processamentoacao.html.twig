@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include '@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig' %}
+    <div class="box box-primary box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Atividades cadastradas</h3>
+        </div>
+        <div class="box-body">
+            <table id="lista" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>CÓD</th>
+                        <th>Prioridade</th>
+                        <th>Vinculo do Planejamento</th>
+                        <th>Instrumento</th>
+                        <th>Programa</th>
+                        <th>Atividade</th>
+                        <th>Exercício</th>
+                        <th>Tipo de Atividade</th>
+                        <th>Proposta</th>
+                        <th>UF</th>
+                        <th>Município</th>
+                        <th>Valor total</th>
+                        <th>Valor Ano Vigente</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for a in atividadePlanoUso %}
+                    <tr>
+                        <td>{{ a.id }}</td>
+                        <td>{{ a.nuPrioridade }}</td>
+                        <td>{{ a.dsVinculoPlanejamento }}</td>
+                        <td >{{ a.dsTipoInstrumento }}</td>
+                        <td >{{ a.dsRedePrograma }}</td>
+                        <td >{{ a.dsAtividade }}</td>
+                        <td >{{ a.nuAnoExercicioAtividade }}</td>
+                        <td >{{ a.dsTipoAtividade }}</td>
+                        <td >{{ a.nuProposta }}</td>
+                        <td >{{ a.sgUf }}</td>
+                        <td >{{ a.noMunicipioAcentuado }}</td>
+                        <td >{{ a.vlTotal|number_format(2, ',', '.') }}</td>
+                        <td >{{ a.vlExecutarExercicio|number_format(2, ',', '.') }}</td>
+                        <td><a class="btn btn-success" href="{{ path('processamento_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> Editar Atividade</li></a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>CÓD</th>
+                        <th>Prioridade</th>
+                        <th>Vinculo do Planejamento</th>
+                        <th>Instrumento</th>
+                        <th>Programa</th>
+                        <th>Atividade</th>
+                        <th>Exercício</th>
+                        <th>Tipo de Atividade</th>
+                        <th>Proposta</th>
+                        <th>UF</th>
+                        <th>Município</th>
+                        <th>Valor total</th>
+                        <th>Valor Ano Vigente</th>
+                        <th>Editar</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <a class="btn btn-primary" href="{{ path('processamento_index', {nuAno: acaoOrcamentaria.nuAnoExercicio}) }}">Voltar</a>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function () {
+
+            $('#lista').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
+                },
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            });
+        })
+    </script>
+{% endblock %}

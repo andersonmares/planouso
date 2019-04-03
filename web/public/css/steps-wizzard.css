@@ -1,0 +1,78 @@
+/*      Get Shit Done Color Pattern         */
+.step-indicator {
+  border-collapse: separate;
+  display: table;
+  margin-left: 0px;
+  position: relative;
+  table-layout: fixed;
+  vertical-align: middle;
+}
+.step-indicator li {
+  display: table-cell;
+  float: none;
+  padding: 0;
+  width: 1%;
+}
+.step-indicator li:before {
+  background-color: #e5e5e5;
+  content: "";
+  display: block;
+  height: 1px;
+  position: relative;
+  top: 18px;
+}
+.step-indicator li:first-child:before {
+  left: 50%;
+}
+.step-indicator li:last-child:before {
+  right: 50%;
+}
+.step-indicator .active .step {
+  border-color: #2CA8FF;
+  color: #2CA8FF;
+}
+.step-indicator .active .caption {
+  color: #2CA8FF;
+}
+.step-indicator .complete .step {
+  border-color: #05AE0E;
+  color: #05AE0E;
+}
+.step-indicator .complete .caption {
+  color: #05AE0E;
+}
+.step-indicator .incomplete .step {
+  border-color: #ff3b30;
+  color: #ff3b30;
+}
+.step-indicator .incomplete .caption {
+  color: #ff3b30;
+}
+.step-indicator .active.complete .step {
+  border-color: #2CA8FF;
+  color: #2CA8FF;
+}
+.step-indicator .active.complete .caption {
+  color: #2CA8FF;
+}
+.step-indicator .inactive .caption {
+  color: #e5e5e5;
+}
+.step-indicator .step {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.step-indicator .caption {
+  box-sizing: border-box;
+  color: #e5e5e5;
+  padding: 11px 16px;
+}
