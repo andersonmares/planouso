@@ -5,60 +5,105 @@
         <div class="box-header with-border">
             <h3 class="box-title"><span class="fa fa-chain"></span> Processamento CGPO</h3>
         </div>
+        {{ form_start(form) }}
         <div class="table-responsive">
-        <div class="box-body">
-            <label>Ano de Exercício:</label>
-            <select name="nuAnoExercicio" id="IdAnoExercicio">
-                <option value="">Selecione o Ano</option>
-                {% for ano in anoExercicio %}
-                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.nuAnoExercicio }}</option>
-                {% endfor %}
-            </select>
-            <table id="lista" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <!-- <th>CÓD</th> -->
-                    <!-- <th>Ano de Exercício</th> -->
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R$ atualizado</th>
-                    <th>R$ Empenhado</th>
-                    <th>R$ Saldo</th>
-                    <th>R$ Processado</th>
-                    <!-- <th>Atividades</th> -->
-                    <th>Itens</th>
-                    <th>Processamento</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <!--
-                <tfoot>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R$ atualizado</th>
-                    <th>R$ Empenhado</th>
-                    <th>R$ Saldo</th>
-                    <th>R$ Processado</th>
-                    <th>Atividades</th>
-                    <th>Processamento</th>
-                </tr>
-                </tfoot>
-                -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Ano de Exercício</label><br>
+                            <select class="form-control" name="nuAnoExercicio" id="IdAnoExercicio">
+                                <option value="">Selecione o Ano</option>
+                                {% for ano in anoExercicio %}
+                                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.nuAnoExercicio }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {#{{ form_label(form.nuAnoExercicio) }}#}
+                            {#{{ form_errors(form.nuAnoExercicio) }}#}
+                            {#{{ form_widget(form.nuAnoExercicio) }}#}
 
-            </table>
+                            <label class="control-label">Departamento</label>
+                            <select class="form-control" id="departamento">
+                                <option value="">Selecione</option>
+                                <option value="CGPO">Nome do Departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label">Ação Orçamentária</label>
+                            <select class="form-control" id="acaoOrcamentaria">
+                                <option value="">Selecione</option>
+                                <option value="1">Número da Ação Orçamentária</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <label class="control-label">PO</label>
+                        <select class="form-control">
+                            <option value="" selected=selected>Selecione</option>
+                            <option value="">Número do Plano Orçamentária</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <label class="control-label">Tipo de Despesa</label>
+                        <select class="form-control">
+                            <option value="" selected=selected>Selecione</option>
+                            <option value="">Tipo de Despesa</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label">Nº da Proposta</label>
+                            <input class="form-control" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label">Descrição do PO</label>
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <button type="button" id="btnPesquisarProcessamento" class="btn btn-success">Pesquisar</button>
+                        <a class="btn btn-primary">Voltar</a>
+                    </div>
+                </div>
 
+                <br>
+                <table id="lista" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <!-- <th>CÓD</th> -->
+                        <!-- <th>Ano de Exercício</th> -->
+                        <!-- <th>Dep. Vinculados</th> -->
+                        <!-- <th>Tipo de Despesa</th> -->
+                        <!-- <th>R$ Processado</th> -->
+                        <!-- <th>Atividades</th> -->
+                        <!-- <th>Itens</th> -->
+                        <th>Departamento</th>
+                        <th>Ação/PO</th>
+                        <th>Tipo de Despesa</th>
+                        <th>Descrição do PO</th>
+                        <th>Dotação Atualizada</th>
+                        <th>Saldo</th>
+                        <th>Selecionar Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                </table>
+
+            </div>
         </div>
-    </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}
 {% block javascripts %}
@@ -73,25 +118,18 @@
                 'iDisplayStart': 0,
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : true,
+                'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
                 "bProcessing": true,
-
                 "aoColumns" : [
-                    //{ "mData": 0 },
-                    //{ "mData": 1 },
-                    { "mData": 2 },
-                    { "mData": 3 },
-                    { "mData": 4 },
-                    { "mData": 5 },
-                    { "mData": 6 },
-                    { "mData": 7 },
-                    { "mData": 8 },
-                    { "mData": 9 },
-                    { "mData": 10 },
-                    { "mData": 11 },
+                    { "mData": 4 }, //Departamento
+                    { "mData": 2 }, //Ação/PO
+                    { "mData": 3 }, //Tipo de Despesa
+                    { "mData": 6 }, //Denominação
+                    { "mData": 7 }, //Valor Atualizado
+                    { "mData": 9 }, //Saldo
                     { "mData": null,
                         "bSortable": false,
                         "mRender": function(data, type, full) {
@@ -101,9 +139,13 @@
                 ]
             } );
 
-            $("#IdAnoExercicio").change(function () {
+            $("#btnPesquisarProcessamento").click(function () {
                 if ($("#IdAnoExercicio").val() != "") {
-                    $lista.ajax.url( Routing.generate('json_lista_processamento', {'anoExercicio': $("#IdAnoExercicio").val()}) ).load();
+                    $lista.ajax.url(Routing.generate('json_lista_processamento', {
+                        'departamento': $("#departamento").val(),
+                        'anoExercicio': $("#IdAnoExercicio").val(),
+                        'acaoOrcamentaria': $("#acaoOrcamentaria").val()
+                    })).load();
                 }
             });
 

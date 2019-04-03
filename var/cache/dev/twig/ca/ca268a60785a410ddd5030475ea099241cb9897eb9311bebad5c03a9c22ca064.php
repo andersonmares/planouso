@@ -22,47 +22,54 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8ba2701c786c43986b997c4710ddc691a70f0bb4c401265fe483c4ef0d3f27cc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8ba2701c786c43986b997c4710ddc691a70f0bb4c401265fe483c4ef0d3f27cc->enter($__internal_8ba2701c786c43986b997c4710ddc691a70f0bb4c401265fe483c4ef0d3f27cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/index.html.twig"));
+        $__internal_de68caef3ae5900ba3c49b93b1353dfa11e18964cca2a2c2c9495124e9db8e7d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_de68caef3ae5900ba3c49b93b1353dfa11e18964cca2a2c2c9495124e9db8e7d->enter($__internal_de68caef3ae5900ba3c49b93b1353dfa11e18964cca2a2c2c9495124e9db8e7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/index.html.twig"));
 
-        $__internal_f19ffa6613f15d16b779f98d5a53fde42d0b94f42f43a998fd7e004276cb97f7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f19ffa6613f15d16b779f98d5a53fde42d0b94f42f43a998fd7e004276cb97f7->enter($__internal_f19ffa6613f15d16b779f98d5a53fde42d0b94f42f43a998fd7e004276cb97f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/index.html.twig"));
+        $__internal_0e5c296fb23f26575b118635d92aa4535645e0b589795286823546d732f783bc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0e5c296fb23f26575b118635d92aa4535645e0b589795286823546d732f783bc->enter($__internal_0e5c296fb23f26575b118635d92aa4535645e0b589795286823546d732f783bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8ba2701c786c43986b997c4710ddc691a70f0bb4c401265fe483c4ef0d3f27cc->leave($__internal_8ba2701c786c43986b997c4710ddc691a70f0bb4c401265fe483c4ef0d3f27cc_prof);
+        $__internal_de68caef3ae5900ba3c49b93b1353dfa11e18964cca2a2c2c9495124e9db8e7d->leave($__internal_de68caef3ae5900ba3c49b93b1353dfa11e18964cca2a2c2c9495124e9db8e7d_prof);
 
         
-        $__internal_f19ffa6613f15d16b779f98d5a53fde42d0b94f42f43a998fd7e004276cb97f7->leave($__internal_f19ffa6613f15d16b779f98d5a53fde42d0b94f42f43a998fd7e004276cb97f7_prof);
+        $__internal_0e5c296fb23f26575b118635d92aa4535645e0b589795286823546d732f783bc->leave($__internal_0e5c296fb23f26575b118635d92aa4535645e0b589795286823546d732f783bc_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_491a53badc48a105cc8628357016bfce11395e59bcfefa6bde8ed83e84861a75 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_491a53badc48a105cc8628357016bfce11395e59bcfefa6bde8ed83e84861a75->enter($__internal_491a53badc48a105cc8628357016bfce11395e59bcfefa6bde8ed83e84861a75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1436e98d8caa65cd00ce2d1c73c3d80d106e28a3c2a78f530166709b289fb400 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1436e98d8caa65cd00ce2d1c73c3d80d106e28a3c2a78f530166709b289fb400->enter($__internal_1436e98d8caa65cd00ce2d1c73c3d80d106e28a3c2a78f530166709b289fb400_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_f5c1112921ee2f6c54171f3ec701c41aa8125d625153dbfcaed723fdfa4db3bc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f5c1112921ee2f6c54171f3ec701c41aa8125d625153dbfcaed723fdfa4db3bc->enter($__internal_f5c1112921ee2f6c54171f3ec701c41aa8125d625153dbfcaed723fdfa4db3bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_eccbbf30c24d45c4c5f0fdec201c79202a3c6ae64d7904efce784b47553bca75 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_eccbbf30c24d45c4c5f0fdec201c79202a3c6ae64d7904efce784b47553bca75->enter($__internal_eccbbf30c24d45c4c5f0fdec201c79202a3c6ae64d7904efce784b47553bca75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <div class=\"box box-success box-solid\">
         <div class=\"box-header with-border\">
             <h3 class=\"box-title\"><span class=\"fa fa-chain\"></span> Processamento CGPO</h3>
         </div>
+        ";
+        // line 8
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
+        echo "
         <div class=\"table-responsive\">
-        <div class=\"box-body\">
-            <label>Ano de Exercício:</label>
-            <select name=\"nuAnoExercicio\" id=\"IdAnoExercicio\">
-                <option value=\"\">Selecione o Ano</option>
-                ";
-        // line 13
+            <div class=\"box-body\">
+                <div class=\"row\">
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label>Ano de Exercício</label><br>
+                            <select class=\"form-control\" name=\"nuAnoExercicio\" id=\"IdAnoExercicio\">
+                                <option value=\"\">Selecione o Ano</option>
+                                ";
+        // line 17
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["anoExercicio"] ?? $this->getContext($context, "anoExercicio")));
         foreach ($context['_seq'] as $context["_key"] => $context["ano"]) {
-            // line 14
-            echo "                    <option value=\"";
+            // line 18
+            echo "                                    <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["ano"], "nuAnoExercicio", array()), "html", null, true);
             echo "\"";
             if ((($context["nuAno"] ?? $this->getContext($context, "nuAno")) == $this->getAttribute($context["ano"], "nuAnoExercicio", array()))) {
@@ -71,78 +78,125 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
             echo ">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["ano"], "nuAnoExercicio", array()), "html", null, true);
             echo "</option>
-                ";
+                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ano'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
-        echo "            </select>
-            <table id=\"lista\" class=\"table table-bordered table-hover\">
-                <thead>
-                <tr>
-                    <!-- <th>CÓD</th> -->
-                    <!-- <th>Ano de Exercício</th> -->
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R\$ atualizado</th>
-                    <th>R\$ Empenhado</th>
-                    <th>R\$ Saldo</th>
-                    <th>R\$ Processado</th>
-                    <!-- <th>Atividades</th> -->
-                    <th>Itens</th>
-                    <th>Processamento</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <!--
-                <tfoot>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R\$ atualizado</th>
-                    <th>R\$ Empenhado</th>
-                    <th>R\$ Saldo</th>
-                    <th>R\$ Processado</th>
-                    <th>Atividades</th>
-                    <th>Processamento</th>
-                </tr>
-                </tfoot>
-                -->
+        // line 20
+        echo "                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            ";
+        // line 26
+        echo "                            ";
+        // line 27
+        echo "                            ";
+        // line 28
+        echo "
+                            <label class=\"control-label\">Departamento</label>
+                            <select class=\"form-control\" id=\"departamento\">
+                                <option value=\"\">Selecione</option>
+                                <option value=\"CGPO\">Nome do Departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Ação Orçamentária</label>
+                            <select class=\"form-control\" id=\"acaoOrcamentaria\">
+                                <option value=\"\">Selecione</option>
+                                <option value=\"1\">Número da Ação Orçamentária</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <label class=\"control-label\">PO</label>
+                        <select class=\"form-control\">
+                            <option value=\"\" selected=selected>Selecione</option>
+                            <option value=\"\">Número do Plano Orçamentária</option>
+                        </select>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <label class=\"control-label\">Tipo de Despesa</label>
+                        <select class=\"form-control\">
+                            <option value=\"\" selected=selected>Selecione</option>
+                            <option value=\"\">Tipo de Despesa</option>
+                        </select>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Nº da Proposta</label>
+                            <input class=\"form-control\" type=\"number\">
+                        </div>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-md-8 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Descrição do PO</label>
+                            <input class=\"form-control\" type=\"text\">
+                        </div>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-md-8 col-sm-6 col-xs-12\">
+                        <button type=\"button\" id=\"btnPesquisarProcessamento\" class=\"btn btn-success\">Pesquisar</button>
+                        <a class=\"btn btn-primary\">Voltar</a>
+                    </div>
+                </div>
 
-            </table>
+                <br>
+                <table id=\"lista\" class=\"table table-bordered table-hover\">
+                    <thead>
+                    <tr>
+                        <!-- <th>CÓD</th> -->
+                        <!-- <th>Ano de Exercício</th> -->
+                        <!-- <th>Dep. Vinculados</th> -->
+                        <!-- <th>Tipo de Despesa</th> -->
+                        <!-- <th>R\$ Processado</th> -->
+                        <!-- <th>Atividades</th> -->
+                        <!-- <th>Itens</th> -->
+                        <th>Departamento</th>
+                        <th>Ação/PO</th>
+                        <th>Tipo de Despesa</th>
+                        <th>Descrição do PO</th>
+                        <th>Dotação Atualizada</th>
+                        <th>Saldo</th>
+                        <th>Selecionar Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                </table>
 
+            </div>
         </div>
-    </div>
+        ";
+        // line 106
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
+        echo "
     </div>
 ";
         
-        $__internal_f5c1112921ee2f6c54171f3ec701c41aa8125d625153dbfcaed723fdfa4db3bc->leave($__internal_f5c1112921ee2f6c54171f3ec701c41aa8125d625153dbfcaed723fdfa4db3bc_prof);
+        $__internal_eccbbf30c24d45c4c5f0fdec201c79202a3c6ae64d7904efce784b47553bca75->leave($__internal_eccbbf30c24d45c4c5f0fdec201c79202a3c6ae64d7904efce784b47553bca75_prof);
 
         
-        $__internal_491a53badc48a105cc8628357016bfce11395e59bcfefa6bde8ed83e84861a75->leave($__internal_491a53badc48a105cc8628357016bfce11395e59bcfefa6bde8ed83e84861a75_prof);
+        $__internal_1436e98d8caa65cd00ce2d1c73c3d80d106e28a3c2a78f530166709b289fb400->leave($__internal_1436e98d8caa65cd00ce2d1c73c3d80d106e28a3c2a78f530166709b289fb400_prof);
 
     }
 
-    // line 64
+    // line 109
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_6c67b8902e0edc469c5c11e929a50c43a23cc7ea0a1768569cdb0716e1a0e42b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6c67b8902e0edc469c5c11e929a50c43a23cc7ea0a1768569cdb0716e1a0e42b->enter($__internal_6c67b8902e0edc469c5c11e929a50c43a23cc7ea0a1768569cdb0716e1a0e42b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_213cd1f7aa8a07833c0569d016231190f30c0a18222ace8b38f8ee91f2e44323 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_213cd1f7aa8a07833c0569d016231190f30c0a18222ace8b38f8ee91f2e44323->enter($__internal_213cd1f7aa8a07833c0569d016231190f30c0a18222ace8b38f8ee91f2e44323_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_a8c5561c70aa9a152ce5c56b15ea6fbea78cdb4922f95c09bcc91e4f72900754 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a8c5561c70aa9a152ce5c56b15ea6fbea78cdb4922f95c09bcc91e4f72900754->enter($__internal_a8c5561c70aa9a152ce5c56b15ea6fbea78cdb4922f95c09bcc91e4f72900754_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_31206fde908ff599580cfbc2284964ddd4f9218151beee62052e7a0b535dec1f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_31206fde908ff599580cfbc2284964ddd4f9218151beee62052e7a0b535dec1f->enter($__internal_31206fde908ff599580cfbc2284964ddd4f9218151beee62052e7a0b535dec1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 65
+        // line 110
         echo "    <script>
         \$(function () {
             \$lista = \$('#lista').DataTable( {
@@ -150,36 +204,29 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
                     url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
                 },
                 ";
-        // line 71
+        // line 116
         if ( !(null === ($context["nuAno"] ?? $this->getContext($context, "nuAno")))) {
             echo "  \"ajax\": Routing.generate('json_lista_processamento', {'anoExercicio':";
             echo twig_escape_filter($this->env, ($context["nuAno"] ?? $this->getContext($context, "nuAno")), "html", null, true);
             echo " }), ";
         }
-        // line 72
+        // line 117
         echo "                'iDisplayLength': 10,
                 'iDisplayStart': 0,
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : true,
+                'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
                 \"bProcessing\": true,
-
                 \"aoColumns\" : [
-                    //{ \"mData\": 0 },
-                    //{ \"mData\": 1 },
-                    { \"mData\": 2 },
-                    { \"mData\": 3 },
-                    { \"mData\": 4 },
-                    { \"mData\": 5 },
-                    { \"mData\": 6 },
-                    { \"mData\": 7 },
-                    { \"mData\": 8 },
-                    { \"mData\": 9 },
-                    { \"mData\": 10 },
-                    { \"mData\": 11 },
+                    { \"mData\": 4 }, //Departamento
+                    { \"mData\": 2 }, //Ação/PO
+                    { \"mData\": 3 }, //Tipo de Despesa
+                    { \"mData\": 6 }, //Denominação
+                    { \"mData\": 7 }, //Valor Atualizado
+                    { \"mData\": 9 }, //Saldo
                     { \"mData\": null,
                         \"bSortable\": false,
                         \"mRender\": function(data, type, full) {
@@ -189,9 +236,13 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
                 ]
             } );
 
-            \$(\"#IdAnoExercicio\").change(function () {
+            \$(\"#btnPesquisarProcessamento\").click(function () {
                 if (\$(\"#IdAnoExercicio\").val() != \"\") {
-                    \$lista.ajax.url( Routing.generate('json_lista_processamento', {'anoExercicio': \$(\"#IdAnoExercicio\").val()}) ).load();
+                    \$lista.ajax.url(Routing.generate('json_lista_processamento', {
+                        'departamento': \$(\"#departamento\").val(),
+                        'anoExercicio': \$(\"#IdAnoExercicio\").val(),
+                        'acaoOrcamentaria': \$(\"#acaoOrcamentaria\").val()
+                    })).load();
                 }
             });
 
@@ -199,10 +250,10 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
     </script>
 ";
         
-        $__internal_a8c5561c70aa9a152ce5c56b15ea6fbea78cdb4922f95c09bcc91e4f72900754->leave($__internal_a8c5561c70aa9a152ce5c56b15ea6fbea78cdb4922f95c09bcc91e4f72900754_prof);
+        $__internal_31206fde908ff599580cfbc2284964ddd4f9218151beee62052e7a0b535dec1f->leave($__internal_31206fde908ff599580cfbc2284964ddd4f9218151beee62052e7a0b535dec1f_prof);
 
         
-        $__internal_6c67b8902e0edc469c5c11e929a50c43a23cc7ea0a1768569cdb0716e1a0e42b->leave($__internal_6c67b8902e0edc469c5c11e929a50c43a23cc7ea0a1768569cdb0716e1a0e42b_prof);
+        $__internal_213cd1f7aa8a07833c0569d016231190f30c0a18222ace8b38f8ee91f2e44323->leave($__internal_213cd1f7aa8a07833c0569d016231190f30c0a18222ace8b38f8ee91f2e44323_prof);
 
     }
 
@@ -218,7 +269,7 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
 
     public function getDebugInfo()
     {
-        return array (  160 => 72,  154 => 71,  146 => 65,  137 => 64,  80 => 16,  65 => 14,  61 => 13,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  214 => 117,  208 => 116,  200 => 110,  191 => 109,  178 => 106,  98 => 28,  96 => 27,  94 => 26,  87 => 20,  72 => 18,  68 => 17,  56 => 8,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -238,60 +289,105 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
         <div class=\"box-header with-border\">
             <h3 class=\"box-title\"><span class=\"fa fa-chain\"></span> Processamento CGPO</h3>
         </div>
+        {{ form_start(form) }}
         <div class=\"table-responsive\">
-        <div class=\"box-body\">
-            <label>Ano de Exercício:</label>
-            <select name=\"nuAnoExercicio\" id=\"IdAnoExercicio\">
-                <option value=\"\">Selecione o Ano</option>
-                {% for ano in anoExercicio %}
-                    <option value=\"{{ ano.nuAnoExercicio }}\"{% if nuAno == ano.nuAnoExercicio %} selected=\"selected\"{% endif %}>{{ ano.nuAnoExercicio }}</option>
-                {% endfor %}
-            </select>
-            <table id=\"lista\" class=\"table table-bordered table-hover\">
-                <thead>
-                <tr>
-                    <!-- <th>CÓD</th> -->
-                    <!-- <th>Ano de Exercício</th> -->
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R\$ atualizado</th>
-                    <th>R\$ Empenhado</th>
-                    <th>R\$ Saldo</th>
-                    <th>R\$ Processado</th>
-                    <!-- <th>Atividades</th> -->
-                    <th>Itens</th>
-                    <th>Processamento</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <!--
-                <tfoot>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R\$ atualizado</th>
-                    <th>R\$ Empenhado</th>
-                    <th>R\$ Saldo</th>
-                    <th>R\$ Processado</th>
-                    <th>Atividades</th>
-                    <th>Processamento</th>
-                </tr>
-                </tfoot>
-                -->
+            <div class=\"box-body\">
+                <div class=\"row\">
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label>Ano de Exercício</label><br>
+                            <select class=\"form-control\" name=\"nuAnoExercicio\" id=\"IdAnoExercicio\">
+                                <option value=\"\">Selecione o Ano</option>
+                                {% for ano in anoExercicio %}
+                                    <option value=\"{{ ano.nuAnoExercicio }}\"{% if nuAno == ano.nuAnoExercicio %} selected=\"selected\"{% endif %}>{{ ano.nuAnoExercicio }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            {#{{ form_label(form.nuAnoExercicio) }}#}
+                            {#{{ form_errors(form.nuAnoExercicio) }}#}
+                            {#{{ form_widget(form.nuAnoExercicio) }}#}
 
-            </table>
+                            <label class=\"control-label\">Departamento</label>
+                            <select class=\"form-control\" id=\"departamento\">
+                                <option value=\"\">Selecione</option>
+                                <option value=\"CGPO\">Nome do Departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Ação Orçamentária</label>
+                            <select class=\"form-control\" id=\"acaoOrcamentaria\">
+                                <option value=\"\">Selecione</option>
+                                <option value=\"1\">Número da Ação Orçamentária</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <label class=\"control-label\">PO</label>
+                        <select class=\"form-control\">
+                            <option value=\"\" selected=selected>Selecione</option>
+                            <option value=\"\">Número do Plano Orçamentária</option>
+                        </select>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <label class=\"control-label\">Tipo de Despesa</label>
+                        <select class=\"form-control\">
+                            <option value=\"\" selected=selected>Selecione</option>
+                            <option value=\"\">Tipo de Despesa</option>
+                        </select>
+                    </div>
+                    <div class=\"col-md-2 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Nº da Proposta</label>
+                            <input class=\"form-control\" type=\"number\">
+                        </div>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-md-8 col-sm-6 col-xs-12\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Descrição do PO</label>
+                            <input class=\"form-control\" type=\"text\">
+                        </div>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-md-8 col-sm-6 col-xs-12\">
+                        <button type=\"button\" id=\"btnPesquisarProcessamento\" class=\"btn btn-success\">Pesquisar</button>
+                        <a class=\"btn btn-primary\">Voltar</a>
+                    </div>
+                </div>
 
+                <br>
+                <table id=\"lista\" class=\"table table-bordered table-hover\">
+                    <thead>
+                    <tr>
+                        <!-- <th>CÓD</th> -->
+                        <!-- <th>Ano de Exercício</th> -->
+                        <!-- <th>Dep. Vinculados</th> -->
+                        <!-- <th>Tipo de Despesa</th> -->
+                        <!-- <th>R\$ Processado</th> -->
+                        <!-- <th>Atividades</th> -->
+                        <!-- <th>Itens</th> -->
+                        <th>Departamento</th>
+                        <th>Ação/PO</th>
+                        <th>Tipo de Despesa</th>
+                        <th>Descrição do PO</th>
+                        <th>Dotação Atualizada</th>
+                        <th>Saldo</th>
+                        <th>Selecionar Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                </table>
+
+            </div>
         </div>
-    </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}
 {% block javascripts %}
@@ -306,25 +402,18 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
                 'iDisplayStart': 0,
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : true,
+                'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
                 \"bProcessing\": true,
-
                 \"aoColumns\" : [
-                    //{ \"mData\": 0 },
-                    //{ \"mData\": 1 },
-                    { \"mData\": 2 },
-                    { \"mData\": 3 },
-                    { \"mData\": 4 },
-                    { \"mData\": 5 },
-                    { \"mData\": 6 },
-                    { \"mData\": 7 },
-                    { \"mData\": 8 },
-                    { \"mData\": 9 },
-                    { \"mData\": 10 },
-                    { \"mData\": 11 },
+                    { \"mData\": 4 }, //Departamento
+                    { \"mData\": 2 }, //Ação/PO
+                    { \"mData\": 3 }, //Tipo de Despesa
+                    { \"mData\": 6 }, //Denominação
+                    { \"mData\": 7 }, //Valor Atualizado
+                    { \"mData\": 9 }, //Saldo
                     { \"mData\": null,
                         \"bSortable\": false,
                         \"mRender\": function(data, type, full) {
@@ -334,9 +423,13 @@ class __TwigTemplate_993e6c3e3f6d89c54983f8f6cf543d90849b3fb0333c85527b15fd05181
                 ]
             } );
 
-            \$(\"#IdAnoExercicio\").change(function () {
+            \$(\"#btnPesquisarProcessamento\").click(function () {
                 if (\$(\"#IdAnoExercicio\").val() != \"\") {
-                    \$lista.ajax.url( Routing.generate('json_lista_processamento', {'anoExercicio': \$(\"#IdAnoExercicio\").val()}) ).load();
+                    \$lista.ajax.url(Routing.generate('json_lista_processamento', {
+                        'departamento': \$(\"#departamento\").val(),
+                        'anoExercicio': \$(\"#IdAnoExercicio\").val(),
+                        'acaoOrcamentaria': \$(\"#acaoOrcamentaria\").val()
+                    })).load();
                 }
             });
 
