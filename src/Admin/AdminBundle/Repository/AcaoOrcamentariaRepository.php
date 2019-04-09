@@ -18,12 +18,25 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
     public function listarAnoExercicio(){
 
         $rs = $this->createQueryBuilder('a')
+            ->select('a.nuAnoExercicio')
+            ->where('a.stRegistroAtivo = :stRegistroAtivo')
+            ->setParameter('stRegistroAtivo', 'S')
+            ->orderBy('a.nuAnoExercicio', 'desc')
+            ->distinct()
+            ->getQuery()
+            ->getResult();
+
+        return $rs;
+    }
+
+    public function listarAnoExerciciForm(){
+
+        $rs = $this->createQueryBuilder('a')
             ->select('distinct a.nuAnoExercicio')
             ->where('a.stRegistroAtivo = :stRegistroAtivo')
             ->setParameter('stRegistroAtivo', 'S')
             ->orderBy('a.nuAnoExercicio', 'desc')
-            ->getQuery()
-            ->getResult();
+            ->getQuery()->getResult();
 
         return $rs;
     }
@@ -242,6 +255,89 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
         return $rs;
     }
 
+
+
+
+    public function consultaProcessamento($data){
+
+        $sql = '
+                SELECT
+                    acao.CO_SEQ_ACAO_ORCAMENTARIA AS "id",
+                    acao.CO_TIPO_DESPESA AS "coTipoDespesa",
+                    acao.CO_DEPARTAMENTO AS "coDepartamento",
+                    acao.NU_ANO_EXERCICIO AS "nuAnoExercicio",
+                    acao.NU_ACAO_ORCAMENTARIA AS "nuAcaoOrcamentaria",
+                    acao.NU_PLANO_ORCAMENTARIO AS "nuPlanoOrcamentario",
+                    acao.DS_DENOMINACAO AS "dsDenominacao",
+                    acao.VL_EXECUT_EXERCICIO_ANTERIOR AS "vlExecutExercicioAnterior",
+                    acao.VL_APROVADO AS "vlAprovado",
+                    acao.VL_BLOQUEADO AS "vlBloqueado",
+                    acao.VL_ATUALIZADO AS "vlAtualizado",
+                    acao.VL_CAPITAL AS "vlCapital",
+                    acao.VL_DISPONIVEL AS "vlDiponivel",
+                    acao.VL_DESPESA_EMPENHADA AS "vlDespesaEmpenhada",
+                    acao.VL_DEPESA_EMPENHADA_ALIQUIDAR AS "vlDepesaEmpenhadaAliquidar",
+                    acao.VL_DESPESA_LIQUIDADA AS "vlDespesaLiquidada",
+                    acao.VL_DESPESA_PAGA AS "vlDespesaPaga",
+                    tpDespesa.DS_TIPO_DESPESA AS "dsTipoDespesa",
+                    departamento.DS_DEPARTAMENTO AS "dsDepartamento",
+                    departamento.SG_DEPARTAMENTO AS "sgDepartamento",
+                    NVL(acao.VL_ATUALIZADO, 0) - NVL(atividade.VL_EXECUTAR_EXERCICIO, 0) AS "vlSaldo",
+                    NVL(atividade.QT_ATIVIDADE, 0) AS "qtAtividade",
+                    atividade.VL_PROCESSADO_CGPO AS "vlProcessadoCgpo",
+                    LISTAGG(departamento2.SG_DEPARTAMENTO, \'; \') WITHIN GROUP (ORDER BY departamento2.SG_DEPARTAMENTO ASC)  AS "sgDepartamentoVinculado"
+                FROM
+                    DBPROPOSTASAS.TB_ACAO_ORCAMENTARIA acao
+                    INNER JOIN DBPROPOSTASAS.TB_TIPO_DESPESA tpDespesa ON (tpDespesa.CO_SEQ_TIPO_DESPESA = acao.CO_TIPO_DESPESA AND tpDespesa.ST_REGISTRO_ATIVO   = :stRegistroAtivo)
+                    LEFT JOIN DBPROPOSTASAS.TB_DEPARTAMENTO departamento ON (departamento.CO_SEQ_DEPARTAMENTO = acao.CO_DEPARTAMENTO AND departamento.ST_REGISTRO_ATIVO   = :stRegistroAtivo)
+                    LEFT JOIN DBPROPOSTASAS.RL_ACAOORCAMENTAR_DEPARTAMENTO rlacaodep ON (rlacaodep.CO_ACAO_ORCAMENTARIA = acao.CO_SEQ_ACAO_ORCAMENTARIA AND rlacaodep.ST_REGISTRO_ATIVO    = :stRegistroAtivo)
+                    LEFT JOIN DBPROPOSTASAS.TB_DEPARTAMENTO departamento2 ON (departamento2.CO_SEQ_DEPARTAMENTO = rlacaodep.CO_DEPARTAMENTO AND departamento2.ST_REGISTRO_ATIVO   = :stRegistroAtivo)
+                    INNER JOIN (
+                        SELECT
+                            CO_ACAO_ORCAMENTARIA, COUNT(CO_SEQ_ATIVIDADE_PLANOUSO) AS QT_ATIVIDADE, SUM(NVL(VL_EXECUTAR_EXERCICIO, 0)) AS VL_EXECUTAR_EXERCICIO, SUM(NVL(VL_PROCESSADO_CGPO, 0)) AS VL_PROCESSADO_CGPO
+                        FROM
+                            DBPROPOSTASAS.TB_ATIVIDADE_PLANOUSO
+                        WHERE
+                            ST_REGISTRO_ATIVO = :stRegistroAtivo AND NU_ANO_EXERCICIO = :nuAnoExercicio
+                        GROUP BY
+                            CO_ACAO_ORCAMENTARIA
+                    ) atividade ON (atividade.CO_ACAO_ORCAMENTARIA = acao.CO_SEQ_ACAO_ORCAMENTARIA)
+                    WHERE
+                      acao.NU_ANO_EXERCICIO  = :nuAnoExercicio AND acao.ST_REGISTRO_ATIVO   = :stRegistroAtivo
+                GROUP BY
+                    acao.CO_SEQ_ACAO_ORCAMENTARIA,
+                    acao.CO_TIPO_DESPESA,
+                    acao.CO_DEPARTAMENTO,
+                    acao.NU_ANO_EXERCICIO,
+                    acao.NU_ACAO_ORCAMENTARIA,
+                    acao.NU_PLANO_ORCAMENTARIO,
+                    acao.DS_DENOMINACAO,
+                    acao.VL_EXECUT_EXERCICIO_ANTERIOR,
+                    acao.VL_APROVADO,
+                    acao.VL_BLOQUEADO,
+                    acao.VL_ATUALIZADO,
+                    acao.VL_CAPITAL,
+                    acao.VL_DISPONIVEL,
+                    acao.VL_DESPESA_EMPENHADA,
+                    acao.VL_DEPESA_EMPENHADA_ALIQUIDAR,
+                    acao.VL_DESPESA_LIQUIDADA,
+                    acao.VL_DESPESA_PAGA,
+                    tpDespesa.DS_TIPO_DESPESA,
+                    departamento.DS_DEPARTAMENTO,
+                    departamento.SG_DEPARTAMENTO,
+                    atividade.VL_EXECUTAR_EXERCICIO,
+                    atividade.QT_ATIVIDADE,
+                    atividade.VL_PROCESSADO_CGPO
+                ORDER BY
+                    acao.NU_ACAO_ORCAMENTARIA ASC,
+                    acao.NU_PLANO_ORCAMENTARIO ASC,
+                    departamento.SG_DEPARTAMENTO ASC';
+
+        $em = $this->getEntityManager();
+        $rs = $em->getConnection()->executeQuery($sql, array('stRegistroAtivo' => 'S', 'nuAnoExercicio' => $data['processamento']['nuAnoExercicio']));
+        return $rs->fetchAll();
+    }
+
     public function relatorioPorAcao($nuAnoExercicio){
 
         $rs = $this->createQueryBuilder('a')
@@ -319,4 +415,5 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
 
         return $rs;
     }
+
 }
