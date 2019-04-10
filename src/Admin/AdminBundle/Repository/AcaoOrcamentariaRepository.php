@@ -284,8 +284,10 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                     departamento.SG_DEPARTAMENTO AS "sgDepartamento",
                     NVL(acao.VL_ATUALIZADO, 0) - NVL(atividade.VL_EXECUTAR_EXERCICIO, 0) AS "vlSaldo",
                     NVL(atividade.QT_ATIVIDADE, 0) AS "qtAtividade",
-                    atividade.VL_PROCESSADO_CGPO AS "vlProcessadoCgpo",
-                    LISTAGG(departamento2.SG_DEPARTAMENTO, \'; \') WITHIN GROUP (ORDER BY departamento2.SG_DEPARTAMENTO ASC)  AS "sgDepartamentoVinculado"
+                   atividade.VL_EXECUTAR_EXERCICIO vlExecutarExercicio,
+                   acao.VL_ATUALIZADO vlAtualizado,
+                    atividade.VL_PROCESSADO_CGPO AS "vlProcessadoCgpo"
+                  --  LISTAGG(departamento2.SG_DEPARTAMENTO, \'; \') WITHIN GROUP (ORDER BY departamento2.SG_DEPARTAMENTO ASC)  AS "sgDepartamentoVinculado"
                 FROM
                     DBPROPOSTASAS.TB_ACAO_ORCAMENTARIA acao
                     INNER JOIN DBPROPOSTASAS.TB_TIPO_DESPESA tpDespesa ON (tpDespesa.CO_SEQ_TIPO_DESPESA = acao.CO_TIPO_DESPESA AND tpDespesa.ST_REGISTRO_ATIVO   = :stRegistroAtivo)
@@ -302,8 +304,31 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                         GROUP BY
                             CO_ACAO_ORCAMENTARIA
                     ) atividade ON (atividade.CO_ACAO_ORCAMENTARIA = acao.CO_SEQ_ACAO_ORCAMENTARIA)
+                    inner join DBPROPOSTASAS.TB_ATIVIDADE_PLANOUSO pl on pl.co_acao_orcamentaria = atividade.CO_ACAO_ORCAMENTARIA
                     WHERE
-                      acao.NU_ANO_EXERCICIO  = :nuAnoExercicio AND acao.ST_REGISTRO_ATIVO   = :stRegistroAtivo
+                      acao.NU_ANO_EXERCICIO  = :nuAnoExercicio AND acao.ST_REGISTRO_ATIVO   = :stRegistroAtivo';
+
+        if(!empty($data['processamento']['nuProposta'])){
+            $sql .=' and pl.nu_proposta like \'%'. $data['processamento']['nuProposta']. '%\'';
+        } 
+        
+        if(!empty($data['processamento']['dsTipoDespesa'])){
+            $sql .=' and acao.CO_TIPO_DESPESA = '. $data['processamento']['dsTipoDespesa'];
+        }
+
+        if(!empty($data['processamento']['coDepartamento'])){
+            $sql .=' and departamento.CO_SEQ_DEPARTAMENTO = '. $data['processamento']['coDepartamento'];
+        }
+
+        if(!empty($data['processamento']['dsDescicao'])){
+            $sql .=' and acao.DS_DENOMINACAO like \'%'. $data['processamento']['dsDescicao']. '%\'';
+        }
+
+        if(!empty($data['processamento']['nuPlanoOrcamentario'])){
+            $sql .=' and acao.NU_PLANO_ORCAMENTARIO like \'%'. $data['processamento']['nuPlanoOrcamentario']. '%\'';
+        }
+
+        $sql .= '
                 GROUP BY
                     acao.CO_SEQ_ACAO_ORCAMENTARIA,
                     acao.CO_TIPO_DESPESA,
@@ -332,6 +357,7 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                     acao.NU_ACAO_ORCAMENTARIA ASC,
                     acao.NU_PLANO_ORCAMENTARIO ASC,
                     departamento.SG_DEPARTAMENTO ASC';
+
 
         $em = $this->getEntityManager();
         $rs = $em->getConnection()->executeQuery($sql, array('stRegistroAtivo' => 'S', 'nuAnoExercicio' => $data['processamento']['nuAnoExercicio']));

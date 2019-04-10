@@ -6,6 +6,7 @@ use Admin\AdminBundle\Entity\AcaoOrcamentaria;
 use Admin\AdminBundle\Entity\AtividadePlanoUso;
 use Admin\AdminBundle\Form\AtividadePlanoUsoType;
 use Admin\AdminBundle\Form\ProcessamentoType;
+use ClassesWithParents\D;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,15 +21,39 @@ class ProcessamentoController extends Controller
     {
 
         $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class);
-        $anoExercicio = $acaoorcamentaria->listarAnoExercicio();
-    
-        $form = $this->createForm(ProcessamentoType::class, null);
+        $anoExercicio = $acaoorcamentaria->listarAnoExerciciForm();
+
+        $form = $this->createForm(ProcessamentoType::class);
         $form->handleRequest($request);
+
+        if ($form->isValid() && $form->isSubmitted()){
+
+            $data = $request->request->all('processamento');
+
+
+            $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)
+                ->consultaProcessamento($data);
+
+
+            try{
+//                $doctrine->persist($postData);
+//                $doctrine->flush();
+//                $doctrine->getConnection()->commit();
+                $this->addFlash("success", "Instrumento registrado com sucesso!");
+            }catch (\Exception $e)            {
+//                $doctrine->getConnection()->rollBack();
+                $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");
+                throw $e;
+            }
+
+           // return $this->redirectToRoute('instrumento');
+        }
 
         return $this->render('@Admin/Processamento/index.html.twig', array(
             'anoExercicio' => $anoExercicio,
             'title_page' => 'Processamento',
             'nuAno' => $nuAno,
+            'acaoorcamentaria' => $acaoorcamentaria,
             'form' => $form->createView()
         ));
     }

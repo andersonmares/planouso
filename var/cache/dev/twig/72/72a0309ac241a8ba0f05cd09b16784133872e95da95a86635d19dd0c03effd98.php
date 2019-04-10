@@ -22,29 +22,29 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f48653a15fa38eac9d4d4ac6619d8fc7f9bcc738785c7c1dee9e7ddd7ff51a46 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f48653a15fa38eac9d4d4ac6619d8fc7f9bcc738785c7c1dee9e7ddd7ff51a46->enter($__internal_f48653a15fa38eac9d4d4ac6619d8fc7f9bcc738785c7c1dee9e7ddd7ff51a46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
+        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208->enter($__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
 
-        $__internal_6895f1a216ea6b6c15aa0149319cf9f44026e3d8d8098cbe715ec6ac952bb2a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6895f1a216ea6b6c15aa0149319cf9f44026e3d8d8098cbe715ec6ac952bb2a5->enter($__internal_6895f1a216ea6b6c15aa0149319cf9f44026e3d8d8098cbe715ec6ac952bb2a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
+        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26->enter($__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f48653a15fa38eac9d4d4ac6619d8fc7f9bcc738785c7c1dee9e7ddd7ff51a46->leave($__internal_f48653a15fa38eac9d4d4ac6619d8fc7f9bcc738785c7c1dee9e7ddd7ff51a46_prof);
+        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208->leave($__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208_prof);
 
         
-        $__internal_6895f1a216ea6b6c15aa0149319cf9f44026e3d8d8098cbe715ec6ac952bb2a5->leave($__internal_6895f1a216ea6b6c15aa0149319cf9f44026e3d8d8098cbe715ec6ac952bb2a5_prof);
+        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26->leave($__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4a77da26aa4c36cd8588face67cf83819397e15a31408655b46d94404b31592c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4a77da26aa4c36cd8588face67cf83819397e15a31408655b46d94404b31592c->enter($__internal_4a77da26aa4c36cd8588face67cf83819397e15a31408655b46d94404b31592c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644->enter($__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_424aa4eef0d45e3acf9bf1e6f501e6d5a68d8804a3da76359b356d209789483a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_424aa4eef0d45e3acf9bf1e6f501e6d5a68d8804a3da76359b356d209789483a->enter($__internal_424aa4eef0d45e3acf9bf1e6f501e6d5a68d8804a3da76359b356d209789483a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3->enter($__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -61,82 +61,77 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
                     <tr>
                         <!-- <th>CÓD</th> -->
                         <!-- <th>Prioridade</th> -->
-                        <th>Vinculo do Planejamento</th>
-                        <th>Instrumento</th>
-                        <th>Programa</th>
-                        <th>Item</th>
-                        <th>Exercício</th>
-                        <th>Tipo de Atividade</th>
-                        <th>Proposta</th>
-                        <th>UF</th>
-                        <th>Município</th>
-                        <th>Valor total</th>
+                        ";
+        // line 17
+        echo "                        ";
+        // line 18
+        echo "                        <th>Status</th>
+                        <th>Política/Programa/Rede</th>
+                        <th>Componente</th>
+                        ";
+        // line 22
+        echo "                        <th>Exercício</th>
+                        ";
+        // line 24
+        echo "                        ";
+        // line 25
+        echo "                        ";
+        // line 26
+        echo "                        ";
+        // line 27
+        echo "                        <th>Valor total</th>
                         <th>Valor Ano Vigente</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
                 ";
-        // line 31
+        // line 33
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["atividadePlanoUso"] ?? $this->getContext($context, "atividadePlanoUso")));
         foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
-            // line 32
-            echo "                    <tr>
-                       <!--  <td>";
-            // line 33
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "id", array()), "html", null, true);
-            echo "</td> -->
-                        <!-- <td>";
             // line 34
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "nuPrioridade", array()), "html", null, true);
-            echo "</td> -->
-                        <td>";
-            // line 35
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsVinculoPlanejamento", array()), "html", null, true);
-            echo "</td>
-                        <td >";
+            echo "                    <tr>
+                        ";
             // line 36
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsTipoInstrumento", array()), "html", null, true);
-            echo "</td>
-                        <td >";
+            echo "                        ";
             // line 37
+            echo "                        <td>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "nuPrioridade", array()), "html", null, true);
+            echo "</td> <!-- Apenas para teste para popular a grid-->
+                        ";
+            // line 39
+            echo "                        ";
+            // line 40
+            echo "                        <td >";
             echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsRedePrograma", array()), "html", null, true);
             echo "</td>
-                        <td >";
-            // line 38
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsAtividade", array()), "html", null, true);
-            echo "</td>
-                        <td >";
-            // line 39
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "nuAnoExercicioAtividade", array()), "html", null, true);
-            echo "</td>
-                        <td >";
-            // line 40
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsTipoAtividade", array()), "html", null, true);
-            echo "</td>
-                        <td >";
-            // line 41
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "nuProposta", array()), "html", null, true);
-            echo "</td>
-                        <td >";
+                        ";
             // line 42
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "sgUf", array()), "html", null, true);
-            echo "</td>
+            echo "                        <td >";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "dsAtividade", array()), "html", null, true);
+            echo "</td> <!-- Apenas para teste para popular a grid-->
                         <td >";
             // line 43
-            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "noMunicipioAcentuado", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["a"], "nuAnoExercicioAtividade", array()), "html", null, true);
             echo "</td>
-                        <td >";
-            // line 44
+                        ";
+            // line 45
+            echo "                        ";
+            // line 46
+            echo "                        ";
+            // line 47
+            echo "                        ";
+            // line 48
+            echo "                        <td >";
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute($context["a"], "vlTotal", array()), 2, ",", "."), "html", null, true);
             echo "</td>
                         <td >";
-            // line 45
+            // line 49
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute($context["a"], "vlExecutarExercicio", array()), 2, ",", "."), "html", null, true);
             echo "</td>
                         <td><a class=\"btn btn-success\" href=\"";
-            // line 46
+            // line 50
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("processamento_edit", array("idAcao" => $this->getAttribute(($context["acaoOrcamentaria"] ?? $this->getContext($context, "acaoOrcamentaria")), "id", array()), "id" => $this->getAttribute($context["a"], "id", array()))), "html", null, true);
             echo "\"><li class=\"fa fa-edit\"> </li></a></td>
                     </tr>
@@ -145,7 +140,7 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 53
         echo "                </tbody>
                 <!--
                 <tfoot>
@@ -173,28 +168,28 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
     </div>
 
     <a class=\"btn btn-primary\" href=\"";
-        // line 75
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("processamento_index", array("nuAno" => $this->getAttribute(($context["acaoOrcamentaria"] ?? $this->getContext($context, "acaoOrcamentaria")), "nuAnoExercicio", array()))), "html", null, true);
         echo "\">Voltar</a>
 ";
         
-        $__internal_424aa4eef0d45e3acf9bf1e6f501e6d5a68d8804a3da76359b356d209789483a->leave($__internal_424aa4eef0d45e3acf9bf1e6f501e6d5a68d8804a3da76359b356d209789483a_prof);
+        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3->leave($__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3_prof);
 
         
-        $__internal_4a77da26aa4c36cd8588face67cf83819397e15a31408655b46d94404b31592c->leave($__internal_4a77da26aa4c36cd8588face67cf83819397e15a31408655b46d94404b31592c_prof);
+        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644->leave($__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644_prof);
 
     }
 
-    // line 77
+    // line 81
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_a3ef8bd7e8ae267da46ab80ea26e7ce9db1971b4b375733cca6dbabe31919163 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a3ef8bd7e8ae267da46ab80ea26e7ce9db1971b4b375733cca6dbabe31919163->enter($__internal_a3ef8bd7e8ae267da46ab80ea26e7ce9db1971b4b375733cca6dbabe31919163_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308->enter($__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_d4919a1789dba56191088c82f6944b7f7cd0ba1d7d389a2d3cea6736856220c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d4919a1789dba56191088c82f6944b7f7cd0ba1d7d389a2d3cea6736856220c0->enter($__internal_d4919a1789dba56191088c82f6944b7f7cd0ba1d7d389a2d3cea6736856220c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969->enter($__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 82
         echo "    <script>
         \$(function () {
 
@@ -213,10 +208,10 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
     </script>
 ";
         
-        $__internal_d4919a1789dba56191088c82f6944b7f7cd0ba1d7d389a2d3cea6736856220c0->leave($__internal_d4919a1789dba56191088c82f6944b7f7cd0ba1d7d389a2d3cea6736856220c0_prof);
+        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969->leave($__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969_prof);
 
         
-        $__internal_a3ef8bd7e8ae267da46ab80ea26e7ce9db1971b4b375733cca6dbabe31919163->leave($__internal_a3ef8bd7e8ae267da46ab80ea26e7ce9db1971b4b375733cca6dbabe31919163_prof);
+        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308->leave($__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308_prof);
 
     }
 
@@ -232,7 +227,7 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
 
     public function getDebugInfo()
     {
-        return array (  198 => 78,  189 => 77,  177 => 75,  149 => 49,  140 => 46,  136 => 45,  132 => 44,  128 => 43,  124 => 42,  120 => 41,  116 => 40,  112 => 39,  108 => 38,  104 => 37,  100 => 36,  96 => 35,  92 => 34,  88 => 33,  85 => 32,  81 => 31,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  193 => 82,  184 => 81,  172 => 79,  144 => 53,  135 => 50,  131 => 49,  126 => 48,  124 => 47,  122 => 46,  120 => 45,  116 => 43,  111 => 42,  106 => 40,  104 => 39,  99 => 37,  97 => 36,  94 => 34,  90 => 33,  82 => 27,  80 => 26,  78 => 25,  76 => 24,  73 => 22,  68 => 18,  66 => 17,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -260,15 +255,17 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
                     <tr>
                         <!-- <th>CÓD</th> -->
                         <!-- <th>Prioridade</th> -->
-                        <th>Vinculo do Planejamento</th>
-                        <th>Instrumento</th>
-                        <th>Programa</th>
-                        <th>Item</th>
+                        {#<th>Vinculo do Planejamento</th>#}
+                        {#<th>Instrumentos</th>#}
+                        <th>Status</th>
+                        <th>Política/Programa/Rede</th>
+                        <th>Componente</th>
+                        {#<th>Objeto</th>#}
                         <th>Exercício</th>
-                        <th>Tipo de Atividade</th>
-                        <th>Proposta</th>
-                        <th>UF</th>
-                        <th>Município</th>
+                        {#<th>Tipo de Atividade</th>#}
+                        {#<th>Proposta</th>#}
+                        {#<th>UF</th>#}
+                        {#<th>Município</th>#}
                         <th>Valor total</th>
                         <th>Valor Ano Vigente</th>
                         <th>Editar</th>
@@ -277,17 +274,19 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
                 <tbody>
                 {% for a in atividadePlanoUso %}
                     <tr>
-                       <!--  <td>{{ a.id }}</td> -->
-                        <!-- <td>{{ a.nuPrioridade }}</td> -->
-                        <td>{{ a.dsVinculoPlanejamento }}</td>
-                        <td >{{ a.dsTipoInstrumento }}</td>
+                        {#<td>{{ a.id }}</td>#}
+                        {#<td>{{ a.nuPrioridade }}</td>#}
+                        <td>{{ a.nuPrioridade }}</td> <!-- Apenas para teste para popular a grid-->
+                        {#<td>{{ a.dsVinculoPlanejamento }}</td>#}
+                        {#<td >{{ a.dsTipoInstrumento }}</td>#}
                         <td >{{ a.dsRedePrograma }}</td>
-                        <td >{{ a.dsAtividade }}</td>
+                        {#<td >{{ a.dsAtividade }}</td>#}
+                        <td >{{ a.dsAtividade }}</td> <!-- Apenas para teste para popular a grid-->
                         <td >{{ a.nuAnoExercicioAtividade }}</td>
-                        <td >{{ a.dsTipoAtividade }}</td>
-                        <td >{{ a.nuProposta }}</td>
-                        <td >{{ a.sgUf }}</td>
-                        <td >{{ a.noMunicipioAcentuado }}</td>
+                        {#<td >{{ a.dsTipoAtividade }}</td>#}
+                        {#<td >{{ a.nuProposta }}</td>#}
+                        {#<td >{{ a.sgUf }}</td>#}
+                        {#<td >{{ a.noMunicipioAcentuado }}</td>#}
                         <td >{{ a.vlTotal|number_format(2, ',', '.') }}</td>
                         <td >{{ a.vlExecutarExercicio|number_format(2, ',', '.') }}</td>
                         <td><a class=\"btn btn-success\" href=\"{{ path('processamento_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}\"><li class=\"fa fa-edit\"> </li></a></td>

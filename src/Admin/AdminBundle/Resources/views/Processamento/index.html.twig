@@ -11,84 +11,57 @@
                 <div class="row">
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <label>Ano de Exercício</label><br>
-                            <select class="form-control" name="nuAnoExercicio" id="IdAnoExercicio">
-                                <option value="">Selecione o Ano</option>
-                                {% for ano in anoExercicio %}
-                                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.nuAnoExercicio }}</option>
-                                {% endfor %}
-                            </select>
+                            {{ form_label(form.nuAnoExercicio) }}
+                            {{ form_errors(form.nuAnoExercicio) }}
+                            {{ form_widget(form.nuAnoExercicio) }}
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.nuPlanoOrcamentario) }}
+                        {{ form_errors(form.nuPlanoOrcamentario) }}
+                        {{ form_widget(form.nuPlanoOrcamentario) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.dsTipoDespesa) }}
+                        {{ form_errors(form.dsTipoDespesa) }}
+                        {{ form_widget(form.dsTipoDespesa) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            {#{{ form_label(form.nuAnoExercicio) }}#}
-                            {#{{ form_errors(form.nuAnoExercicio) }}#}
-                            {#{{ form_widget(form.nuAnoExercicio) }}#}
-
-                            <label class="control-label">Departamento</label>
-                            <select class="form-control" id="departamento">
-                                <option value="">Selecione</option>
-                                <option value="CGPO">Nome do Departamento</option>
-                            </select>
+                            {{ form_label(form.nuProposta) }}
+                            {{ form_errors(form.nuProposta) }}
+                            {{ form_widget(form.nuProposta) }}
                         </div>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <label class="control-label">Ação Orçamentária</label>
-                            <select class="form-control" id="acaoOrcamentaria">
-                                <option value="">Selecione</option>
-                                <option value="1">Número da Ação Orçamentária</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12">
-                        <label class="control-label">PO</label>
-                        <select class="form-control">
-                            <option value="" selected=selected>Selecione</option>
-                            <option value="">Número do Plano Orçamentária</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12">
-                        <label class="control-label">Tipo de Despesa</label>
-                        <select class="form-control">
-                            <option value="" selected=selected>Selecione</option>
-                            <option value="">Tipo de Despesa</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                            <label class="control-label">Nº da Proposta</label>
-                            <input class="form-control" type="number">
+                            {{ form_label(form.coDepartamento) }}
+                            {{ form_errors(form.coDepartamento) }}
+                            {{ form_widget(form.coDepartamento) }}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <label class="control-label">Descrição do PO</label>
-                            <input class="form-control" type="text">
+                            {{ form_label(form.dsDescicao) }}
+                            {{ form_errors(form.dsDescicao) }}
+                            {{ form_widget(form.dsDescicao) }}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
-                        <button type="button" id="btnPesquisarProcessamento" class="btn btn-success">Pesquisar</button>
+                        {{ form_widget(form.btnPesquisar, { 'label': 'Pesquisar'  }) }}
                         <a class="btn btn-primary">Voltar</a>
                     </div>
                 </div>
-
                 <br>
                 <table id="lista" class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <!-- <th>CÓD</th> -->
-                        <!-- <th>Ano de Exercício</th> -->
-                        <!-- <th>Dep. Vinculados</th> -->
-                        <!-- <th>Tipo de Despesa</th> -->
-                        <!-- <th>R$ Processado</th> -->
-                        <!-- <th>Atividades</th> -->
-                        <!-- <th>Itens</th> -->
                         <th>Departamento</th>
                         <th>Ação/PO</th>
                         <th>Tipo de Despesa</th>
@@ -99,6 +72,24 @@
                     </tr>
                     </thead>
                     <tbody>
+                        {% for acao in acaoorcamentaria %}
+                          <tr>
+                           <td>{{ acao.sgDepartamento }}</td>
+                           <td>{{ acao.nuAcaoOrcamentaria  }} -  {{ acao.nuPlanoOrcamentario}} </td>
+                           <td>{{ acao.dsTipoDespesa }}</td>
+                           <td>{{ acao.dsDenominacao }}</td>
+                           <td>{{ acao.sgDepartamento }}</td>
+                           <td>{{ (acao.vlSaldo)|number_format(2,',','.') }}</td>
+                           <td><a class="btn btn-primary" href="{{ path('processamento_acao', {'id': acao.id }) }}"><li class="fa fa-edit">
+                                   </li>
+                               </a>
+                           </td>
+
+                          </tr>
+
+                        {% endfor %}
+                    </tbody>
+
                 </table>
 
             </div>
@@ -109,35 +100,23 @@
 {% block javascripts %}
     <script>
         $(function () {
-            $lista = $('#lista').DataTable( {
+            $lista = $('#lista').DataTable({
                 language: {
                     url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
                 },
-                {% if nuAno is not null %}  "ajax": Routing.generate('json_lista_processamento', {'anoExercicio':{{ nuAno }} }), {% endif %}
+                {% if nuAno is not null %}
+              //  "ajax": Routing.generate('json_lista_processamento', {'anoExercicio':{{ nuAno }} }), {% endif %}
                 'iDisplayLength': 10,
                 'iDisplayStart': 0,
-                'paging'      : true,
+                'paging': true,
                 'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false,
                 "bProcessing": true,
-                "aoColumns" : [
-                    { "mData": 4 }, //Departamento
-                    { "mData": 2 }, //Ação/PO
-                    { "mData": 3 }, //Tipo de Despesa
-                    { "mData": 6 }, //Denominação
-                    { "mData": 7 }, //Valor Atualizado
-                    { "mData": 9 }, //Saldo
-                    { "mData": null,
-                        "bSortable": false,
-                        "mRender": function(data, type, full) {
-                            return '<a class="btn btn-success" href="'+ Routing.generate('processamento_acao', {'id': full[0]})+'"><li class="fa fa-edit"> <!-- Processamento --></li></a>';
-                        }
-                    },
-                ]
-            } );
+
+            });
 
             $("#btnPesquisarProcessamento").click(function () {
                 if ($("#IdAnoExercicio").val() != "") {

@@ -22,29 +22,29 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3c27308d87ea14a6e5c45d7c3d2f9a5a2917ddfb837dd6a69c7c39a40d01e069 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3c27308d87ea14a6e5c45d7c3d2f9a5a2917ddfb837dd6a69c7c39a40d01e069->enter($__internal_3c27308d87ea14a6e5c45d7c3d2f9a5a2917ddfb837dd6a69c7c39a40d01e069_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/edit.html.twig"));
+        $__internal_37efd4eb07ca2468a37ff21c3808af81ab021d19816140376b7b917c9d779c3d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_37efd4eb07ca2468a37ff21c3808af81ab021d19816140376b7b917c9d779c3d->enter($__internal_37efd4eb07ca2468a37ff21c3808af81ab021d19816140376b7b917c9d779c3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/edit.html.twig"));
 
-        $__internal_ed66fc315e3123a7074918b4a857b03fd3ae502a1392f4d3510e751f8f92658f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ed66fc315e3123a7074918b4a857b03fd3ae502a1392f4d3510e751f8f92658f->enter($__internal_ed66fc315e3123a7074918b4a857b03fd3ae502a1392f4d3510e751f8f92658f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/edit.html.twig"));
+        $__internal_d5b653150929c95fcf189afd3af0f7375331979f9e79e525d0a0c31d123bd9ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d5b653150929c95fcf189afd3af0f7375331979f9e79e525d0a0c31d123bd9ee->enter($__internal_d5b653150929c95fcf189afd3af0f7375331979f9e79e525d0a0c31d123bd9ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3c27308d87ea14a6e5c45d7c3d2f9a5a2917ddfb837dd6a69c7c39a40d01e069->leave($__internal_3c27308d87ea14a6e5c45d7c3d2f9a5a2917ddfb837dd6a69c7c39a40d01e069_prof);
+        $__internal_37efd4eb07ca2468a37ff21c3808af81ab021d19816140376b7b917c9d779c3d->leave($__internal_37efd4eb07ca2468a37ff21c3808af81ab021d19816140376b7b917c9d779c3d_prof);
 
         
-        $__internal_ed66fc315e3123a7074918b4a857b03fd3ae502a1392f4d3510e751f8f92658f->leave($__internal_ed66fc315e3123a7074918b4a857b03fd3ae502a1392f4d3510e751f8f92658f_prof);
+        $__internal_d5b653150929c95fcf189afd3af0f7375331979f9e79e525d0a0c31d123bd9ee->leave($__internal_d5b653150929c95fcf189afd3af0f7375331979f9e79e525d0a0c31d123bd9ee_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3132d3641d6a0a8101d69b8ff71e6261fd462d113d6874a9edbe44b34922ef3b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3132d3641d6a0a8101d69b8ff71e6261fd462d113d6874a9edbe44b34922ef3b->enter($__internal_3132d3641d6a0a8101d69b8ff71e6261fd462d113d6874a9edbe44b34922ef3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_98668d70f23e430f3d47ced72daacccdff5038e798ec92976cea276ee90cb2af = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_98668d70f23e430f3d47ced72daacccdff5038e798ec92976cea276ee90cb2af->enter($__internal_98668d70f23e430f3d47ced72daacccdff5038e798ec92976cea276ee90cb2af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_40e2c9a6458a9cddf833a93741791ecfc888f043e6440dbd4ca73bcabe17c0b0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_40e2c9a6458a9cddf833a93741791ecfc888f043e6440dbd4ca73bcabe17c0b0->enter($__internal_40e2c9a6458a9cddf833a93741791ecfc888f043e6440dbd4ca73bcabe17c0b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a067d4f52c43938ee7db26162d0041c85b9e842e50154f6f2139839ed4c5d915 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a067d4f52c43938ee7db26162d0041c85b9e842e50154f6f2139839ed4c5d915->enter($__internal_a067d4f52c43938ee7db26162d0041c85b9e842e50154f6f2139839ed4c5d915_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -72,35 +72,21 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                             <option value=\"\">PROCESSADO</option>
                         </select>
                     </div>
-                    <!--
-                    <div class=\"form-group\">
-                        ";
-        // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPrioridade", array()), 'label');
-        echo "
-                        ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPrioridade", array()), 'errors');
-        echo "
-                        ";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPrioridade", array()), 'widget');
-        echo "
-                    </div>
-                    -->
-                </div>
+                    ";
+        // line 29
+        echo "                </div>
                 <div class=\"col-md-4 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 34
+        // line 32
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vinculoPlanejamento", array()), 'label');
         echo "
                         ";
-        // line 35
+        // line 33
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vinculoPlanejamento", array()), 'errors');
         echo "
                         ";
-        // line 36
+        // line 34
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vinculoPlanejamento", array()), 'widget');
         echo "
                     </div>
@@ -110,15 +96,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-9 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 43
+        // line 41
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "redePrograma", array()), 'label');
         echo "
                         ";
-        // line 44
+        // line 42
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "redePrograma", array()), 'errors');
         echo "
                         ";
-        // line 45
+        // line 43
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "redePrograma", array()), 'widget');
         echo "
                     </div>
@@ -128,15 +114,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-6 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 52
+        // line 50
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoComponente", array()), 'label');
         echo "
                         ";
-        // line 53
+        // line 51
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoComponente", array()), 'errors');
         echo "
                         ";
-        // line 54
+        // line 52
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoComponente", array()), 'widget');
         echo "
                     </div>
@@ -144,15 +130,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-3 col-sm-6 col-xs-12\">
                     <div class=\"form-group\"> <!-- Objeto -->
                         ";
-        // line 59
+        // line 57
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "atividade", array()), 'label');
         echo "
                         ";
-        // line 60
+        // line 58
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "atividade", array()), 'errors');
         echo "
                         ";
-        // line 61
+        // line 59
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "atividade", array()), 'widget');
         echo "
                     </div>
@@ -161,15 +147,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 67
+        // line 65
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuAnoExercicioAtividade", array()), 'label');
         echo "
                         ";
-        // line 68
+        // line 66
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuAnoExercicioAtividade", array()), 'errors');
         echo "
                         ";
-        // line 69
+        // line 67
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuAnoExercicioAtividade", array()), 'widget');
         echo "
                     </div>
@@ -180,15 +166,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\"> <!-- Ano de Referência -->
                         ";
-        // line 77
+        // line 75
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoAtividade", array()), 'label');
         echo "
                         ";
-        // line 78
+        // line 76
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoAtividade", array()), 'errors');
         echo "
                         ";
-        // line 79
+        // line 77
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoAtividade", array()), 'widget');
         echo "
                     </div>
@@ -196,15 +182,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\"> <!-- Valor Ano Vigente -->
                         ";
-        // line 84
+        // line 82
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlExecutarExercicio", array()), 'label');
         echo "
                         ";
-        // line 85
+        // line 83
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlExecutarExercicio", array()), 'errors');
         echo "
                         ";
-        // line 86
+        // line 84
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlExecutarExercicio", array()), 'widget');
         echo "
                     </div>
@@ -212,15 +198,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 91
+        // line 89
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoInstrumento", array()), 'label');
         echo "
                         ";
-        // line 92
+        // line 90
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoInstrumento", array()), 'errors');
         echo "
                         ";
-        // line 93
+        // line 91
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoInstrumento", array()), 'widget');
         echo "
                     </div>
@@ -228,15 +214,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-3 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 98
+        // line 96
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProcesso", array()), 'label');
         echo "
                         ";
-        // line 99
+        // line 97
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProcesso", array()), 'errors');
         echo "
                         ";
-        // line 100
+        // line 98
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProcesso", array()), 'widget');
         echo "
                     </div>
@@ -246,15 +232,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-3 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 107
+        // line 105
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProposta", array()), 'label');
         echo "
                         ";
-        // line 108
+        // line 106
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProposta", array()), 'errors');
         echo "
                         ";
-        // line 109
+        // line 107
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuProposta", array()), 'widget');
         echo "
                     </div>
@@ -262,15 +248,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 114
+        // line 112
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPortaria", array()), 'label');
         echo "
                         ";
-        // line 115
+        // line 113
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPortaria", array()), 'errors');
         echo "
                         ";
-        // line 116
+        // line 114
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "nuPortaria", array()), 'widget');
         echo "
                     </div>
@@ -278,15 +264,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 121
+        // line 119
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dtPortaria", array()), 'label');
         echo "
                         ";
-        // line 122
+        // line 120
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dtPortaria", array()), 'errors');
         echo "
                         ";
-        // line 123
+        // line 121
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dtPortaria", array()), 'widget');
         echo "
                     </div>
@@ -311,15 +297,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-3 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 145
+        // line 143
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlTotal", array()), 'label');
         echo "
                         ";
-        // line 146
+        // line 144
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlTotal", array()), 'errors');
         echo "
                         ";
-        // line 147
+        // line 145
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlTotal", array()), 'widget');
         echo "
                     </div>
@@ -327,15 +313,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 152
+        // line 150
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "uf", array()), 'label');
         echo "
                         ";
-        // line 153
+        // line 151
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "uf", array()), 'errors');
         echo "
                         ";
-        // line 154
+        // line 152
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "uf", array()), 'widget');
         echo "
                     </div>
@@ -343,15 +329,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 159
+        // line 157
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "municipio", array()), 'label');
         echo "
                         ";
-        // line 160
+        // line 158
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "municipio", array()), 'errors');
         echo "
                         ";
-        // line 161
+        // line 159
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "municipio", array()), 'widget');
         echo "
                     </div>
@@ -359,15 +345,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-2 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 166
+        // line 164
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "coCnes", array()), 'label');
         echo "
                         ";
-        // line 167
+        // line 165
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "coCnes", array()), 'errors');
         echo "
                         ";
-        // line 168
+        // line 166
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "coCnes", array()), 'widget');
         echo "
                     </div>
@@ -377,15 +363,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-9 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 175
+        // line 173
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsJustificativa", array()), 'label');
         echo "
                         ";
-        // line 176
+        // line 174
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsJustificativa", array()), 'errors');
         echo "
                         ";
-        // line 177
+        // line 175
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsJustificativa", array()), 'widget');
         echo "
                     </div>
@@ -395,15 +381,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-9 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 184
+        // line 182
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsObservacao", array()), 'label');
         echo "
                         ";
-        // line 185
+        // line 183
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsObservacao", array()), 'errors');
         echo "
                         ";
-        // line 186
+        // line 184
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dsObservacao", array()), 'widget');
         echo "
                     </div>
@@ -416,15 +402,15 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                 <div class=\"col-md-4 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">
                         ";
-        // line 196
+        // line 194
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlProcessadoCgpo", array()), 'label');
         echo "
                         ";
-        // line 197
+        // line 195
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlProcessadoCgpo", array()), 'errors');
         echo "
                         ";
-        // line 198
+        // line 196
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "vlProcessadoCgpo", array()), 'widget');
         echo "
                     </div>
@@ -432,11 +418,11 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
             </div>
             <button type=\"submit\" class=\"btn btn-success\">Salvar</button>
             <a class=\"btn btn-primary\" href=\"";
-        // line 203
+        // line 201
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("processamento_acao", array("id" => $this->getAttribute(($context["acaoOrcamentaria"] ?? $this->getContext($context, "acaoOrcamentaria")), "id", array()))), "html", null, true);
         echo "\">Voltar</a>
             ";
-        // line 204
+        // line 202
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
         </div>
@@ -444,23 +430,23 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
 
 ";
         
-        $__internal_40e2c9a6458a9cddf833a93741791ecfc888f043e6440dbd4ca73bcabe17c0b0->leave($__internal_40e2c9a6458a9cddf833a93741791ecfc888f043e6440dbd4ca73bcabe17c0b0_prof);
+        $__internal_a067d4f52c43938ee7db26162d0041c85b9e842e50154f6f2139839ed4c5d915->leave($__internal_a067d4f52c43938ee7db26162d0041c85b9e842e50154f6f2139839ed4c5d915_prof);
 
         
-        $__internal_3132d3641d6a0a8101d69b8ff71e6261fd462d113d6874a9edbe44b34922ef3b->leave($__internal_3132d3641d6a0a8101d69b8ff71e6261fd462d113d6874a9edbe44b34922ef3b_prof);
+        $__internal_98668d70f23e430f3d47ced72daacccdff5038e798ec92976cea276ee90cb2af->leave($__internal_98668d70f23e430f3d47ced72daacccdff5038e798ec92976cea276ee90cb2af_prof);
 
     }
 
-    // line 209
+    // line 207
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_13e2d4af9a292e1a486d73e56593158b637d5f85fd9d0d4bcffebe94efec218b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_13e2d4af9a292e1a486d73e56593158b637d5f85fd9d0d4bcffebe94efec218b->enter($__internal_13e2d4af9a292e1a486d73e56593158b637d5f85fd9d0d4bcffebe94efec218b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_5aba4e1834dbb59b653c4165e733036109e1553237951b31e9f5980a0d49831e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_5aba4e1834dbb59b653c4165e733036109e1553237951b31e9f5980a0d49831e->enter($__internal_5aba4e1834dbb59b653c4165e733036109e1553237951b31e9f5980a0d49831e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_d7c7aa33200c3585e9210d20525a215b4bf606b175705a16f4f6e36e87d5ad3d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d7c7aa33200c3585e9210d20525a215b4bf606b175705a16f4f6e36e87d5ad3d->enter($__internal_d7c7aa33200c3585e9210d20525a215b4bf606b175705a16f4f6e36e87d5ad3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_2afded8178ec613bea996c78a9e174a25949f95985a1a501b048aa517c800a46 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2afded8178ec613bea996c78a9e174a25949f95985a1a501b048aa517c800a46->enter($__internal_2afded8178ec613bea996c78a9e174a25949f95985a1a501b048aa517c800a46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 210
+        // line 208
         echo "    <script>
         \$(function () {
 
@@ -502,10 +488,10 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
     </script>
 ";
         
-        $__internal_d7c7aa33200c3585e9210d20525a215b4bf606b175705a16f4f6e36e87d5ad3d->leave($__internal_d7c7aa33200c3585e9210d20525a215b4bf606b175705a16f4f6e36e87d5ad3d_prof);
+        $__internal_2afded8178ec613bea996c78a9e174a25949f95985a1a501b048aa517c800a46->leave($__internal_2afded8178ec613bea996c78a9e174a25949f95985a1a501b048aa517c800a46_prof);
 
         
-        $__internal_13e2d4af9a292e1a486d73e56593158b637d5f85fd9d0d4bcffebe94efec218b->leave($__internal_13e2d4af9a292e1a486d73e56593158b637d5f85fd9d0d4bcffebe94efec218b_prof);
+        $__internal_5aba4e1834dbb59b653c4165e733036109e1553237951b31e9f5980a0d49831e->leave($__internal_5aba4e1834dbb59b653c4165e733036109e1553237951b31e9f5980a0d49831e_prof);
 
     }
 
@@ -521,7 +507,7 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
 
     public function getDebugInfo()
     {
-        return array (  464 => 210,  455 => 209,  440 => 204,  436 => 203,  428 => 198,  424 => 197,  420 => 196,  407 => 186,  403 => 185,  399 => 184,  389 => 177,  385 => 176,  381 => 175,  371 => 168,  367 => 167,  363 => 166,  355 => 161,  351 => 160,  347 => 159,  339 => 154,  335 => 153,  331 => 152,  323 => 147,  319 => 146,  315 => 145,  290 => 123,  286 => 122,  282 => 121,  274 => 116,  270 => 115,  266 => 114,  258 => 109,  254 => 108,  250 => 107,  240 => 100,  236 => 99,  232 => 98,  224 => 93,  220 => 92,  216 => 91,  208 => 86,  204 => 85,  200 => 84,  192 => 79,  188 => 78,  184 => 77,  173 => 69,  169 => 68,  165 => 67,  156 => 61,  152 => 60,  148 => 59,  140 => 54,  136 => 53,  132 => 52,  122 => 45,  118 => 44,  114 => 43,  104 => 36,  100 => 35,  96 => 34,  87 => 28,  83 => 27,  79 => 26,  60 => 10,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  450 => 208,  441 => 207,  426 => 202,  422 => 201,  414 => 196,  410 => 195,  406 => 194,  393 => 184,  389 => 183,  385 => 182,  375 => 175,  371 => 174,  367 => 173,  357 => 166,  353 => 165,  349 => 164,  341 => 159,  337 => 158,  333 => 157,  325 => 152,  321 => 151,  317 => 150,  309 => 145,  305 => 144,  301 => 143,  276 => 121,  272 => 120,  268 => 119,  260 => 114,  256 => 113,  252 => 112,  244 => 107,  240 => 106,  236 => 105,  226 => 98,  222 => 97,  218 => 96,  210 => 91,  206 => 90,  202 => 89,  194 => 84,  190 => 83,  186 => 82,  178 => 77,  174 => 76,  170 => 75,  159 => 67,  155 => 66,  151 => 65,  142 => 59,  138 => 58,  134 => 57,  126 => 52,  122 => 51,  118 => 50,  108 => 43,  104 => 42,  100 => 41,  90 => 34,  86 => 33,  82 => 32,  77 => 29,  60 => 10,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -557,13 +543,11 @@ class __TwigTemplate_77e54414e698fc28934eddb36335e2dc6d9cf0ecb9fd66f71a9dd9ddc70
                             <option value=\"\">PROCESSADO</option>
                         </select>
                     </div>
-                    <!--
-                    <div class=\"form-group\">
+                    {#<div class=\"form-group\">
                         {{ form_label(form.nuPrioridade) }}
                         {{ form_errors(form.nuPrioridade) }}
                         {{ form_widget(form.nuPrioridade) }}
-                    </div>
-                    -->
+                    </div>#}
                 </div>
                 <div class=\"col-md-4 col-sm-6 col-xs-12\">
                     <div class=\"form-group\">

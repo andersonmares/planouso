@@ -653,6 +653,7 @@
     </service>
     <service id="Admin\AdminBundle\Form\ProcessamentoType" class="Admin\AdminBundle\Form\ProcessamentoType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
     <service id="Admin\AdminBundle\Form\RedeProgramaType" class="Admin\AdminBundle\Form\RedeProgramaType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
