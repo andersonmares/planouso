@@ -5,6 +5,7 @@ namespace Admin\AdminBundle\Controller;
 use Admin\AdminBundle\Entity\AcaoOrcamentaria;
 use Admin\AdminBundle\Entity\AtividadePlanoUso;
 use Admin\AdminBundle\Form\AtividadePlanoUsoType;
+use Admin\AdminBundle\Form\ProcessamentoAcaoType;
 use Admin\AdminBundle\Form\ProcessamentoType;
 use ClassesWithParents\D;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -65,9 +66,14 @@ class ProcessamentoController extends Controller
 
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->acaoOrcamentariaId($id);
         $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id);
+
+        $form = $this->createForm(ProcessamentoAcaoType::class);
+        $form->handleRequest($request);
+
         return $this->render('@Admin/Processamento/processamentoacao.html.twig', [
                 'acaoOrcamentaria' => $acaoOrcamentaria,
-                'atividadePlanoUso' => $atividadePlanoUso
+                'atividadePlanoUso' => $atividadePlanoUso,
+                'form' => $form->createView()
             ]
         );
 
