@@ -42,7 +42,7 @@ class AtividadePlanoUsoType extends AbstractType
 
         $builder
             ->add('nuPrioridade', ChoiceType::class, array(
-                'label' => 'Prioridade',
+                'label' => 'Status do Item',
                 'choices' => $this->prioridades(),
                 'placeholder' => 'Selecione'
             ))
@@ -72,7 +72,7 @@ class AtividadePlanoUsoType extends AbstractType
                 'placeholder' => 'Selecione'
             ))
             ->add('redePrograma', EntityType::class, array(
-                'label' => 'Programa',
+                'label' => 'Programa/Política/Rede',
                 'class' => RedePrograma::class,
                 'query_builder' => function (RedeProgramaRepository $er){
                     return $er->createQueryBuilder('r')
@@ -96,7 +96,7 @@ class AtividadePlanoUsoType extends AbstractType
                 'placeholder' => 'Selecione'
             ))
             ->add('atividade', EntityType::class, array(
-                'label' => 'Atividade',
+                'label' => 'Objeto',//Antigo "Atividade"
                 'class' => Atividade::class,
                 'query_builder' => function (AtividadeRepository $er){
                     return $er->createQueryBuilder('a')
@@ -113,7 +113,7 @@ class AtividadePlanoUsoType extends AbstractType
                 'placeholder' => 'Selecione'
             ))
             ->add('tipoAtividade', EntityType::class, array(
-                'label' => 'Tipo de Atividade',
+                'label' => 'Ano de Referência',//Antigo "Tipo de Atividade"
                 'class' => TipoAtividade::class,
                 'query_builder' => function (TipoAtividadeRepository $er){
                     return $er->createQueryBuilder('a')
@@ -125,7 +125,7 @@ class AtividadePlanoUsoType extends AbstractType
                 'placeholder' => 'Selecione'
             ))
             ->add('vlTotal', MoneyType::class, array(
-                'label' => 'Valor Total R$',
+                'label' => 'Valor Total',
                 'attr' => [
                     'type' => 'number',
                 ],
@@ -133,8 +133,11 @@ class AtividadePlanoUsoType extends AbstractType
                 'grouping' => true,
 
             ))
-            ->add('dsJustificativa', TextType::class,array(
-                'label' => 'Justificativa'
+            ->add('dsJustificativa', TextareaType::class,array(
+                'label' => 'Justificativa',
+                'attr' => array(
+                'rowls' => 20
+                )
 
             ))
             ->add('uf', EntityType::class, array(
@@ -180,7 +183,7 @@ class AtividadePlanoUsoType extends AbstractType
                 )
             ))
             ->add('vlExecutarExercicio', MoneyType::class, array(
-                'label' => 'Valor Ano Vigente R$',
+                'label' => 'Valor Ano Vigente',
                 'attr' => [
                     'type' => 'number',
                 ],
@@ -209,7 +212,7 @@ class AtividadePlanoUsoType extends AbstractType
 
                 )
             ))->add('vlProcessadoCgpo', MoneyType::class, array(
-                'label' => 'Valor Processado CGPO R$',
+                'label' => 'Valor Processado CGPO',
                 'attr' => [
                     'type' => 'number',
                 ],

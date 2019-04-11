@@ -15,11 +15,11 @@ class __TwigTemplate_b4c44ec1d5bbd472c698aa2d4eaee96c20b4c96eb4b6909d44939e6e942
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_47c83cf836090a9136154c30e6b9071e5bca0977fca89f2956fa841f619d9995 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_47c83cf836090a9136154c30e6b9071e5bca0977fca89f2956fa841f619d9995->enter($__internal_47c83cf836090a9136154c30e6b9071e5bca0977fca89f2956fa841f619d9995_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/footer.html.twig"));
+        $__internal_1d3a610382132e235c3218acd20cd8c255bfd0a1947c25981acaab445377e5d9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1d3a610382132e235c3218acd20cd8c255bfd0a1947c25981acaab445377e5d9->enter($__internal_1d3a610382132e235c3218acd20cd8c255bfd0a1947c25981acaab445377e5d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/footer.html.twig"));
 
-        $__internal_0a0438acd0a5b76db6a73f9aaf8a01985ad40b944bc60a78a0338591b64b9f38 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0a0438acd0a5b76db6a73f9aaf8a01985ad40b944bc60a78a0338591b64b9f38->enter($__internal_0a0438acd0a5b76db6a73f9aaf8a01985ad40b944bc60a78a0338591b64b9f38_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/footer.html.twig"));
+        $__internal_f750c05ec1faba380801c6b9395070a654cdfee4e6aab6a0992f1fca32b517e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f750c05ec1faba380801c6b9395070a654cdfee4e6aab6a0992f1fca32b517e1->enter($__internal_f750c05ec1faba380801c6b9395070a654cdfee4e6aab6a0992f1fca32b517e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/footer.html.twig"));
 
         // line 1
         echo "<!--######################RODAPE#####################->
@@ -30,7 +30,7 @@ class __TwigTemplate_b4c44ec1d5bbd472c698aa2d4eaee96c20b4c96eb4b6909d44939e6e942
         INTERFACE ";
         // line 6
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo "- Versão 1.0
+        echo "- Versão 2.0
     </div>
     <!-- Default to the left -->
     <strong>Ministério da Saúde &copy; ";
@@ -221,10 +221,10 @@ class __TwigTemplate_b4c44ec1d5bbd472c698aa2d4eaee96c20b4c96eb4b6909d44939e6e942
 </body>
 </html>";
         
-        $__internal_47c83cf836090a9136154c30e6b9071e5bca0977fca89f2956fa841f619d9995->leave($__internal_47c83cf836090a9136154c30e6b9071e5bca0977fca89f2956fa841f619d9995_prof);
+        $__internal_1d3a610382132e235c3218acd20cd8c255bfd0a1947c25981acaab445377e5d9->leave($__internal_1d3a610382132e235c3218acd20cd8c255bfd0a1947c25981acaab445377e5d9_prof);
 
         
-        $__internal_0a0438acd0a5b76db6a73f9aaf8a01985ad40b944bc60a78a0338591b64b9f38->leave($__internal_0a0438acd0a5b76db6a73f9aaf8a01985ad40b944bc60a78a0338591b64b9f38_prof);
+        $__internal_f750c05ec1faba380801c6b9395070a654cdfee4e6aab6a0992f1fca32b517e1->leave($__internal_f750c05ec1faba380801c6b9395070a654cdfee4e6aab6a0992f1fca32b517e1_prof);
 
     }
 
@@ -258,7 +258,7 @@ class __TwigTemplate_b4c44ec1d5bbd472c698aa2d4eaee96c20b4c96eb4b6909d44939e6e942
 <footer class=\"main-footer\">
     <!-- To the right -->
     <div class=\"pull-right hidden-xs\">
-        INTERFACE {{ \"now\"|date(\"Y\") }}- Versão 1.0
+        INTERFACE {{ \"now\"|date(\"Y\") }}- Versão 2.0
     </div>
     <!-- Default to the left -->
     <strong>Ministério da Saúde &copy; {{ \"now\"|date(\"Y\") }}. <a href=\"http://dab.saude.gov.br\" target=\"_blank\">Secretária de Atenção a Saúde</a></strong>

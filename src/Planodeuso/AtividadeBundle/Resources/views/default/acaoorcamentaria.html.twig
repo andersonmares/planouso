@@ -17,16 +17,16 @@
                         <!-- <th>CÓD</th> -->
                         <th>Prioridade</th>
                         <th>Vinculo do Planejamento</th>
-                        <<th>Instrumento</th>
+                        <th>Instrumento</th>
                         <th>Programa</th>
                         <th>Atividade</th>
                         <th>Exercício</th>
                         <th>Tipo de Atividade</th>
                         <th>Valor total</th>
                         <th>Valor Ano Vigente</th>
-                        <th align="center">Ação</th>
-                        <!-- <th>Vincular Nota de Empenho</th> -->
-                        <!-- <th>Excluir</th> -->
+                        <th>Editar</th>
+                        <th>Vincular Nota de Empenho</th>
+                        <th>Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,18 +42,10 @@
                         <td >{{ a.dsTipoAtividade }}</td>
                         <td >{{ a.vlTotal|number_format(2, ',', '.') }}</td>
                         <td >{{ a.vlExecutarExercicio|number_format(2, ',', '.') }}</td>
+                        <td><a class="btn btn-success" href="{{ path('planodeuso_atividade_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> Editar Atividade</li></a></td>
+                        <td><a class="btn btn-primary" href="{{ path('planodeuso_nota_empenho', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-check"> Nota de Empenho </li></a></td>
                         <td>
-                            <a class="btn btn-success" href="{{ path('planodeuso_atividade_edit', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-edit"> </li></a>
-                        <!--
-                        </td>
-                        <td>
-                        -->
-                            <a class="btn btn-primary" href="{{ path('planodeuso_nota_empenho', {idAcao: acaoOrcamentaria.id, id: a.id}) }}"><li class="fa fa-check"> </li></a>
-                        <!--
-                        </td>
-                        <td>
-                        -->
-                            <a class="btn btn-danger excluir" data-toggle="modal" data-idacao="{{ acaoOrcamentaria.id }}" data-id="{{ a.id }}" data-descricao="{{ a.id }}" href="#modal-disabled"> <li class="fa fa-trash"> </li></a>
+                            <a class="btn btn-danger excluir" data-toggle="modal" data-idacao="{{ acaoOrcamentaria.id }}" data-id="{{ a.id }}" data-descricao="{{ a.id }}" href="#modal-disabled"> <li class="fa fa-trash"> Excluir </li></a>
                         </td>
                     </tr>
                 {% endfor %}

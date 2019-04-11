@@ -350,7 +350,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // json_lista_processamento
-                if (0 === strpos($pathinfo, '/admin/processamento/jsonlistaacao') && preg_match('#^/admin/processamento/jsonlistaacao/(?P<anoExercicio>[^/]++)$#s', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/admin/processamento/jsonlistaacao') && preg_match('#^/admin/processamento/jsonlistaacao/(?P<anoExercicio>[^/]++)/(?P<acaoOrcamentaria>[^/]++)/(?P<departamento>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'json_lista_processamento')), array (  '_controller' => 'Admin\\AdminBundle\\Controller\\ProcessamentoController::jsonlistaacaoAction',));
                 }
 

@@ -16,11 +16,11 @@ class __TwigTemplate_18f7708be938869f61cec6af922a9b130d8b61eb0e12f4c4764690ea803
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52->enter($__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
+        $__internal_e244361cb1d1fbadd2c4375b7cab20d932e4f24cbd0b941808eae6498bd4d58b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e244361cb1d1fbadd2c4375b7cab20d932e4f24cbd0b941808eae6498bd4d58b->enter($__internal_e244361cb1d1fbadd2c4375b7cab20d932e4f24cbd0b941808eae6498bd4d58b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
 
-        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2->enter($__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
+        $__internal_3f7175049acfe68b8a58260af529ec2e16526ee8e2af21d2e5cd166665a3437e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3f7175049acfe68b8a58260af529ec2e16526ee8e2af21d2e5cd166665a3437e->enter($__internal_3f7175049acfe68b8a58260af529ec2e16526ee8e2af21d2e5cd166665a3437e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/header.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -92,7 +92,7 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/steps-wizzard.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\"/>
     <!-- Hint-->
-    <!-- <script src=\"";
+    <script src=\"";
         // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/plugins/jQuery/jQuery-2.1.4.min.js"), "html", null, true);
         echo "\"></script>
@@ -311,27 +311,27 @@ desired effect
             </div>
 ";
         
-        $__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52->leave($__internal_be6c8bbf239ccaa4f1a025d92a55669b07a9a7b950cd774b12cb611b99bc6f52_prof);
+        $__internal_e244361cb1d1fbadd2c4375b7cab20d932e4f24cbd0b941808eae6498bd4d58b->leave($__internal_e244361cb1d1fbadd2c4375b7cab20d932e4f24cbd0b941808eae6498bd4d58b_prof);
 
         
-        $__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2->leave($__internal_740a317d216e240352f191f783c7d03828617034fa0108a22a8bb49f694335b2_prof);
+        $__internal_3f7175049acfe68b8a58260af529ec2e16526ee8e2af21d2e5cd166665a3437e->leave($__internal_3f7175049acfe68b8a58260af529ec2e16526ee8e2af21d2e5cd166665a3437e_prof);
 
     }
 
     // line 65
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea->enter($__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_1d28bcc2545959b1bc9c62ea517f5e5f9031dae91c606dbad34d8c1c59c0286b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1d28bcc2545959b1bc9c62ea517f5e5f9031dae91c606dbad34d8c1c59c0286b->enter($__internal_1d28bcc2545959b1bc9c62ea517f5e5f9031dae91c606dbad34d8c1c59c0286b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296->enter($__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        
-        $__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296->leave($__internal_e2b7601273b64453dc284fae01775b581555143e4200a8068abfdf84ceb35296_prof);
+        $__internal_5016c81bef9caad3d34b80c0859c3509031f6ecbf587f9b82b3801d2cb93600c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5016c81bef9caad3d34b80c0859c3509031f6ecbf587f9b82b3801d2cb93600c->enter($__internal_5016c81bef9caad3d34b80c0859c3509031f6ecbf587f9b82b3801d2cb93600c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea->leave($__internal_3c95400c8740ad740a03e7d04559f950f01e0a9f619814f985f9fd79e8aed7ea_prof);
+        $__internal_5016c81bef9caad3d34b80c0859c3509031f6ecbf587f9b82b3801d2cb93600c->leave($__internal_5016c81bef9caad3d34b80c0859c3509031f6ecbf587f9b82b3801d2cb93600c_prof);
+
+        
+        $__internal_1d28bcc2545959b1bc9c62ea517f5e5f9031dae91c606dbad34d8c1c59c0286b->leave($__internal_1d28bcc2545959b1bc9c62ea517f5e5f9031dae91c606dbad34d8c1c59c0286b_prof);
 
     }
 
@@ -396,7 +396,7 @@ PÁGINA INICIAL - FRONT-END (CUSTOMIZAÇÃO DE FRONT END POR ALEXANDRE BRITO bas
     <!--steps CSS-->
     <link href=\"{{ asset('css/steps-wizzard.css') }}\" rel=\"stylesheet\" type=\"text/css\"/>
     <!-- Hint-->
-    <!-- <script src=\"{{ asset('js/plugins/jQuery/jQuery-2.1.4.min.js') }}\"></script>
+    <script src=\"{{ asset('js/plugins/jQuery/jQuery-2.1.4.min.js') }}\"></script>
     <!-- Hint -->
     <script src=\"{{ asset('js/plugins/input-mask/jquery.inputmask.js') }}\"></script>
     <script src=\"{{ asset('js/plugins/input-mask/jquery.inputmask.extensions.js') }}\"></script>

@@ -134,7 +134,7 @@ class AtividadePlanoUsoType extends AbstractType
                 'currency' => 'BRL',
                 'grouping' => true,
             ))
-            ->add('dsJustificativa *', TextType::class,array(
+            ->add('dsJustificativa', TextType::class,array(
                 'label' => 'Justificativa'
 
             ))

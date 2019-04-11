@@ -5,102 +5,126 @@
         <div class="box-header with-border">
             <h3 class="box-title"><span class="fa fa-chain"></span> Processamento CGPO</h3>
         </div>
+        {{ form_start(form) }}
         <div class="table-responsive">
-        <div class="box-body">
-            <label>Ano de Exercício:</label>
-            <select name="nuAnoExercicio" id="IdAnoExercicio">
-                <option value="">Selecione o Ano</option>
-                {% for ano in anoExercicio %}
-                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.nuAnoExercicio }}</option>
-                {% endfor %}
-            </select>
-            <table id="lista" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R$ atualizado</th>
-                    <th>R$ Empenhado</th>
-                    <th>R$ Saldo</th>
-                    <th>R$ Processado</th>
-                    <th>Atividades</th>
-                    <th>Processamento</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ano de Exercício</th>
-                    <th>Ação/PO</th>
-                    <th>Despesa</th>
-                    <th>Dep. responsável</th>
-                    <th>Dep. Vinculados</th>
-                    <th>Denominação</th>
-                    <th>R$ atualizado</th>
-                    <th>R$ Empenhado</th>
-                    <th>R$ Saldo</th>
-                    <th>R$ Processado</th>
-                    <th>Atividades</th>
-                    <th>Processamento</th>
-                </tr>
-                </tfoot>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.nuAnoExercicio) }}
+                            {{ form_errors(form.nuAnoExercicio) }}
+                            {{ form_widget(form.nuAnoExercicio) }}
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.nuPlanoOrcamentario) }}
+                        {{ form_errors(form.nuPlanoOrcamentario) }}
+                        {{ form_widget(form.nuPlanoOrcamentario) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.dsTipoDespesa) }}
+                        {{ form_errors(form.dsTipoDespesa) }}
+                        {{ form_widget(form.dsTipoDespesa) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.nuProposta) }}
+                            {{ form_errors(form.nuProposta) }}
+                            {{ form_widget(form.nuProposta) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.coDepartamento) }}
+                            {{ form_errors(form.coDepartamento) }}
+                            {{ form_widget(form.coDepartamento) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.dsDescicao) }}
+                            {{ form_errors(form.dsDescicao) }}
+                            {{ form_widget(form.dsDescicao) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        {{ form_widget(form.btnPesquisar, { 'label': 'Pesquisar'  }) }}
+                        <a class="btn btn-primary">Voltar</a>
+                    </div>
+                </div>
+                <br>
+                <table id="lista" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Departamento</th>
+                        <th>Ação/PO</th>
+                        <th>Tipo de Despesa</th>
+                        <th>Descrição do PO</th>
+                        <th>Dotação Atualizada</th>
+                        <th>Saldo</th>
+                        <th>Selecionar Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for acao in acaoorcamentaria %}
+                          <tr>
+                           <td>{{ acao.sgDepartamento }}</td>
+                           <td>{{ acao.nuAcaoOrcamentaria  }} -  {{ acao.nuPlanoOrcamentario}} </td>
+                           <td>{{ acao.dsTipoDespesa }}</td>
+                           <td>{{ acao.dsDenominacao }}</td>
+                           <td>{{ acao.sgDepartamento }}</td>
+                           <td>{{ (acao.vlSaldo)|number_format(2,',','.') }}</td>
+                           <td><a class="btn btn-primary" href="{{ path('processamento_acao', {'id': acao.id }) }}"><li class="fa fa-edit">
+                                   </li>
+                               </a>
+                           </td>
 
-            </table>
+                          </tr>
 
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
         </div>
-    </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}
 {% block javascripts %}
     <script>
         $(function () {
-            $lista = $('#lista').DataTable( {
+            $lista = $('#lista').DataTable({
                 language: {
                     url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
                 },
-                {% if nuAno is not null %}  "ajax": Routing.generate('json_lista_processamento', {'anoExercicio':{{ nuAno }} }), {% endif %}
+                {% if nuAno is not null %}
+              //  "ajax": Routing.generate('json_lista_processamento', {'anoExercicio':{{ nuAno }} }), {% endif %}
                 'iDisplayLength': 10,
                 'iDisplayStart': 0,
-                'paging'      : true,
+                'paging': true,
                 'lengthChange': false,
-                'searching'   : true,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false,
                 "bProcessing": true,
 
-                "aoColumns" : [
-                    { "mData": 0 },
-                    { "mData": 1 },
-                    { "mData": 2 },
-                    { "mData": 3 },
-                    { "mData": 4 },
-                    { "mData": 5 },
-                    { "mData": 6 },
-                    { "mData": 7 },
-                    { "mData": 8 },
-                    { "mData": 9 },
-                    { "mData": 10 },
-                    { "mData": 11 },
-                    { "mData": null,
-                        "bSortable": false,
-                        "mRender": function(data, type, full) {
-                            return '<a class="btn btn-success" href="'+ Routing.generate('processamento_acao', {'id': full[0]})+'"><li class="fa fa-edit"> Processamento</li></a>';
-                        }
-                    },
-                ]
-            } );
+            });
 
-            $("#IdAnoExercicio").change(function () {
+            $("#btnPesquisarProcessamento").click(function () {
                 if ($("#IdAnoExercicio").val() != "") {
-                    $lista.ajax.url( Routing.generate('json_lista_processamento', {'anoExercicio': $("#IdAnoExercicio").val()}) ).load();
+                    $lista.ajax.url(Routing.generate('json_lista_processamento', {
+                        'departamento': $("#departamento").val(),
+                        'anoExercicio': $("#IdAnoExercicio").val(),
+                        'acaoOrcamentaria': $("#acaoOrcamentaria").val()
+                    })).load();
                 }
             });
 

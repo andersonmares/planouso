@@ -5,6 +5,9 @@ namespace Admin\AdminBundle\Controller;
 use Admin\AdminBundle\Entity\AcaoOrcamentaria;
 use Admin\AdminBundle\Entity\AtividadePlanoUso;
 use Admin\AdminBundle\Form\AtividadePlanoUsoType;
+use Admin\AdminBundle\Form\ProcessamentoAcaoType;
+use Admin\AdminBundle\Form\ProcessamentoType;
+use ClassesWithParents\D;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -15,13 +18,44 @@ class ProcessamentoController extends Controller
     /**
      * @Route("processamento/{nuAno}", name="processamento_index")
      */
-    public function indexAction($nuAno = null)
+    public function indexAction(Request $request,$nuAno = null)
     {
+
         $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class);
-        $anoExercicio = $acaoorcamentaria->listarAnoExercicio();
+        $anoExercicio = $acaoorcamentaria->listarAnoExerciciForm();
+
+        $form = $this->createForm(ProcessamentoType::class);
+        $form->handleRequest($request);
+
+        if ($form->isValid() && $form->isSubmitted()){
+
+            $data = $request->request->all('processamento');
+
+
+            $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)
+                ->consultaProcessamento($data);
+
+
+            try{
+//                $doctrine->persist($postData);
+//                $doctrine->flush();
+//                $doctrine->getConnection()->commit();
+                $this->addFlash("success", "Instrumento registrado com sucesso!");
+            }catch (\Exception $e)            {
+//                $doctrine->getConnection()->rollBack();
+                $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");
+                throw $e;
+            }
+
+           // return $this->redirectToRoute('instrumento');
+        }
+
         return $this->render('@Admin/Processamento/index.html.twig', array(
             'anoExercicio' => $anoExercicio,
-            'nuAno' => $nuAno
+            'title_page' => 'Processamento',
+            'nuAno' => $nuAno,
+            'acaoorcamentaria' => $acaoorcamentaria,
+            'form' => $form->createView()
         ));
     }
 
@@ -32,9 +66,14 @@ class ProcessamentoController extends Controller
 
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->acaoOrcamentariaId($id);
         $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id);
+
+        $form = $this->createForm(ProcessamentoAcaoType::class);
+        $form->handleRequest($request);
+
         return $this->render('@Admin/Processamento/processamentoacao.html.twig', [
                 'acaoOrcamentaria' => $acaoOrcamentaria,
-                'atividadePlanoUso' => $atividadePlanoUso
+                'atividadePlanoUso' => $atividadePlanoUso,
+                'form' => $form->createView()
             ]
         );
 
@@ -86,15 +125,15 @@ class ProcessamentoController extends Controller
     }
     
     /**
-     * @Route("processamento/jsonlistaacao/{anoExercicio}", name="json_lista_processamento", options={ "expose" = true })
+     * @Route("processamento/jsonlistaacao/{anoExercicio}/{acaoOrcamentaria}/{departamento}", name="json_lista_processamento", options={ "expose" = true })
      * @return JsonResponse
      */
-    public function jsonlistaacaoAction($anoExercicio)
+    public function jsonlistaacaoAction($acaoOrcamentaria,$departamento, $anoExercicio)
     {
-        $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->jsonListarAcaoComAtividade($anoExercicio);
+        $acaoorcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)
+            ->jsonListarAcaoComAtividade($anoExercicio);
 
         $json = array();
-
         foreach ($acaoorcamentaria as $acao) {
             $json[] = [
                 $acao['id'],
@@ -111,12 +150,12 @@ class ProcessamentoController extends Controller
                 $acao['qtAtividade'],
             ];
         }
-
         return new JsonResponse(
             array(
                 'data' => $json
             )
         );
+
     }
 
 }
