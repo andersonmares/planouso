@@ -1,6 +1,7 @@
 <?php
 
 namespace Admin\AdminBundle\Repository;
+use ClassesWithParents\D;
 
 /**
  * AtividadePlanoUsoRepository
@@ -10,9 +11,9 @@ namespace Admin\AdminBundle\Repository;
  */
 class AtividadePlanoUsoRepository extends \Doctrine\ORM\EntityRepository
 {
-	public function listarAtividade($idAcao){
-		
-		return $this->createQueryBuilder('a')
+	public function listarAtividade($idAcao,$param){
+
+		$result =  $this->createQueryBuilder('a')
 			->select('a.id, a.nuPrioridade, a.nuAnoExercicioAtividade , a.vlTotal, a.vlExecutarExercicio, a.nuProposta, b.dsVinculoPlanejamento, c.dsTipoInstrumento, d.dsRedePrograma, e.dsAtividade, f.dsTipoAtividade, g.sgUf, h.id as coMunicipioIbge, h.noMunicipioAcentuado')
 			->innerJoin('Admin\AdminBundle\Entity\AcaoOrcamentaria', 'z', 'WITH', 'z.id = a.coAcaoOrcamentaria and z.stRegistroAtivo = :stRegistroAtivo')
 			->leftJoin('Admin\AdminBundle\Entity\VinculoPlanejamento', 'b', 'WITH', 'b.id = a.coVinculoPlanejamento and b.stRegistroAtivo = :stRegistroAtivo')
@@ -27,10 +28,17 @@ class AtividadePlanoUsoRepository extends \Doctrine\ORM\EntityRepository
 			->setParameter('coAcaoOrcamentaria', $idAcao)
 			->setParameter('stRegistroAtivo', 'S')
 			->setParameter('stMunicipio', 'ATIVO')
-			->orderBy('a.nuPrioridade')
-			->getQuery()
-			->getResult();
-			;
+			->orderBy('a.nuPrioridade');
+
+		if(isset($param['processamentoFilter']['nuProcesso']) && !empty($param['processamentoFilter']['nuProcesso'])){
+			$result->andWhere('a.nuProcesso = :nuProcesso' )
+				->setParameter('nuProcesso',$param['processamentoFilter']['nuProcesso']);
+		}
+		if(isset($param['processamentoFilter']['nuProposta'])){
+			$result->andWhere('a.nuProposta like :nuProposta' )
+				->setParameter('nuProposta','%'.$param['processamentoFilter']['nuProposta'].'%');
+		}
+		return $result->getQuery()->getResult();
 
 	}
 

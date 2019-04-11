@@ -48,7 +48,7 @@ class ProcessamentoAcaoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder,array $options)
     {
         $builder->add('coDepartamento', EntityType::class, array(
-            'label' => 'Departamento',
+            'label' => 'Status do Item',
             'required' => false,
             'class' => Departamento::class,
             'query_builder' => function (DepartamentoRepository $er) {
@@ -86,7 +86,7 @@ class ProcessamentoAcaoType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'processamento';
+        return 'processamentoFilter';
     }
 
     public function anosExercicio()

@@ -41,11 +41,6 @@ class AtividadePlanoUsoType extends AbstractType
     {
 
         $builder
-            ->add('nuPrioridade', ChoiceType::class, array(
-                'label' => 'Status do Item',
-                'choices' => $this->prioridades(),
-                'placeholder' => 'Selecione'
-            ))
             ->add('vinculoPlanejamento', EntityType::class, array(
                     'label' => 'Vinculo de Planejamento',
                     'class' => VinculoPlanejamento::class,
