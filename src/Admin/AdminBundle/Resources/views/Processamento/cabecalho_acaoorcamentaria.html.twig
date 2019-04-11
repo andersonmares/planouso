@@ -42,8 +42,8 @@
                     {#<span class="info-box-icon bg-aqua-gradient"><i class="fa fa-usd"></i></span>#}
                     {#<div class="info-box-content">#}
                     <div class="info-box">
-                        <span class="info-box-text">Dotação atualizada</span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
+                        <span class="info-box-number">Dotação atualizada</span>
+                        <span class="info-box-text">R$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -55,8 +55,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         {#<span class="info-box-text">Saldo da Ação para alocar em atividades</span>#}
-                        <span class="info-box-text">Saldo</span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
+                        <span class="info-box-number">Saldo</span>
+                        <span class="info-box-text">R$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
                     </div>
                 </div>
             </div>
@@ -121,9 +121,9 @@
                     {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
                     {#<div class="info-box-content">#}
                     <div class="info-box">
-                        <span class="info-box-text">PLANEJADO</span>
-                        <span class="info-box-number">Quantidade Itens</span>
-                        <span class="info-box-number">Valor Itens</span>
+                        <span class="info-box-number">PLANEJADO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -133,9 +133,9 @@
                     {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
                     {#<div class="info-box-content">#}
                     <div class="info-box">
-                        <span class="info-box-text">PRIORIZADO</span>
-                        <span class="info-box-number">Quantidade Itens</span>
-                        <span class="info-box-number">Valor Itens</span>
+                        <span class="info-box-number">PRIORIZADO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -145,21 +145,21 @@
                     {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
                     {#<div class="info-box-content">#}
                     <div class="info-box">
-                        <span class="info-box-text">A PROCESSAR</span>
-                        <span class="info-box-number">Quantidade Itens</span>
-                        <span class="info-box-number">Valor Itens</span>
+                        <span class="info-box-number">A PROCESSAR</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
             </div>
-            <div class="col-md-2 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
                     {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
                     {#<div class="info-box-content">#}
                     <div class="info-box">
-                        <span class="info-box-text">EM PROCESSAMENTO</span>
-                        <span class="info-box-number">Quantidade Itens</span>
-                        <span class="info-box-number">Valor Itens</span>
+                        <span class="info-box-number">EM PROCESSAMENTO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -189,7 +189,7 @@
             <div>
                 <label class="control-label required" for="processamento_nuAnoExercicio">Ano Exercicio</label>
                 {#<label>{{atividadePlanoUso.nuAnoExercicioAtividade}}</label>#}
-                <label> Apresentar o Ano Exercício </label>
+                <span class="info-box-text">Ano deve estar aqui</span>
             </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
@@ -216,6 +216,20 @@
                 {{ form_errors(form.nuPrioridade) }}
                 {{ form_widget(form.nuPrioridade) }}
             </div>#}
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label class="control-label" for="processamento_nuProposta">NUP</label>
+
+                <input type="text" id="processamento_nuProposta" name="processamento[nuProposta]" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label class="control-label" for="processamento_nuProposta">N° da Prroposta</label>
+
+                <input type="text" id="processamento_nuProposta" name="processamento[nuProposta]" class="form-control">
+            </div>
         </div>
     </div>
 </div>

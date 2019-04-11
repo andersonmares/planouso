@@ -15,11 +15,11 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5c36769a61f162a3724b0c8a177f6bea9d3dd333cf0cb8a1e1674f0966f4e1a9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5c36769a61f162a3724b0c8a177f6bea9d3dd333cf0cb8a1e1674f0966f4e1a9->enter($__internal_5c36769a61f162a3724b0c8a177f6bea9d3dd333cf0cb8a1e1674f0966f4e1a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig"));
+        $__internal_f70fcbbdc06161762fa11812c7de1fea8e7290036fe855b1938bfa2a5ba54a1a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f70fcbbdc06161762fa11812c7de1fea8e7290036fe855b1938bfa2a5ba54a1a->enter($__internal_f70fcbbdc06161762fa11812c7de1fea8e7290036fe855b1938bfa2a5ba54a1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig"));
 
-        $__internal_cb4489d4b2f63638f25801080af9f50daa3a174c630ed8e6b39b401b9b98ac9f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cb4489d4b2f63638f25801080af9f50daa3a174c630ed8e6b39b401b9b98ac9f->enter($__internal_cb4489d4b2f63638f25801080af9f50daa3a174c630ed8e6b39b401b9b98ac9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig"));
+        $__internal_6b091d18d9dd065fb114078bf8709a033601970d905ddd2cae3c1c784e85a7b3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6b091d18d9dd065fb114078bf8709a033601970d905ddd2cae3c1c784e85a7b3->enter($__internal_6b091d18d9dd065fb114078bf8709a033601970d905ddd2cae3c1c784e85a7b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig"));
 
         // line 1
         echo "<!----------------------------------------->
@@ -77,8 +77,8 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "                    ";
         // line 44
         echo "                    <div class=\"info-box\">
-                        <span class=\"info-box-text\">Dotação atualizada</span>
-                        <span class=\"info-box-number\">R\$ ";
+                        <span class=\"info-box-number\">Dotação atualizada</span>
+                        <span class=\"info-box-text\">R\$ ";
         // line 46
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute(($context["acaoOrcamentaria"] ?? $this->getContext($context, "acaoOrcamentaria")), "vlAtualizado", array()), 2, ",", "."), "html", null, true);
         echo "</span>
@@ -96,8 +96,8 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "                    <div class=\"info-box\">
                         ";
         // line 58
-        echo "                        <span class=\"info-box-text\">Saldo</span>
-                        <span class=\"info-box-number\">R\$ ";
+        echo "                        <span class=\"info-box-number\">Saldo</span>
+                        <span class=\"info-box-text\">R\$ ";
         // line 59
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute(($context["acaoOrcamentaria"] ?? $this->getContext($context, "acaoOrcamentaria")), "vlSaldo", array()), 2, ",", "."), "html", null, true);
         echo "</span>
@@ -119,9 +119,9 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "                    ";
         // line 123
         echo "                    <div class=\"info-box\">
-                        <span class=\"info-box-text\">PLANEJADO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">PLANEJADO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -133,9 +133,9 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "                    ";
         // line 135
         echo "                    <div class=\"info-box\">
-                        <span class=\"info-box-text\">PRIORIZADO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">PRIORIZADO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -147,23 +147,23 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "                    ";
         // line 147
         echo "                    <div class=\"info-box\">
-                        <span class=\"info-box-text\">A PROCESSAR</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">A PROCESSAR</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
             </div>
-            <div class=\"col-md-2 col-sm-6 col-xs-12\">
+            <div class=\"col-md-3 col-sm-6 col-xs-12\">
                 <div class=\"info-box\">
                     ";
         // line 158
         echo "                    ";
         // line 159
         echo "                    <div class=\"info-box\">
-                        <span class=\"info-box-text\">EM PROCESSAMENTO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">EM PROCESSAMENTO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -196,7 +196,7 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                 <label class=\"control-label required\" for=\"processamento_nuAnoExercicio\">Ano Exercicio</label>
                 ";
         // line 192
-        echo "                <label> Apresentar o Ano Exercício </label>
+        echo "                <span class=\"info-box-text\">Ano deve estar aqui</span>
             </div>
         </div>
         <div class=\"col-md-3 col-sm-6 col-xs-12\">
@@ -216,13 +216,27 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
         echo "            ";
         // line 219
         echo "        </div>
+        <div class=\"col-md-3 col-sm-6 col-xs-12\">
+            <div class=\"form-group\">
+                <label class=\"control-label\" for=\"processamento_nuProposta\">NUP</label>
+
+                <input type=\"text\" id=\"processamento_nuProposta\" name=\"processamento[nuProposta]\" class=\"form-control\">
+            </div>
+        </div>
+        <div class=\"col-md-3 col-sm-6 col-xs-12\">
+            <div class=\"form-group\">
+                <label class=\"control-label\" for=\"processamento_nuProposta\">N° da Prroposta</label>
+
+                <input type=\"text\" id=\"processamento_nuProposta\" name=\"processamento[nuProposta]\" class=\"form-control\">
+            </div>
+        </div>
     </div>
 </div>";
         
-        $__internal_5c36769a61f162a3724b0c8a177f6bea9d3dd333cf0cb8a1e1674f0966f4e1a9->leave($__internal_5c36769a61f162a3724b0c8a177f6bea9d3dd333cf0cb8a1e1674f0966f4e1a9_prof);
+        $__internal_f70fcbbdc06161762fa11812c7de1fea8e7290036fe855b1938bfa2a5ba54a1a->leave($__internal_f70fcbbdc06161762fa11812c7de1fea8e7290036fe855b1938bfa2a5ba54a1a_prof);
 
         
-        $__internal_cb4489d4b2f63638f25801080af9f50daa3a174c630ed8e6b39b401b9b98ac9f->leave($__internal_cb4489d4b2f63638f25801080af9f50daa3a174c630ed8e6b39b401b9b98ac9f_prof);
+        $__internal_6b091d18d9dd065fb114078bf8709a033601970d905ddd2cae3c1c784e85a7b3->leave($__internal_6b091d18d9dd065fb114078bf8709a033601970d905ddd2cae3c1c784e85a7b3_prof);
 
     }
 
@@ -295,8 +309,8 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                     {#<span class=\"info-box-icon bg-aqua-gradient\"><i class=\"fa fa-usd\"></i></span>#}
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
-                        <span class=\"info-box-text\">Dotação atualizada</span>
-                        <span class=\"info-box-number\">R\$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
+                        <span class=\"info-box-number\">Dotação atualizada</span>
+                        <span class=\"info-box-text\">R\$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -308,8 +322,8 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
                         {#<span class=\"info-box-text\">Saldo da Ação para alocar em atividades</span>#}
-                        <span class=\"info-box-text\">Saldo</span>
-                        <span class=\"info-box-number\">R\$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
+                        <span class=\"info-box-number\">Saldo</span>
+                        <span class=\"info-box-text\">R\$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
                     </div>
                 </div>
             </div>
@@ -374,9 +388,9 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                     {#<span class=\"info-box-icon bg-yellow-gradient\"><i class=\"fa fa-usd\"></i></span>#}
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
-                        <span class=\"info-box-text\">PLANEJADO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">PLANEJADO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -386,9 +400,9 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                     {#<span class=\"info-box-icon bg-yellow-gradient\"><i class=\"fa fa-usd\"></i></span>#}
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
-                        <span class=\"info-box-text\">PRIORIZADO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">PRIORIZADO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -398,21 +412,21 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                     {#<span class=\"info-box-icon bg-yellow-gradient\"><i class=\"fa fa-usd\"></i></span>#}
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
-                        <span class=\"info-box-text\">A PROCESSAR</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">A PROCESSAR</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
             </div>
-            <div class=\"col-md-2 col-sm-6 col-xs-12\">
+            <div class=\"col-md-3 col-sm-6 col-xs-12\">
                 <div class=\"info-box\">
                     {#<span class=\"info-box-icon bg-yellow-gradient\"><i class=\"fa fa-usd\"></i></span>#}
                     {#<div class=\"info-box-content\">#}
                     <div class=\"info-box\">
-                        <span class=\"info-box-text\">EM PROCESSAMENTO</span>
-                        <span class=\"info-box-number\">Quantidade Itens</span>
-                        <span class=\"info-box-number\">Valor Itens</span>
+                        <span class=\"info-box-number\">EM PROCESSAMENTO</span>
+                        <span class=\"info-box-text\">Quantidade Itens</span>
+                        <span class=\"info-box-text\">Valor Itens</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -442,7 +456,7 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
             <div>
                 <label class=\"control-label required\" for=\"processamento_nuAnoExercicio\">Ano Exercicio</label>
                 {#<label>{{atividadePlanoUso.nuAnoExercicioAtividade}}</label>#}
-                <label> Apresentar o Ano Exercício </label>
+                <span class=\"info-box-text\">Ano deve estar aqui</span>
             </div>
         </div>
         <div class=\"col-md-3 col-sm-6 col-xs-12\">
@@ -469,6 +483,20 @@ class __TwigTemplate_431d5ec518fb3c8d72477682d465bf776948f8200f393033c5ba6682c87
                 {{ form_errors(form.nuPrioridade) }}
                 {{ form_widget(form.nuPrioridade) }}
             </div>#}
+        </div>
+        <div class=\"col-md-3 col-sm-6 col-xs-12\">
+            <div class=\"form-group\">
+                <label class=\"control-label\" for=\"processamento_nuProposta\">NUP</label>
+
+                <input type=\"text\" id=\"processamento_nuProposta\" name=\"processamento[nuProposta]\" class=\"form-control\">
+            </div>
+        </div>
+        <div class=\"col-md-3 col-sm-6 col-xs-12\">
+            <div class=\"form-group\">
+                <label class=\"control-label\" for=\"processamento_nuProposta\">N° da Prroposta</label>
+
+                <input type=\"text\" id=\"processamento_nuProposta\" name=\"processamento[nuProposta]\" class=\"form-control\">
+            </div>
         </div>
     </div>
 </div>", "@Admin/Processamento/cabecalho_acaoorcamentaria.html.twig", "D:\\planouso\\src\\Admin\\AdminBundle\\Resources\\views\\Processamento\\cabecalho_acaoorcamentaria.html.twig");

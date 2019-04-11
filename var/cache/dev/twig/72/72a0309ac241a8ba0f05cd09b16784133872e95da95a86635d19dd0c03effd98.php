@@ -22,29 +22,29 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208->enter($__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
+        $__internal_7bf9a86ff22dd22cd02dc53f875f021a183a813d250dc531924fd1a7f069db16 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7bf9a86ff22dd22cd02dc53f875f021a183a813d250dc531924fd1a7f069db16->enter($__internal_7bf9a86ff22dd22cd02dc53f875f021a183a813d250dc531924fd1a7f069db16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
 
-        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26->enter($__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
+        $__internal_c5adaf4b42965faca47f317487636a9ac6a6f6810bdba5078aff5ee21db0e012 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5adaf4b42965faca47f317487636a9ac6a6f6810bdba5078aff5ee21db0e012->enter($__internal_c5adaf4b42965faca47f317487636a9ac6a6f6810bdba5078aff5ee21db0e012_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Processamento/processamentoacao.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208->leave($__internal_4dfef94e709c106ab1705ae927346a5233f55e8194765fbf72c2afa8db77d208_prof);
+        $__internal_7bf9a86ff22dd22cd02dc53f875f021a183a813d250dc531924fd1a7f069db16->leave($__internal_7bf9a86ff22dd22cd02dc53f875f021a183a813d250dc531924fd1a7f069db16_prof);
 
         
-        $__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26->leave($__internal_917d2804896548d341732aaf3d67bbf6d43923cc7a3619ea8187a1583e334c26_prof);
+        $__internal_c5adaf4b42965faca47f317487636a9ac6a6f6810bdba5078aff5ee21db0e012->leave($__internal_c5adaf4b42965faca47f317487636a9ac6a6f6810bdba5078aff5ee21db0e012_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644->enter($__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_286e208423f42bc818397c4568e39b8d8a6649ba28f1624328681401ab897419 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_286e208423f42bc818397c4568e39b8d8a6649ba28f1624328681401ab897419->enter($__internal_286e208423f42bc818397c4568e39b8d8a6649ba28f1624328681401ab897419_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3->enter($__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1a739764a2c28431b9212080476ac66347c23809d3b702734fa62e5338e37fdf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1a739764a2c28431b9212080476ac66347c23809d3b702734fa62e5338e37fdf->enter($__internal_1a739764a2c28431b9212080476ac66347c23809d3b702734fa62e5338e37fdf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -59,27 +59,29 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
             <table id=\"lista\" class=\"table table-bordered table-hover\">
                 <thead>
                     <tr>
-                        <!-- <th>CÓD</th> -->
-                        <!-- <th>Prioridade</th> -->
                         ";
+        // line 15
+        echo "                        ";
+        // line 16
+        echo "                        ";
         // line 17
         echo "                        ";
         // line 18
+        echo "                        ";
+        // line 19
+        echo "                        ";
+        // line 20
+        echo "                        ";
+        // line 21
+        echo "                        ";
+        // line 22
+        echo "                        ";
+        // line 23
         echo "                        <th>Status</th>
                         <th>Política/Programa/Rede</th>
                         <th>Componente</th>
-                        ";
-        // line 22
-        echo "                        <th>Exercício</th>
-                        ";
-        // line 24
-        echo "                        ";
-        // line 25
-        echo "                        ";
-        // line 26
-        echo "                        ";
-        // line 27
-        echo "                        <th>Valor total</th>
+                        <th>Exercício</th>
+                        <th>Valor Total</th>
                         <th>Valor Ano Vigente</th>
                         <th>Editar</th>
                     </tr>
@@ -173,21 +175,21 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
         echo "\">Voltar</a>
 ";
         
-        $__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3->leave($__internal_159057287f2e3c21c8016f413427e7c95ab0a70df2284f4115d0fa6e72462bb3_prof);
+        $__internal_1a739764a2c28431b9212080476ac66347c23809d3b702734fa62e5338e37fdf->leave($__internal_1a739764a2c28431b9212080476ac66347c23809d3b702734fa62e5338e37fdf_prof);
 
         
-        $__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644->leave($__internal_0e63d7cfa899e2892f2d7a7445b34956c3176d850d46368b5a773add9ddf5644_prof);
+        $__internal_286e208423f42bc818397c4568e39b8d8a6649ba28f1624328681401ab897419->leave($__internal_286e208423f42bc818397c4568e39b8d8a6649ba28f1624328681401ab897419_prof);
 
     }
 
     // line 81
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308->enter($__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_fcfa14695fa400ebb853386c575b52bd7fd5662219f06a8166c222731df5fe75 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_fcfa14695fa400ebb853386c575b52bd7fd5662219f06a8166c222731df5fe75->enter($__internal_fcfa14695fa400ebb853386c575b52bd7fd5662219f06a8166c222731df5fe75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969->enter($__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_91b1615ff7c2e6ab2259a1fd7b1217ec57234efb25ffc87feae8653ef0ec620d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_91b1615ff7c2e6ab2259a1fd7b1217ec57234efb25ffc87feae8653ef0ec620d->enter($__internal_91b1615ff7c2e6ab2259a1fd7b1217ec57234efb25ffc87feae8653ef0ec620d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 82
         echo "    <script>
@@ -208,10 +210,10 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
     </script>
 ";
         
-        $__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969->leave($__internal_cdf5b414e0458dc042613a833fee8695f1cc8d7ed216335d1b0801a9ebf4b969_prof);
+        $__internal_91b1615ff7c2e6ab2259a1fd7b1217ec57234efb25ffc87feae8653ef0ec620d->leave($__internal_91b1615ff7c2e6ab2259a1fd7b1217ec57234efb25ffc87feae8653ef0ec620d_prof);
 
         
-        $__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308->leave($__internal_e22a8456b724194003ebb5f9b3007183c23c39cbaafc9cdf86bd958630b15308_prof);
+        $__internal_fcfa14695fa400ebb853386c575b52bd7fd5662219f06a8166c222731df5fe75->leave($__internal_fcfa14695fa400ebb853386c575b52bd7fd5662219f06a8166c222731df5fe75_prof);
 
     }
 
@@ -227,7 +229,7 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
 
     public function getDebugInfo()
     {
-        return array (  193 => 82,  184 => 81,  172 => 79,  144 => 53,  135 => 50,  131 => 49,  126 => 48,  124 => 47,  122 => 46,  120 => 45,  116 => 43,  111 => 42,  106 => 40,  104 => 39,  99 => 37,  97 => 36,  94 => 34,  90 => 33,  82 => 27,  80 => 26,  78 => 25,  76 => 24,  73 => 22,  68 => 18,  66 => 17,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  195 => 82,  186 => 81,  174 => 79,  146 => 53,  137 => 50,  133 => 49,  128 => 48,  126 => 47,  124 => 46,  122 => 45,  118 => 43,  113 => 42,  108 => 40,  106 => 39,  101 => 37,  99 => 36,  96 => 34,  92 => 33,  80 => 23,  78 => 22,  76 => 21,  74 => 20,  72 => 19,  70 => 18,  68 => 17,  66 => 16,  64 => 15,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -253,20 +255,20 @@ class __TwigTemplate_e59cad7261a3049ccab7f386a79128921255be3060d964698df8a33582c
             <table id=\"lista\" class=\"table table-bordered table-hover\">
                 <thead>
                     <tr>
-                        <!-- <th>CÓD</th> -->
-                        <!-- <th>Prioridade</th> -->
+                        {#<th>CÓD</th>#}
+                        {#<th>Prioridade</th>#}
                         {#<th>Vinculo do Planejamento</th>#}
                         {#<th>Instrumentos</th>#}
-                        <th>Status</th>
-                        <th>Política/Programa/Rede</th>
-                        <th>Componente</th>
                         {#<th>Objeto</th>#}
-                        <th>Exercício</th>
                         {#<th>Tipo de Atividade</th>#}
                         {#<th>Proposta</th>#}
                         {#<th>UF</th>#}
                         {#<th>Município</th>#}
-                        <th>Valor total</th>
+                        <th>Status</th>
+                        <th>Política/Programa/Rede</th>
+                        <th>Componente</th>
+                        <th>Exercício</th>
+                        <th>Valor Total</th>
                         <th>Valor Ano Vigente</th>
                         <th>Editar</th>
                     </tr>
