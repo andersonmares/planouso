@@ -651,6 +651,10 @@
     <service id="Admin\AdminBundle\Form\PlanilhaOrcamentariaType" class="Admin\AdminBundle\Form\PlanilhaOrcamentariaType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="Admin\AdminBundle\Form\ProcessamentoType" class="Admin\AdminBundle\Form\ProcessamentoType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
     <service id="Admin\AdminBundle\Form\RedeProgramaType" class="Admin\AdminBundle\Form\RedeProgramaType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -703,7 +707,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.mra3cmm"/>
+      <argument type="service" id="service_locator.pos8ba."/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -969,6 +973,7 @@
         <argument>Admin\AdminBundle\Form\DepartamentoType</argument>
         <argument>Admin\AdminBundle\Form\PlanilhaNotaEmpenhoType</argument>
         <argument>Admin\AdminBundle\Form\PlanilhaOrcamentariaType</argument>
+        <argument>Admin\AdminBundle\Form\ProcessamentoType</argument>
         <argument>Admin\AdminBundle\Form\RedeProgramaType</argument>
         <argument>Admin\AdminBundle\Form\RlAcaoOrcamentariaDepartamentoType</argument>
         <argument>Admin\AdminBundle\Form\TipoAtividadeType</argument>
@@ -1185,7 +1190,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.am0bxn_"/>
+      <argument type="service" id="service_locator.iehgfc5"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -4872,6 +4877,8 @@
     <service id="abstract.instanceof.Admin\AdminBundle\Form\PlanilhaNotaEmpenhoType" class="Admin\AdminBundle\Form\PlanilhaNotaEmpenhoType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.Admin\AdminBundle\Form\PlanilhaOrcamentariaType" class="Admin\AdminBundle\Form\PlanilhaOrcamentariaType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.Admin\AdminBundle\Form\PlanilhaOrcamentariaType" class="Admin\AdminBundle\Form\PlanilhaOrcamentariaType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.Admin\AdminBundle\Form\ProcessamentoType" class="Admin\AdminBundle\Form\ProcessamentoType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.Admin\AdminBundle\Form\ProcessamentoType" class="Admin\AdminBundle\Form\ProcessamentoType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.Admin\AdminBundle\Form\RedeProgramaType" class="Admin\AdminBundle\Form\RedeProgramaType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.Admin\AdminBundle\Form\RedeProgramaType" class="Admin\AdminBundle\Form\RedeProgramaType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.Admin\AdminBundle\Form\RlAcaoOrcamentariaDepartamentoType" class="Admin\AdminBundle\Form\RlAcaoOrcamentariaDepartamentoType" public="false" autowire="true" abstract="true"/>
@@ -4980,7 +4987,7 @@
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.mra3cmm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.pos8ba." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
@@ -5115,7 +5122,7 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.am0bxn_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.iehgfc5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Admin\AdminBundle\Form\AtividadePlanoUsoType" type="service" id="Admin\AdminBundle\Form\AtividadePlanoUsoType"/>
@@ -5124,6 +5131,7 @@
         <argument key="Admin\AdminBundle\Form\DepartamentoType" type="service" id="Admin\AdminBundle\Form\DepartamentoType"/>
         <argument key="Admin\AdminBundle\Form\PlanilhaNotaEmpenhoType" type="service" id="Admin\AdminBundle\Form\PlanilhaNotaEmpenhoType"/>
         <argument key="Admin\AdminBundle\Form\PlanilhaOrcamentariaType" type="service" id="Admin\AdminBundle\Form\PlanilhaOrcamentariaType"/>
+        <argument key="Admin\AdminBundle\Form\ProcessamentoType" type="service" id="Admin\AdminBundle\Form\ProcessamentoType"/>
         <argument key="Admin\AdminBundle\Form\RedeProgramaType" type="service" id="Admin\AdminBundle\Form\RedeProgramaType"/>
         <argument key="Admin\AdminBundle\Form\RlAcaoOrcamentariaDepartamentoType" type="service" id="Admin\AdminBundle\Form\RlAcaoOrcamentariaDepartamentoType"/>
         <argument key="Admin\AdminBundle\Form\TipoAtividadeType" type="service" id="Admin\AdminBundle\Form\TipoAtividadeType"/>

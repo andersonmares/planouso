@@ -1,11 +1,11 @@
 <div class="box box-success box-solid">
     <div class="box-header with-border">
-        <h3 class="box-title">Ação orçamentária</h3>
-        <!--<div class="pull-right ">
-          legenda da tela
-        </div>-->
+       <h3 class="box-title">Ação Orçamentária</h3>
+        <a class="btn btn-success" data-toggle="collapse" data-target="#demo">
+            <li class="fa fa-arrows-v fa-plus"> </li>
+        </a>
     </div>
-    <div class="box-body">
+    <div id="demo" class="box-body">
         <div class="row">
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-more text-bold">Plano Orçamentário</span>
+                    <span class="info-box-more text-bold">PO</span>
                     {{ acaoOrcamentaria.nuPlanoOrcamentario  }}
                     <!-- /.info-box-content -->
                 </div>
@@ -25,82 +25,98 @@
             </div>
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-more text-bold">Ano</span>
-                    {% if ( acaoOrcamentaria.nuAnoExercicio >  "now"|date("Y")) %}
-                        {{ acaoOrcamentaria.nuAnoExercicio  }} - Em Planejamento
-                    {% else %}
-                        {{ acaoOrcamentaria.nuAnoExercicio  }}
-                    {% endif %}
-
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            <div class="col-md-2 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-more text-bold">Despesa</span>
+                    <span class="info-box-more text-bold">Tipo de Despesa</span>
                     {{ acaoOrcamentaria.dsTipoDespesa  }}
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-more text-bold">Denominação</span>
-                    {{ acaoOrcamentaria.dsDenominacao  }}
-                </div>
-                <!-- /.info-box -->
-            </div>
-
-        </div>
-        <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-aqua-gradient"><i class="fa fa-usd"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">Dotação atualizada</span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
+                    {#<span class="info-box-icon bg-aqua-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">Dotação atualizada</span>
+                        <span class="info-box-text">R$ {{ acaoOrcamentaria.vlAtualizado|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
             </div>
-
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-green-gradient"><i class="fa fa-usd"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">Valor das atividades no ano vigente </span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlAtividade|number_format(2, ',', '.')  }}</span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">Valor processoado CGPO na Ação</span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlProcessadoCgpo|number_format(2, ',', '.')  }}</span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon {% if acaoOrcamentaria.vlSaldo > 0 %}bg-green-gradient{% else %} bg-red-gradient {% endif %}"><i class="fa fa-usd"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">Saldo da Ação para alocar em atividades</span>
-                        <span class="info-box-number">R$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
+                    {#<span class="info-box-icon {% if acaoOrcamentaria.vlSaldo > 0 %}bg-green-gradient{% else %} bg-red-gradient {% endif %}"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        {#<span class="info-box-text">Saldo da Ação para alocar em atividades</span>#}
+                        <span class="info-box-number">Saldo</span>
+                        <span class="info-box-text">R$ {{ acaoOrcamentaria.vlSaldo|number_format(2, ',', '.')  }}</span>
                     </div>
                 </div>
             </div>
 
         </div>
-        <!-- /.info-box -->
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">PLANEJADO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">PRIORIZADO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">A PROCESSAR</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">EM PROCESSAMENTO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    {#<span class="info-box-icon bg-yellow-gradient"><i class="fa fa-usd"></i></span>#}
+                    {#<div class="info-box-content">#}
+                    <div class="info-box">
+                        <span class="info-box-number">PROCESSADO</span>
+                        <span class="info-box-text">Quantidade Itens</span>
+                        <span class="info-box-text">Valor Itens</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
