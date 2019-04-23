@@ -194,7 +194,6 @@
 {% block javascripts %}
     <script>
         $(function () {
-
             if({{is_granted('ROLE_DEPARTAMENTO')}}){
                 $("#atividadeplanouso_coStatus option[value='2']").remove();
                 $("#atividadeplanouso_coStatus option[value='5']").remove();
