@@ -10,9 +10,11 @@ use Admin\AdminBundle\Entity\TipoDespesa;
 use Admin\AdminBundle\Repository\AcaoOrcamentariaRepository;
 use Admin\AdminBundle\Repository\DepartamentoRepository;
 use Admin\AdminBundle\Repository\PerfilAcessoRepository;
+use Admin\AdminBundle\Repository\StatusItemRepository;
 use Admin\AdminBundle\Repository\TipoDespesaRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Proxies\__CG__\Admin\AdminBundle\Entity\StatusItem;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -68,7 +70,20 @@ class ProcessamentoAcaoType extends AbstractType
         ))->add('btnPesquisar', SubmitType::class, array(
                 'attr' => array('class' => 'btn btn-success')
             )
-        );
+        )
+            ->add('coStatus', EntityType::class, array(
+                    'label' => 'Status do Item',
+                    'class' => StatusItem::class,
+                    'query_builder' => function (StatusItemRepository $er) {
+                        return $er->createQueryBuilder('v');
+                    },
+                    'required' => false,
+                    'choice_label' => 'noStatus',
+                    'placeholder' => 'Selecione'
+                )
+            )
+
+        ;
     }
 
     /**

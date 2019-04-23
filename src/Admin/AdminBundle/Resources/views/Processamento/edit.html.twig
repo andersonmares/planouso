@@ -200,6 +200,8 @@
     <script>
         $(function () {
             $( "#status-item" ).change(function() {
+                $('#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_redePrograma,#atividadeplanouso_vinculoPlanejamento').attr('required', false);
+                $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', false);
 
                 if($('#status-item').val() == 1 ||  $('#status-item').val() == 2){
                     $('#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_redePrograma,#atividadeplanouso_vinculoPlanejamento').attr('required', true);

@@ -83,7 +83,7 @@ class AtividadePlanoUsoType extends AbstractType
                 )
             )
             ->add('coStatus', EntityType::class, array(
-                    'label' => 'Vinculo de Planejamento',
+                    'label' => 'Status do Item',
                     'class' => StatusItem::class,
                     'query_builder' => function (StatusItemRepository $er) {
                         return $er->createQueryBuilder('v');
