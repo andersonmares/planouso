@@ -100,6 +100,8 @@ class ProcessamentoController extends Controller
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->acaoOrcamentariaId($idAcao);
         $saldoValidacao = ($acaoOrcamentaria['vlSaldo'] + $atividadePlanoUso->getVlExecutarExercicio());
         $form = $this->createForm(AtividadePlanoUsoType::class, $atividadePlanoUso, array('vlSaldo' => $saldoValidacao));
+
+        $totalizadores = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->totalizadoresAcaoOrcamentaria($idAcao);
         $form->handleRequest($request);
 
 
@@ -128,6 +130,7 @@ class ProcessamentoController extends Controller
 
         return $this->render('@Admin/Processamento/edit.html.twig', [
                 'acaoOrcamentaria' => $acaoOrcamentaria,
+                'totalizadores'=>$totalizadores,
                 'form' => $form->createView(),
             ]
         );

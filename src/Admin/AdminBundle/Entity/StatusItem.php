@@ -21,21 +21,21 @@ class StatusItem
      * @ORM\GeneratedValue(strategy="NONE")
 
      */
-    private $coSeqStatus;
+    protected $coSeqStatus;
 
     /**
      * @var string
      *
      * @ORM\Column(name="NO_STATUS", type="string", length=250)
      */
-    private $noStatus;
+    protected $noStatus;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ST_REGISTRO_ATIVO", type="string", length=1)
      */
-    private $stRegistoAtivo;
+    protected $stRegistoAtivo;
 
     /**
      * @return int

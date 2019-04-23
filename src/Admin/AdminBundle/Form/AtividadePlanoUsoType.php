@@ -82,12 +82,18 @@ class AtividadePlanoUsoType extends AbstractType
                     'placeholder' => 'Selecione'
                 )
             )
-//            ->add('statusItem', ChoiceType::class, array(
-//                    'choices' => $this->getStatusItem(),
-//                    'label' => 'Status do Item',
-//                    'required' => false,
-//                )
-//            )
+            ->add('coStatus', EntityType::class, array(
+                    'label' => 'Vinculo de Planejamento',
+                    'class' => StatusItem::class,
+                    'query_builder' => function (StatusItemRepository $er) {
+                        return $er->createQueryBuilder('v');
+                    },
+                    'required' => false,
+                    'choice_label' => 'noStatus',
+                    'placeholder' => 'Selecione'
+                )
+            )
+
             ->add('tipoInstrumento', EntityType::class, array(
                 'label' => 'Instrumento',
                 'class' => TipoInstrumento::class,
@@ -374,6 +380,8 @@ class AtividadePlanoUsoType extends AbstractType
     {
 
         $statusItem = $this->repository->findAll();
+
+
         foreach ($statusItem as $status) {
             $arr[$status->getCoSeqStatus()] = $status->getNoStatus();
         }

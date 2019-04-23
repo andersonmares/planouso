@@ -140,6 +140,14 @@ class AtividadePlanoUso
      */
     private $coVinculoPlanejamento;
 
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="CO_STATUS", type="integer")
+     */
+    private $coStatus;
+
     /**
      * @var int
      *
@@ -1236,4 +1244,24 @@ class AtividadePlanoUso
     {
         $this->seqStatus = $seqStatus;
     }
+
+    /**
+     * @return int
+     */
+    public function getCoStatus()
+    {
+        return $this->coStatus;
+    }
+
+    /**
+     * @param int $coStatus
+     */
+    public function setCoStatus($coStatus)
+    {
+        $this->coStatus = $coStatus;
+    }
+    
+
+
+
 }
