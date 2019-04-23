@@ -49,19 +49,7 @@ class ProcessamentoAcaoType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder,array $options)
     {
-        $builder->add('coDepartamento', EntityType::class, array(
-            'label' => 'Status do Item',
-            'required' => false,
-            'class' => Departamento::class,
-            'query_builder' => function (DepartamentoRepository $er) {
-                return $er->createQueryBuilder('a')
-                    ->where('a.stRegistroAtivo = :stregistroativo')
-                    ->setParameter('stregistroativo', 'S')
-                    ->orderBy('a.dsDepartamento', 'ASC');
-            },
-            'choice_label' => 'dsDepartamento',
-            'placeholder' => 'Selecione'
-        ))->add('nuProcesso', TextType::class, array(
+        $builder->add('nuProcesso', TextType::class, array(
             'label' => 'NUP',
             'required' => false,
         ))->add('nuProposta', TextType::class, array(
