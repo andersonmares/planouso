@@ -50,15 +50,10 @@
                         {{ form_widget(form.atividade) }}
                     </div>
                 </div>
-                <!--
-                <div class="col-md-2 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                        {{ form_label(form.nuAnoExercicioAtividade) }}
-                        {{ form_errors(form.nuAnoExercicioAtividade) }}
-                        {{ form_widget(form.nuAnoExercicioAtividade) }}
-                    </div>
-                </div>
-                -->
+                {{ form_label(form.nuAnoExercicioAtividade) }}
+                {{ form_errors(form.nuAnoExercicioAtividade) }}
+                {{ form_widget(form.nuAnoExercicioAtividade) }}
+
             </div>
             <div class="row">
                 <div class="col-md-2 col-sm-6 col-xs-12">
@@ -116,7 +111,7 @@
                     <div>
                         <label class="control-label">Parcela</label>
                         <select class="form-control" id="ds-parcela">
-                            <option value="" selected = selected>Selecione</option>
+                            <option value="" selected=selected>Selecione</option>
                             <option value="">Única</option>
                             <option value="">1ª</option>
                             <option value="">2ª</option>
@@ -191,7 +186,7 @@
             {#{{ form_widget(form.btnPesquisar, { 'label': 'Pesquisar'  }) }}#}
             <button type="submit" class="btn btn-success">Salvar</button>
             <a class="btn btn-primary" href="{{ path('processamento_acao', {id: acaoOrcamentaria.id}) }}">Voltar</a>
-            {{ form_end(form)}}
+            {{ form_end(form) }}
         </div>
     </div>
 
@@ -199,45 +194,52 @@
 {% block javascripts %}
     <script>
         $(function () {
-            $( "#status-item" ).change(function() {
+
+            if({{is_granted('ROLE_DEPARTAMENTO')}}){
+                $("#atividadeplanouso_coStatus option[value='2']").remove();
+                $("#atividadeplanouso_coStatus option[value='5']").remove();
+            }
+
+
+            $("#status-item").change(function () {
                 $('#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_redePrograma,#atividadeplanouso_vinculoPlanejamento').attr('required', false);
                 $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', false);
 
-                if($('#status-item').val() == 1 ||  $('#status-item').val() == 2){
+                if ($('#status-item').val() == 1 || $('#status-item').val() == 2) {
                     $('#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_redePrograma,#atividadeplanouso_vinculoPlanejamento').attr('required', true);
                 }
-                if( $('#status-item').val() == 3){
+                if ($('#status-item').val() == 3) {
 
                     $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
 
-                    var arratividade_a = [3,30,2,1,9,4];
-                    var arrInstrumentos_a = [5,6,7];
-                    if($.inArray($('#atividadeplanouso_atividade').val(),arratividade_a) &&
-                    $.inArray($('#atividadeplanouso_tipoInstrumento').val(),arrInstrumentos_a)
-                    ){
-                        $('#atividadeplanouso_nuProposta').attr('required',true);
-                        $('#atividadeplanouso_vlTotal').attr('required',true);
+                    var arratividade_a = [3, 30, 2, 1, 9, 4];
+                    var arrInstrumentos_a = [5, 6, 7];
+                    if ($.inArray($('#atividadeplanouso_atividade').val(), arratividade_a) &&
+                            $.inArray($('#atividadeplanouso_tipoInstrumento').val(), arrInstrumentos_a)
+                    ) {
+                        $('#atividadeplanouso_nuProposta').attr('required', true);
+                        $('#atividadeplanouso_vlTotal').attr('required', true);
 
                     }
 
-                    var arratividade_b = [3,2,4,1];
-                    if($.inArray($('#atividadeplanouso_atividade').val(),arratividade_b) &&
+                    var arratividade_b = [3, 2, 4, 1];
+                    if ($.inArray($('#atividadeplanouso_atividade').val(), arratividade_b) &&
                             $('#atividadeplanouso_tipoInstrumento').val() == 3
-                    ){
-                        $('#atividadeplanouso_nuProposta').attr('required',true);
-                        $('#atividadeplanouso_vlTotal').attr('required',true);
-                        $('#atividadeplanouso_municipio').attr('required',true);
-                        $('#ds-parcela').attr('required',true);
-                        $('#atividadeplanouso_uf').attr('required',true);
+                    ) {
+                        $('#atividadeplanouso_nuProposta').attr('required', true);
+                        $('#atividadeplanouso_vlTotal').attr('required', true);
+                        $('#atividadeplanouso_municipio').attr('required', true);
+                        $('#ds-parcela').attr('required', true);
+                        $('#atividadeplanouso_uf').attr('required', true);
                     }
 
                 }
 
-                if( $('#status-item').val() == 4){
+                if ($('#status-item').val() == 4) {
                     $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
                 }
 
-                if( $('#status-item').val() == 5){
+                if ($('#status-item').val() == 5) {
                     $('#atividadeplanouso_vlProcessadoCgpo,#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
                 }
 
@@ -248,28 +250,42 @@
                 language: {
                     url: '//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json'
                 },
-                'paging'      : true,
+                'paging': true,
                 'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
             });
 
             $("#atividadeplanouso_dtPortaria").inputmask({mask: ["d/m/y"]});
             $("#atividadeplanouso_nuProposta").inputmask({mask: ["99999999999999999"], placeholder: ''});
             $("#atividadeplanouso_nuProcesso").inputmask({mask: ["9999999999999999999999999"], placeholder: ''});
             $("#atividadeplanouso_coCnes").inputmask({mask: ["9999999"], placeholder: ''});
-            $("#atividadeplanouso_vlTotal").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
-            $("#atividadeplanouso_vlExecutarExercicio").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
+            $("#atividadeplanouso_vlTotal").maskMoney({
+                prefix: '',
+                allowNegative: false,
+                thousands: '.',
+                decimal: ',',
+                affixesStay: false
+            });
+            ;
+            $("#atividadeplanouso_vlExecutarExercicio").maskMoney({
+                prefix: '',
+                allowNegative: false,
+                thousands: '.',
+                decimal: ',',
+                affixesStay: false
+            });
+            ;
             //$("#atividadeplanouso_vlProcessadoCgpo").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
 
-            $('#atividadeplanouso_uf').change(function(){
+            $('#atividadeplanouso_uf').change(function () {
                 if ($('#atividadeplanouso_uf').val() == '') {
                     $("#atividadeplanouso_municipio").html('<option value="">-Selecione a UF-</option>');
-                }else if ($('#atividadeplanouso_uf').val() == 'XX') {
+                } else if ($('#atividadeplanouso_uf').val() == 'XX') {
                     $("#atividadeplanouso_municipio").html('<option value="">TODOS</option>');
-                }else{
+                } else {
                     $(this).carregarMunicipios('#atividadeplanouso_municipio', {
                         uf: $('#atividadeplanouso_uf').val(),
                         url: Routing.generate('json_municipio', {'coUfIbge': $('#atividadeplanouso_uf').val()})
@@ -277,7 +293,6 @@
                 }
             });
         })
-
 
 
     </script>
