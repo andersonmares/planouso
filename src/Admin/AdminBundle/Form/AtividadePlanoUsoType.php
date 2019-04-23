@@ -5,6 +5,7 @@ namespace Admin\AdminBundle\Form;
 use Admin\AdminBundle\Entity\Atividade;
 use Admin\AdminBundle\Entity\Municipio;
 use Admin\AdminBundle\Entity\RedePrograma;
+use Admin\AdminBundle\Entity\StatusItem;
 use Admin\AdminBundle\Entity\TipoAtividade;
 use Admin\AdminBundle\Entity\TipoComponente;
 use Admin\AdminBundle\Entity\TipoInstrumento;
@@ -13,27 +14,53 @@ use Admin\AdminBundle\Entity\VinculoPlanejamento;
 use Admin\AdminBundle\Repository\AtividadeRepository;
 use Admin\AdminBundle\Repository\MunicipioRepository;
 use Admin\AdminBundle\Repository\RedeProgramaRepository;
+use Admin\AdminBundle\Repository\StatusItemRepository;
 use Admin\AdminBundle\Repository\TipoAtividadeRepository;
 use Admin\AdminBundle\Repository\TipoComponenteRepository;
 use Admin\AdminBundle\Repository\TipoInstrumentoRepository;
 use Admin\AdminBundle\Repository\UFRepository;
 use Admin\AdminBundle\Repository\VinculoPlanejamentoRepository;
-use AppBundle\Validator\Constraints\Saldo;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Callback;
 use Symfony\Component\Validator\Constraints\Date;
+use AppBundle\Validator\Constraints\ValidarObrigatoriedade;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 class AtividadePlanoUsoType extends AbstractType
 {
+
+
+    /**
+     * @var EntityRepository
+     */
+    private $repository;
+
+    /**
+     * StatusItemRepository constructor.
+     *
+     * @param EntityManagerInterface $entityManager
+     */
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->repository = $entityManager->getRepository(StatusItem::class);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -50,10 +77,17 @@ class AtividadePlanoUsoType extends AbstractType
                             ->orderBy('v.dsVinculoPlanejamento')
                             ->setParameter('stregistroativo', 'S');
                     },
+                    'required' => false,
                     'choice_label' => 'dsVinculoPlanejamento',
                     'placeholder' => 'Selecione'
                 )
             )
+//            ->add('statusItem', ChoiceType::class, array(
+//                    'choices' => $this->getStatusItem(),
+//                    'label' => 'Status do Item',
+//                    'required' => false,
+//                )
+//            )
             ->add('tipoInstrumento', EntityType::class, array(
                 'label' => 'Instrumento',
                 'class' => TipoInstrumento::class,
@@ -64,6 +98,7 @@ class AtividadePlanoUsoType extends AbstractType
                         ->setParameter('stregistroativo', 'S');
                 },
                 'choice_label' => 'dsTipoInstrumento',
+                'required' => false,
                 'placeholder' => 'Selecione'
             ))
             ->add('redePrograma', EntityType::class, array(
@@ -76,7 +111,8 @@ class AtividadePlanoUsoType extends AbstractType
                         ->setParameter('stregistroativo', 'S');
                 },
                 'choice_label' => 'dsRedePrograma',
-                'placeholder' => 'Selecione'
+                'placeholder' => 'Selecione',
+                'required' => false
             ))
             ->add('tipoComponente', EntityType::class, array(
                 'label' => 'Componente',
@@ -87,6 +123,7 @@ class AtividadePlanoUsoType extends AbstractType
                         ->orderBy('r.dsTipoComponente')
                         ->setParameter('stregistroativo', 'S');
                 },
+                'required' => false,
                 'choice_label' => 'dsTipoComponente',
                 'placeholder' => 'Selecione'
             ))
@@ -99,11 +136,13 @@ class AtividadePlanoUsoType extends AbstractType
                         ->orderBy('a.dsAtividade')
                         ->setParameter('stregistroativo', 'S');
                 },
+                'required' => false,
                 'choice_label' => 'dsAtividade',
                 'placeholder' => 'Selecione'
             ))
             ->add('nuAnoExercicioAtividade', ChoiceType::class, array(
                 'label' => 'Exercício',
+                'required' => false,
                 'choices' => $this->anosExercicio(),
                 'placeholder' => 'Selecione'
             ))
@@ -116,6 +155,7 @@ class AtividadePlanoUsoType extends AbstractType
                         ->orderBy('a.dsTipoAtividade')
                         ->setParameter('stregistroativo', 'S');
                 },
+                'required' => false,
                 'choice_label' => 'dsTipoAtividade',
                 'placeholder' => 'Selecione'
             ))
@@ -213,7 +253,13 @@ class AtividadePlanoUsoType extends AbstractType
                 ],
                 'currency' => 'BRL',
                 'grouping' => true,
-            ));
+            )
+//            ->add('btnPesquisar', ButtonType::class, array(
+//                    'attr' => array('class' => 'btn btn-success','id'=>'bnt-salvar'),
+//                )
+            );
+
+
         $builder->addEventListener(
             FormEvents::PRE_SET_DATA ,
             function (FormEvent $event) {
@@ -241,6 +287,8 @@ class AtividadePlanoUsoType extends AbstractType
                 }
             }
         );
+
+
         $builder->addEventListener(
             FormEvents::PRE_SUBMIT,
             function (FormEvent $event) {
@@ -270,7 +318,27 @@ class AtividadePlanoUsoType extends AbstractType
         );
 
 
+
+
+
+        $builder->addEventListener(
+            FormEvents::SUBMIT,
+            array($this, 'determineRequired')
+        );
     }
+
+
+    public function determineRequired(FormEvent  $event)
+    {
+
+        $form = $event->getForm();
+        $data = $event->getData();
+
+        // $form->get('tipoInstrumento')->setRequired(true);
+        //        if (!$form->getParent) {
+        //            /** @var $formConfig FormBuilderInterface */
+    }
+
 
     /**
      * {@inheritdoc}
@@ -279,8 +347,18 @@ class AtividadePlanoUsoType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'Admin\AdminBundle\Entity\AtividadePlanoUso',
-            'vlSaldo' => null
-        ));
+            'vlSaldo' => null,
+         ));
+    }
+
+    public function checkEmailPassword($data, ExecutionContextInterface $context)
+    {
+        die('asdasdasd');
+//        if ($data->hasEmail() === true && !$data->getEmailPassword()) {
+//            $context->buildViolation('Email password is not set!')
+//                ->atPath('emailPassword')
+//                ->addViolation();
+//        }
     }
 
     /**
@@ -291,6 +369,17 @@ class AtividadePlanoUsoType extends AbstractType
         return 'atividadeplanouso';
     }
 
+
+    private function getStatusItem()
+    {
+
+        $statusItem = $this->repository->findAll();
+        foreach ($statusItem as $status) {
+            $arr[$status->getCoSeqStatus()] = $status->getNoStatus();
+        }
+
+        return $arr;
+    }
 
     public function prioridades() {
         $r = array();

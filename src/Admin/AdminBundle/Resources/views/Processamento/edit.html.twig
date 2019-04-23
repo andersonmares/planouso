@@ -7,21 +7,22 @@
             <h3 class="box-title">Cadastro de Atividade</h3>
         </div>
         <div class="box-body">
-            {{ form_start(form) }}
+            {{ form_start(form,{'attr': {'id': 'form_person_edit'}}) }}
             <div class="row"> <!-- Campo Status do Item-->
                 <div class="col-md-5 col-sm-6 col-xs-12">
                     <div>
                         <label class="control-label">Status do Item</label>
-                        <select class="form-control">
+                        <select class="form-control" id="status-item" required>
                             <option value="" selected = selected>Selecione</option>
-                            <option value="">PLANEJADO</option>
-                            <option value="">PRIORIZADO</option>
-                            <option value="">A PROCESSAR</option>
-                            <option value="">EM PROCESSAMENTO</option>
-                            <option value="">PROCESSADO</option>
+                            <option value="1">PLANEJADO</option>
+                            <option value="2">PRIORIZADO</option>
+                            <option value="3">A PROCESSAR</option>
+                            {% if (is_granted('ROLE_DEPARTAMENTO')) %}
+                                <option value="4">EM PROCESSAMENTO</option>
+                                <option value="5">PROCESSADO</option>
+                            {% endif %}
                         </select>
                     </div>
-
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="form-group">
@@ -120,7 +121,7 @@
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div>
                         <label class="control-label">Parcela</label>
-                        <select class="form-control">
+                        <select class="form-control" id="ds-parcela">
                             <option value="" selected = selected>Selecione</option>
                             <option value="">Única</option>
                             <option value="">1ª</option>
@@ -193,6 +194,7 @@
                     </div>
                 </div>
             </div>
+            {#{{ form_widget(form.btnPesquisar, { 'label': 'Pesquisar'  }) }}#}
             <button type="submit" class="btn btn-success">Salvar</button>
             <a class="btn btn-primary" href="{{ path('processamento_acao', {id: acaoOrcamentaria.id}) }}">Voltar</a>
             {{ form_end(form)}}
@@ -203,6 +205,49 @@
 {% block javascripts %}
     <script>
         $(function () {
+
+            $( "#status-item" ).change(function() {
+
+                if($('#status-item').val() == 1 ||  $('#status-item').val() == 2){
+                    $('#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_redePrograma,#atividadeplanouso_vinculoPlanejamento').attr('required', true);
+                }
+                if( $('#status-item').val() == 3){
+
+                    $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
+
+                    var arratividade_a = [3,30,2,1,9,4];
+                    var arrInstrumentos_a = [5,6,7];
+                    if($.inArray($('#atividadeplanouso_atividade').val(),arratividade_a) &&
+                    $.inArray($('#atividadeplanouso_tipoInstrumento').val(),arrInstrumentos_a)
+                    ){
+                        $('#atividadeplanouso_nuProposta').attr('required',true);
+                        $('#atividadeplanouso_vlTotal').attr('required',true);
+
+                    }
+
+                    var arratividade_b = [3,2,4,1];
+                    if($.inArray($('#atividadeplanouso_atividade').val(),arratividade_b) &&
+                            $('#atividadeplanouso_tipoInstrumento').val() == 3
+                    ){
+                        $('#atividadeplanouso_nuProposta').attr('required',true);
+                        $('#atividadeplanouso_vlTotal').attr('required',true);
+                        $('#atividadeplanouso_municipio').attr('required',true);
+                        $('#ds-parcela').attr('required',true);
+                        $('#atividadeplanouso_uf').attr('required',true);
+                    }
+
+                }
+
+                if( $('#status-item').val() == 4){
+                    $('#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
+                }
+
+                if( $('#status-item').val() == 5){
+                    $('#atividadeplanouso_vlProcessadoCgpo,#atividadeplanouso_nuProcesso,#atividadeplanouso_tipoInstrumento,#atividadeplanouso_vlExecutarExercicio,#atividadeplanouso_tipoAtividade,#atividadeplanouso_atividade,#atividadeplanouso_tipoComponente,#atividadeplanouso_vinculoPlanejamento,#atividadeplanouso_redePrograma').attr('required', true);
+                }
+
+//                $( "#form_person_edit" ).submit();
+            });
 
             $('#lista').DataTable({
                 language: {
@@ -222,7 +267,7 @@
             $("#atividadeplanouso_coCnes").inputmask({mask: ["9999999"], placeholder: ''});
             $("#atividadeplanouso_vlTotal").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
             $("#atividadeplanouso_vlExecutarExercicio").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
-            $("#atividadeplanouso_vlProcessadoCgpo").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
+            //$("#atividadeplanouso_vlProcessadoCgpo").maskMoney({prefix:'', allowNegative: false, thousands:'.', decimal:',', affixesStay: false});;
 
             $('#atividadeplanouso_uf').change(function(){
                 if ($('#atividadeplanouso_uf').val() == '') {
@@ -237,6 +282,7 @@
                 }
             });
         })
+
 
 
     </script>

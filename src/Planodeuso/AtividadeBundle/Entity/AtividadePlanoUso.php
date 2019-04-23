@@ -62,6 +62,12 @@ class AtividadePlanoUso
     private $tipoAtividade;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Admin\AdminBundle\Entity\StatusItem")
+     * @ORM\JoinColumn(name="CO_STATUS", referencedColumnName="CO_SEQ_STATUS")
+     */
+    private $seqStatus;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="CO_SEQ_ATIVIDADE_PLANOUSO", type="integer")
@@ -1156,6 +1162,22 @@ class AtividadePlanoUso
     {
         $this->tipoAtividade = $tipoAtividade;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSeqStatus()
+    {
+        return $this->seqStatus;
+    }
+
+    /**
+     * @param mixed $seqStatus
+     */
+    public function setSeqStatus($seqStatus)
+    {
+        $this->seqStatus = $seqStatus;
     }
 
 

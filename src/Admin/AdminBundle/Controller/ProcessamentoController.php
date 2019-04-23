@@ -58,6 +58,8 @@ class ProcessamentoController extends Controller
     public function processamentoacaoAction(Request $request, $id){
 
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->acaoOrcamentariaId($id);
+        $totalizadores = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->totalizadoresAcaoOrcamentaria($id);
+
 
         $form = $this->createForm(ProcessamentoAcaoType::class);
         $form->handleRequest($request);
@@ -69,8 +71,6 @@ class ProcessamentoController extends Controller
                 $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id, $param);
             }catch (\Exception $e)            {
 //                $doctrine->getConnection()->rollBack();
-                echo $e->getMessage();
-                die;
                 $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");
                 throw $e;
             }
@@ -84,6 +84,7 @@ class ProcessamentoController extends Controller
         return $this->render('@Admin/Processamento/processamentoacao.html.twig', [
                 'acaoOrcamentaria' => $acaoOrcamentaria,
                 'atividadePlanoUso' => $atividadePlanoUso,
+                'totalizadores'=>$totalizadores,
                 'form' => $form->createView()
             ]
         );
@@ -96,14 +97,11 @@ class ProcessamentoController extends Controller
      */
     public function editAction(AtividadePlanoUso  $atividadePlanoUso, Request $request, $idAcao, $id){
 
-
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class)->acaoOrcamentariaId($idAcao);
-
         $saldoValidacao = ($acaoOrcamentaria['vlSaldo'] + $atividadePlanoUso->getVlExecutarExercicio());
-
         $form = $this->createForm(AtividadePlanoUsoType::class, $atividadePlanoUso, array('vlSaldo' => $saldoValidacao));
-
         $form->handleRequest($request);
+
 
         if ($form->isSubmitted()){
             if ($form->isValid()){

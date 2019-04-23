@@ -117,17 +117,6 @@
                 "bProcessing": true,
 
             });
-
-            $("#btnPesquisarProcessamento").click(function () {
-                if ($("#IdAnoExercicio").val() != "") {
-                    $lista.ajax.url(Routing.generate('json_lista_processamento', {
-                        'departamento': $("#departamento").val(),
-                        'anoExercicio': $("#IdAnoExercicio").val(),
-                        'acaoOrcamentaria': $("#acaoOrcamentaria").val()
-                    })).load();
-                }
-            });
-
         });
     </script>
 {% endblock %}

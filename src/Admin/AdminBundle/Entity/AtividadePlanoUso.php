@@ -38,6 +38,12 @@ class AtividadePlanoUso
     private $tipoInstrumento;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Admin\AdminBundle\Entity\StatusItem")
+     * @ORM\JoinColumn(name="CO_STATUS", referencedColumnName="CO_SEQ_STATUS")
+     */
+    private $seqStatus;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Admin\AdminBundle\Entity\RedePrograma")
      * @ORM\JoinColumn(name="CO_REDEPROGRAMA_PLANOUSO", referencedColumnName="CO_SEQ_REDEPROGRAMA_PLANOUSO")
      */
@@ -1215,4 +1221,19 @@ class AtividadePlanoUso
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getSeqStatus()
+    {
+        return $this->seqStatus;
+    }
+
+    /**
+     * @param mixed $seqStatus
+     */
+    public function setSeqStatus($seqStatus)
+    {
+        $this->seqStatus = $seqStatus;
+    }
 }

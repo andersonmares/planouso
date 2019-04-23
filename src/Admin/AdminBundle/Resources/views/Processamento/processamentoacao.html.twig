@@ -24,7 +24,7 @@
                 <tbody>
                 {% for a in atividadePlanoUso %}
                     <tr>
-                        <td>{{ a.nuPrioridade }}</td> <!-- Apenas para teste para popular a grid-->
+                        <td>{{ a.noStatus ?  a.noStatus : '--'}}</td> <!-- Apenas para teste para popular a grid-->
                         <td >{{ a.dsRedePrograma }}</td>
                         <td >{{ a.dsAtividade }}</td> <!-- Apenas para teste para popular a grid-->
                         <td >{{ a.nuAnoExercicioAtividade }}</td>

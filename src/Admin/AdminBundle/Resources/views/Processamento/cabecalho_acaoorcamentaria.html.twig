@@ -63,8 +63,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         <span class="info-box-number">PLANEJADO</span>
-                        <span class="info-box-text">Quantidade Itens</span>
-                        <span class="info-box-text">Valor Itens</span>
+                        <span class="info-box-text">  {{ totalizadores.QT_PLANEJADOS  }}</span>
+                        <span class="info-box-text">R$ {{ totalizadores.VL_PLANEJADOS|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -75,8 +75,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         <span class="info-box-number">PRIORIZADO</span>
-                        <span class="info-box-text">Quantidade Itens</span>
-                        <span class="info-box-text">Valor Itens</span>
+                        <span class="info-box-text">{{  totalizadores.QT_PRIORIZADO  }}</span>
+                        <span class="info-box-text">R$ {{ totalizadores.VL_PRIORIZADO|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -87,8 +87,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         <span class="info-box-number">A PROCESSAR</span>
-                        <span class="info-box-text">Quantidade Itens</span>
-                        <span class="info-box-text">Valor Itens</span>
+                        <span class="info-box-text">{{ totalizadores.QT_PROCESSAR  }}</span>
+                        <span class="info-box-text">R$ {{ totalizadores.VL_PROCESSAR|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -99,8 +99,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         <span class="info-box-number">EM PROCESSAMENTO</span>
-                        <span class="info-box-text">Quantidade Itens</span>
-                        <span class="info-box-text">Valor Itens</span>
+                        <span class="info-box-text">{{ totalizadores.QT_PROCESSAMENTO  }}</span>
+                        <span class="info-box-text">R$ {{ totalizadores.VL_PROCESSAMENTO|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -111,8 +111,8 @@
                     {#<div class="info-box-content">#}
                     <div class="info-box">
                         <span class="info-box-number">PROCESSADO</span>
-                        <span class="info-box-text">Quantidade Itens</span>
-                        <span class="info-box-text">Valor Itens</span>
+                        <span class="info-box-text">{{ totalizadores.QT_PROCESSADOS  }}</span>
+                        <span class="info-box-text">{{ totalizadores.VL_PROCESSADOS|number_format(2, ',', '.')  }}</span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>

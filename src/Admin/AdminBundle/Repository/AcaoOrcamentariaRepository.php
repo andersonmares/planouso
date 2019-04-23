@@ -1,6 +1,7 @@
 <?php
 
 namespace Admin\AdminBundle\Repository;
+use Admin\AdminBundle\Entity\StatusItem;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
 /**
@@ -55,7 +56,6 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
     }
 
     public function acaoOrcamentariaId($id){
-
         $rs = $this->createQueryBuilder('a')
             ->select('
                 a.id, a.coTipoDespesa, a.coDepartamento, a.nuAnoExercicio, a.nuAcaoOrcamentaria, a.nuPlanoOrcamentario, a.dsDenominacao,
@@ -68,8 +68,10 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                 count(d.id) as qtAtividade
             ')
             ->innerJoin('Admin\AdminBundle\Entity\TipoDespesa', 'b', 'WITH', 'b.id = a.coTipoDespesa and b.stRegistroAtivo = :stRegistroAtivo')
+            
             ->leftJoin('Admin\AdminBundle\Entity\Departamento', 'c', 'WITH', 'c.id = a.coDepartamento and c.stRegistroAtivo = :stRegistroAtivo')
             ->leftJoin('Planodeuso\AtividadeBundle\Entity\AtividadePlanoUso', 'd', 'WITH', 'd.coAcaoOrcamentaria = a.id and d.stRegistroAtivo = :stRegistroAtivo')
+          //  ->innerJoin('Admin\AdminBundle\Entity\StatusItem','i','WITH','i.coSeqStatus = d.seqStatus')
             ->andWhere('a.id = :id')
             ->andWhere('a.stRegistroAtivo = :stRegistroAtivo')
             ->setParameter('id', $id)
@@ -80,10 +82,42 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                 a.vlDespesaEmpenhadaAliquidar, a.vlDepesaEmpenhadaLiquidada, a.vlDespesaPaga,
                 b.dsTipoDespesa, c.dsDepartamento, c.sgDepartamento
             ')
-            ->getQuery()
-            ->getOneOrNullResult();
+            ->getQuery()->getOneOrNullResult();
 
         return $rs;
+    }
+
+
+    public function totalizadoresAcaoOrcamentaria($id)
+    {
+       $sql = 'SELECT
+                SUM(CASE WHEN t3_.co_status = 1 THEN 1 ELSE 0 END) AS qt_planejados,
+                SUM(CASE WHEN t3_.co_status = 2 THEN 1 ELSE 0 END) AS qt_priorizado,
+                SUM(CASE WHEN t3_.co_status = 3 THEN 1 ELSE 0 END) AS qt_processar,
+                SUM(CASE WHEN t3_.co_status = 4 THEN 1 ELSE 0 END) AS qt_processamento,
+                SUM(CASE WHEN t3_.co_status = 5 THEN 1 ELSE 0 END) AS qt_processados,
+                SUM(CASE WHEN t3_.co_status = 1 THEN t3_.vl_total ELSE 0 END) AS vl_planejados,
+                SUM(CASE WHEN t3_.co_status = 2 THEN t3_.vl_total ELSE 0 END) AS vl_priorizado,
+                SUM(CASE WHEN t3_.co_status = 3 THEN t3_.vl_total ELSE 0 END) AS vl_processar,
+                SUM(CASE WHEN t3_.co_status = 4 THEN t3_.vl_total ELSE 0 END) AS vl_processamento,
+                SUM(CASE WHEN t3_.co_status = 5 THEN t3_.vl_total ELSE 0 END) AS vl_processados,
+                count(t3_.CO_SEQ_ATIVIDADE_PLANOUSO) AS CO_SEQ_ATIVIDADE_PLANOUSO 
+                
+                FROM DBPROPOSTASAS.TB_ACAO_ORCAMENTARIA t0_
+                INNER JOIN DBPROPOSTASAS.TB_TIPO_DESPESA t1_ ON (t1_.CO_SEQ_TIPO_DESPESA = t0_.CO_TIPO_DESPESA AND t1_.ST_REGISTRO_ATIVO = \'S\') 
+                LEFT JOIN DBPROPOSTASAS.TB_DEPARTAMENTO t2_ ON (t2_.CO_SEQ_DEPARTAMENTO = t0_.CO_DEPARTAMENTO AND t2_.ST_REGISTRO_ATIVO = \'S\')
+                LEFT JOIN DBPROPOSTASAS.TB_ATIVIDADE_PLANOUSO t3_ ON (t3_.CO_ACAO_ORCAMENTARIA = t0_.CO_SEQ_ACAO_ORCAMENTARIA AND t3_.ST_REGISTRO_ATIVO = \'S\') 
+                WHERE t0_.CO_SEQ_ACAO_ORCAMENTARIA = :co_acao_orcamentaria AND t0_.ST_REGISTRO_ATIVO = \'S\' 
+                GROUP BY t0_.CO_SEQ_ACAO_ORCAMENTARIA, t0_.CO_TIPO_DESPESA, t0_.CO_DEPARTAMENTO, t0_.NU_ANO_EXERCICIO, 
+                t0_.NU_ACAO_ORCAMENTARIA, t0_.NU_PLANO_ORCAMENTARIO, t0_.DS_DENOMINACAO, t0_.VL_EXECUT_EXERCICIO_ANTERIOR,
+                t0_.VL_APROVADO, t0_.VL_BLOQUEADO, t0_.VL_ATUALIZADO, t0_.VL_CAPITAL, t0_.VL_DISPONIVEL, t0_.VL_DESPESA_EMPENHADA, 
+                t0_.VL_DEPESA_EMPENHADA_ALIQUIDAR, t0_.VL_DESPESA_LIQUIDADA, t0_.VL_DESPESA_PAGA, t1_.DS_TIPO_DESPESA, t2_.DS_DEPARTAMENTO, t2_.SG_DEPARTAMENTO
+       ';
+        $em = $this->getEntityManager();
+        $query = $em->getConnection()->executeQuery($sql, array( 'co_acao_orcamentaria' => $id));
+        return $query->fetch();
+
+
     }
 
 

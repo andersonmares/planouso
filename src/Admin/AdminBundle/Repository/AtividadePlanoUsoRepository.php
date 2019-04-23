@@ -14,8 +14,9 @@ class AtividadePlanoUsoRepository extends \Doctrine\ORM\EntityRepository
 	public function listarAtividade($idAcao,$param){
 
 		$result =  $this->createQueryBuilder('a')
-			->select('a.id, a.nuPrioridade, a.nuAnoExercicioAtividade , a.vlTotal, a.vlExecutarExercicio, a.nuProposta, b.dsVinculoPlanejamento, c.dsTipoInstrumento, d.dsRedePrograma, e.dsAtividade, f.dsTipoAtividade, g.sgUf, h.id as coMunicipioIbge, h.noMunicipioAcentuado')
+			->select('a.id, a.nuPrioridade, a.nuAnoExercicioAtividade , a.vlTotal, a.vlExecutarExercicio, a.nuProposta, b.dsVinculoPlanejamento, c.dsTipoInstrumento, d.dsRedePrograma, e.dsAtividade, f.dsTipoAtividade, g.sgUf, h.id as coMunicipioIbge, h.noMunicipioAcentuado,i.noStatus')
 			->innerJoin('Admin\AdminBundle\Entity\AcaoOrcamentaria', 'z', 'WITH', 'z.id = a.coAcaoOrcamentaria and z.stRegistroAtivo = :stRegistroAtivo')
+			->innerJoin('Admin\AdminBundle\Entity\StatusItem','i','WITH','i.coSeqStatus = a.seqStatus')
 			->leftJoin('Admin\AdminBundle\Entity\VinculoPlanejamento', 'b', 'WITH', 'b.id = a.coVinculoPlanejamento and b.stRegistroAtivo = :stRegistroAtivo')
 			->leftJoin('Admin\AdminBundle\Entity\TipoInstrumento', 'c', 'WITH', 'c.id = a.coTipoInstrumento and c.stRegistroAtivo = :stRegistroAtivo')
 			->leftJoin('Admin\AdminBundle\Entity\RedePrograma', 'd', 'WITH', 'd.id = a.coRedeprogramaPlanouso and d.stRegistroAtivo = :stRegistroAtivo')

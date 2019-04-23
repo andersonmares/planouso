@@ -15,7 +15,6 @@ class VinculoPlanejamentoController extends Controller
      */
     public function indexAction()
     {
-
         $vinculoPlanejamento = $this->getDoctrine()->getRepository('AdminBundle:VinculoPlanejamento')
             ->findBy(
                 ['stRegistroAtivo' => 'S'],
@@ -63,11 +62,14 @@ class VinculoPlanejamentoController extends Controller
         $form = $this->createForm(VinculoPlanejamentoType::class, $vinculoPlanejamento);
         $form->handleRequest($request);
 
+
+
         if ($form->isValid() && $form->isSubmitted()){
 
             $postData = $form->getData();
             $postData->setDtAtualizacao(new \DateTime("now", new \DateTimeZone("America/Sao_Paulo")));
             $doctrine = $this->getDoctrine()->getEntityManager();
+
 
             $doctrine->persist($postData);
             $doctrine->flush();

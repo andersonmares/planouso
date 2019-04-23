@@ -25,6 +25,7 @@ class DefaultController extends Controller
         $anoExercicio = $acaoOrcamentaria->listarAnoExercicio($this->getUser()->getCoDepartamento());
         $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), date('Y'));
 
+      
         return $this->render('@Atividade/default/index.html.twig', [
                 'listaAcaoOrcamentaria' => $listaAcaoOrcamentaria,
                 'anoExercicio' => $anoExercicio,
