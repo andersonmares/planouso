@@ -39,6 +39,13 @@ class AtividadePlanoUsoRepository extends \Doctrine\ORM\EntityRepository
 			$result->andWhere('a.nuProposta like :nuProposta' )
 				->setParameter('nuProposta','%'.$param['processamentoFilter']['nuProposta'].'%');
 		}
+
+		if(isset($param['processamentoFilter']['coStatus'])){
+			$result->andWhere('a.coStatus = :coStatus' )
+				->setParameter('coStatus',$param['processamentoFilter']['coStatus']);
+		}
+
+
 		return $result->getQuery()->getResult();
 
 	}
