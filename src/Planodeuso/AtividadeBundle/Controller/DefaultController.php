@@ -4,28 +4,65 @@ namespace Planodeuso\AtividadeBundle\Controller;
 
 use Admin\AdminBundle\Entity\NotaEmpenho;
 use Admin\AdminBundle\Entity\RlNotaEmpenhoAtividadePlanouso;
+use Admin\AdminBundle\Form\ProcessamentoAcaoType;
 use Planodeuso\AtividadeBundle\Entity\AcaoOrcamentaria;
 use Planodeuso\AtividadeBundle\Entity\AtividadePlanoUso;
 use Planodeuso\AtividadeBundle\Form\AtividadePlanoUsoType;
+use Planodeuso\AtividadeBundle\Form\ProcessamentoType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Admin\AdminBundle\Entity\AtividadePlanoUso as atividade;
 
 class DefaultController extends Controller
 {
 
     /**
-     * @Route("/{nuAno}", name="planodeuso_atividade")
+     * @Route("{nuAno}", name="planodeuso_atividade")
      */
-    public function indexAction($nuAno = null)
+    public function indexAction(Request $request,$nuAno = null)
     {
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class);
 
         $anoExercicio = $acaoOrcamentaria->listarAnoExercicio($this->getUser()->getCoDepartamento());
         $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), date('Y'));
 
-      
+
+        $form = $this->createForm(\Admin\AdminBundle\Form\ProcessamentoType::class);
+        $form->handleRequest($request);
+        $atividadePlanoUso = array();
+        $totalizadores = array();
+        $param = null;
+        if ($form->isValid() && $form->isSubmitted()){
+
+            $param = $request->request->all('processamentoFilter');
+
+            try{
+                $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), $param["processamento"]["nuAnoExercicio"]);
+
+            }catch (\Exception $e)            {
+                $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");
+                throw $e;
+            }
+        }else{
+           // $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id, $param);
+        }
+
+
+        return $this->render('@Atividade/default/index.html.twig', [
+                'acaoOrcamentaria' => $acaoOrcamentaria,
+                'atividadePlanoUso' => $listaAcaoOrcamentaria,
+                'totalizadores'=>$totalizadores,
+                'listaAcaoOrcamentaria' => $listaAcaoOrcamentaria,
+                'anoExercicio' => $anoExercicio,
+                'nuAno' => $nuAno,
+                'form' => $form->createView()
+            ]
+        );
+
+
+
         return $this->render('@Atividade/default/index.html.twig', [
                 'listaAcaoOrcamentaria' => $listaAcaoOrcamentaria,
                 'anoExercicio' => $anoExercicio,
@@ -293,7 +330,6 @@ class DefaultController extends Controller
 
 
     }
-
 
     /**
      * @Route("jsonlistaacao/{anoExercicio}", name="json_plano_lista_acao", options={ "expose" = true })

@@ -55,6 +55,7 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
             ->innerJoin('Admin\AdminBundle\Entity\RlAcaoOrcamentariaDepartamento', 'c', 'WITH', 'c.coAcaoOrcamentaria = a.id and c.coDepartamento = :coDepartamento and c.stRegistroAtivo = :stRegistroAtivo')
             ->leftJoin('Admin\AdminBundle\Entity\Departamento', 'd', 'WITH', 'd.id = a.coDepartamento and d.stRegistroAtivo = :stRegistroAtivo')
             ->leftJoin('Planodeuso\AtividadeBundle\Entity\AtividadePlanoUso', 'e', 'WITH', 'e.coAcaoOrcamentaria = a.id and e.stRegistroAtivo = :stRegistroAtivo')
+            ->leftJoin('Admin\AdminBundle\Entity\StatusItem','i','WITH','i.coSeqStatus = e.seqStatus')
             ->andWhere('a.coDepartamento = :coDepartamento')
             ->andWhere('a.nuAnoExercicio = :nuAnoExercicio')
             ->andWhere('a.stRegistroAtivo = :stRegistroAtivo')
@@ -66,11 +67,25 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                 a.vlExecutadoExercicioAnterior, a.vlAprovado, a.vlBloqueado, a.vlAtualizado, a.vlCapital, a.vlDisponivel, a.vlDespesaEmpenhada,
                 a.vlDespesaEmpenhadaAliquidar, a.vlDepesaEmpenhadaLiquidada, a.vlDespesaPaga,
                 b.dsTipoDespesa, d.dsDepartamento, d.sgDepartamento
-            ')
-            ->getQuery()
-            ->getResult();
+            ');
 
-        return $rs;
+
+                if(isset($param['processamentoFilter']['nuProcesso']) && !empty($param['processamentoFilter']['nuProcesso'])){
+                    $rs->andWhere('a.nuProcesso = :nuProcesso' )
+                        ->setParameter('nuProcesso',$param['processamentoFilter']['nuProcesso']);
+                }
+                if(isset($param['processamentoFilter']['nuProposta'])){
+                    $rs->andWhere('a.nuProposta like :nuProposta' )
+                        ->setParameter('nuProposta','%'.$param['processamentoFilter']['nuProposta'].'%');
+                }
+
+                if(isset($param['processamentoFilter']['coStatus'])){
+                    $rs->andWhere('a.coStatus = :coStatus' )
+                        ->setParameter('coStatus',$param['processamentoFilter']['coStatus']);
+                }
+
+            return $rs->getQuery()->getResult();
+
     }
 
     public function acaoOrcamentariaId($coDepartamento, $id){

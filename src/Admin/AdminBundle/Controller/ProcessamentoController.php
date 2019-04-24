@@ -68,7 +68,8 @@ class ProcessamentoController extends Controller
         if ($form->isValid() && $form->isSubmitted()){
             $param = $request->request->all('processamentoFilter');
             try{
-                $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id, $param);
+                $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)
+                    ->listarAtividade($id, $param);
             }catch (\Exception $e)            {
 //                $doctrine->getConnection()->rollBack();
                 $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");

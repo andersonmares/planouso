@@ -2,10 +2,67 @@
 
 {% block body %}
 
+
+
     <div class="box box-success box-solid">
         <div class="box-header with-border">
             <h3 class="box-title"><span class="fa fa-usd"></span> Ação Orçamentária</h3>
         </div>
+         {{ form_start(form) }}
+        <div class="table-responsive">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.nuAnoExercicio) }}
+                            {{ form_errors(form.nuAnoExercicio) }}
+                            {{ form_widget(form.nuAnoExercicio) }}
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.nuPlanoOrcamentario) }}
+                        {{ form_errors(form.nuPlanoOrcamentario) }}
+                        {{ form_widget(form.nuPlanoOrcamentario) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        {{ form_label(form.dsTipoDespesa) }}
+                        {{ form_errors(form.dsTipoDespesa) }}
+                        {{ form_widget(form.dsTipoDespesa) }}
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.nuProposta) }}
+                            {{ form_errors(form.nuProposta) }}
+                            {{ form_widget(form.nuProposta) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.coDepartamento) }}
+                            {{ form_errors(form.coDepartamento) }}
+                            {{ form_widget(form.coDepartamento) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            {{ form_label(form.dsDescicao) }}
+                            {{ form_errors(form.dsDescicao) }}
+                            {{ form_widget(form.dsDescicao) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        {{ form_widget(form.btnPesquisar, { 'label': 'Pesquisar'  }) }}
+                        <a class="btn btn-primary">Voltar</a>
+                    </div>
+                </div>
+
+
         <div class="box-body">
             <div class="table-responsive" >
             <label>Ano de Exercício:</label>
@@ -15,44 +72,51 @@
                     <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.labelAnoExercicio }}</option>
                 {% endfor %}
             </select>
+
+
+
             <table id="lista" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <!-- <th>CÓD</th> -->
                     <th>Ação/PO</th>
                     <th>Denominação</th>
                     <th>Despesa</th>
                     <th>Valor Atualizado</th>
                     <th>Valor Utilizado</th>
                     <th>Saldo disponivel</th>
-                    <!-- <th>Atividades<br />Cadastradas</th> -->
                     <th>Itens<br />Cadastrados</th>
                     <th>Selecionar<br />Ação/PO</th>
                 </tr>
                 </thead>
-                <tbody>
+              <tbody>
+
+                {% for a in atividadePlanoUso %}
+                    <tr>
+
+                        <td>{{ a.id }}</td> <!-- Apenas para teste para popular a grid-->
+                        <td >{{ a.dsDenominacao }}</td>
+                        <td >{{ a.dsTipoDespesa }}</td>
+                        <td >{{ a.vlAtualizado|number_format(2, ',', '.') }}</td>
+                        <td >{{ a.vlUtilizado|number_format(2, ',', '.') }}</td>
+                        <td >{{ a.vlSaldo|number_format(2, ',', '.') }}</td>
+                        <td >{{ a.qtAtividade|number_format(2, ',', '.') }}</td>
+
+                        {% if a.nuAnoExercicio >= "now"|date("Y") %}
+                          <td><a class="btn btn-success" href="{{ path('planodeuso_acao', {id: a.id}) }}"><li class="fa fa-edit"> </li></a></td>
+                        {% else %}
+                          <td>-</td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
                 </tbody>
-                <!--
-                <tfoot>
-                <tr>
-                    <th>CÓD</th>
-                    <th>Ação/PO</th>
-                    <th>Denominação</th>
-                    <th>Despesa</th>
-                    <th>Valor Atualizado</th>
-                    <th>Valor Utilizado</th>
-                    <th>Saldo disponivel</th>
-                    <th>Atividades<br />Cadastradas</th>
-                    <th>Selecionar<br />Ação/Plano</th>
-                </tr>
-                </tfoot>
-                -->
 
             </table>
 
         </div>
         </div>
     </div>
+  {{ form_end(form) }}
 {% endblock %}
 {% block javascripts %}
     <script>
@@ -66,41 +130,21 @@
                 'iDisplayStart': 0,
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : true,
+                'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
                 "bProcessing": true,
                 {% if nuAno is not null %}  "ajax": Routing.generate('json_plano_lista_acao', {'anoExercicio':{{ nuAno }} }), {% endif %}
-                "aoColumns" : [
-                    //{ "mData": 0 }, Código da tabela no banco
-                    { "mData": 2 },
-                    { "mData": 3 },
-                    { "mData": 4 },
-                    { "mData": 6 },
-                    { "mData": 7 },
-                    { "mData": 8 },
-                    { "mData": 9 },
-                    { "mData": null,
-                        "bSortable": false,
-                        "mRender": function(data, type, full) {
-                            if (full[1] >= {{ "now"|date("Y") }}) {
-                                return '<a class="btn btn-success" href="' + Routing.generate('planodeuso_acao', {'id': full[0]}) + '"><li class="fa fa-edit"> </li></a>';
-                            }else{
-                                return '-';
-                            }
-                        }
-                    },
-                ]
             } );
 
-            $("#IdAnoExercicio").change(function () {
-                if ($("#IdAnoExercicio").val() != "") {
-                    $lista.ajax.url( Routing.generate('json_plano_lista_acao', {'anoExercicio': $("#IdAnoExercicio").val()}) ).load();
-                }else{
-                    $lista.clear().draw();
-                }
-            });
+//            $("#IdAnoExercicio").change(function () {
+//                if ($("#IdAnoExercicio").val() != "") {
+//                    $lista.ajax.url( Routing.generate('json_plano_lista_acao', {'anoExercicio': $("#IdAnoExercicio").val()}) ).load();
+//                }else{
+//                    $lista.clear().draw();
+//                }
+//            });
         })
     </script>
 {% endblock %}
