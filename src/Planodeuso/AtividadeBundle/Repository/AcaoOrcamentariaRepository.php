@@ -38,7 +38,7 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
         return $anos;
     }
 
-    public function listarAcaoOrcamentaria($coDepartamento, $nuAnoExercicio){
+    public function listarAcaoOrcamentaria($coDepartamento, $nuAnoExercicio,$param = null){
 
         $rs = $this->createQueryBuilder('a')
             ->select('
@@ -70,19 +70,28 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
             ');
 
 
-                if(isset($param['processamentoFilter']['nuProcesso']) && !empty($param['processamentoFilter']['nuProcesso'])){
+                if(isset($param['processamento']['nuProcesso']) && !empty($param['processamento']['nuProcesso'])){
                     $rs->andWhere('a.nuProcesso = :nuProcesso' )
-                        ->setParameter('nuProcesso',$param['processamentoFilter']['nuProcesso']);
-                }
-                if(isset($param['processamentoFilter']['nuProposta'])){
-                    $rs->andWhere('a.nuProposta like :nuProposta' )
-                        ->setParameter('nuProposta','%'.$param['processamentoFilter']['nuProposta'].'%');
+                        ->setParameter('nuProcesso',$param['processamento']['nuProcesso']);
                 }
 
-                if(isset($param['processamentoFilter']['coStatus'])){
-                    $rs->andWhere('a.coStatus = :coStatus' )
-                        ->setParameter('coStatus',$param['processamentoFilter']['coStatus']);
+
+
+                if(isset($param['processamento']['nuProposta']) && !empty($param['processamento']['nuProposta'])){
+                    $rs->andWhere('a.nuProposta like :nuProposta' )
+                        ->setParameter('nuProposta','%'.$param['processamento']['nuProposta'].'%');
                 }
+
+                if(isset($param['processamento']['coStatus'])  && !empty($param['processamento']['coStatus']) ){
+                    $rs->andWhere('a.coStatus = :coStatus' )
+                        ->setParameter('coStatus',$param['processamento']['coStatus']);
+                }
+                if(isset($param['processamento']['coDepartamento'])  && !empty($param['processamento']['coDepartamento']) ){
+                    $rs->andWhere('e.coDepartamento = :coDepartamento' )
+                        ->setParameter('coDepartamento',$param['processamento']['coDepartamento']);
+                }
+
+
 
             return $rs->getQuery()->getResult();
 

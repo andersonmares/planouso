@@ -65,15 +65,13 @@
 
         <div class="box-body">
             <div class="table-responsive" >
-            <label>Ano de Exercício:</label>
-            <select name="nuAnoExercicio" id="IdAnoExercicio">
-                <option value="">Selecione o Ano</option>
-                {% for ano in anoExercicio %}
-                    <option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.labelAnoExercicio }}</option>
-                {% endfor %}
-            </select>
-
-
+            {#<label>Ano de Exercício:</label>#}
+            {#<select name="nuAnoExercicio" id="IdAnoExercicio">#}
+                {#<option value="">Selecione o Ano</option>#}
+                {#{% for ano in anoExercicio %}#}
+                    {#<option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.labelAnoExercicio }}</option>#}
+                {#{% endfor %}#}
+            {#</select>#}
 
             <table id="lista" class="table table-bordered table-hover">
                 <thead>
@@ -136,6 +134,26 @@
                 'autoWidth'   : false,
                 "bProcessing": true,
                 {% if nuAno is not null %}  "ajax": Routing.generate('json_plano_lista_acao', {'anoExercicio':{{ nuAno }} }), {% endif %}
+                {#"aoColumns" : [#}
+                    {#//{ "mData": 0 }, Código da tabela no banco#}
+                    {#{ "mData": 2 },#}
+                    {#{ "mData": 3 },#}
+                    {#{ "mData": 4 },#}
+                    {#{ "mData": 6 },#}
+                    {#{ "mData": 7 },#}
+                    {#{ "mData": 8 },#}
+                    {#{ "mData": 9 },#}
+                    {#{ "mData": null,#}
+                        {#"bSortable": false,#}
+                        {#"mRender": function(data, type, full) {#}
+                            {#if (full[1] >= {{ "now"|date("Y") }}) {#}
+                                {#return '<a class="btn btn-success" href="' + Routing.generate('planodeuso_acao', {'id': full[0]}) + '"><li class="fa fa-edit"> </li></a>';#}
+                            {#}else{#}
+                                {#return '-';#}
+                            {#}#}
+                        {#}#}
+                    {#},#}
+                {#]#}
             } );
 
 //            $("#IdAnoExercicio").change(function () {

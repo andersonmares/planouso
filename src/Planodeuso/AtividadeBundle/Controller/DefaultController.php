@@ -26,7 +26,7 @@ class DefaultController extends Controller
         $acaoOrcamentaria = $this->getDoctrine()->getRepository(AcaoOrcamentaria::class);
 
         $anoExercicio = $acaoOrcamentaria->listarAnoExercicio($this->getUser()->getCoDepartamento());
-        $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), date('Y'));
+        $listaAcaoOrcamentaria = array();
 
 
         $form = $this->createForm(\Admin\AdminBundle\Form\ProcessamentoType::class);
@@ -39,14 +39,14 @@ class DefaultController extends Controller
             $param = $request->request->all('processamentoFilter');
 
             try{
-                $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), $param["processamento"]["nuAnoExercicio"]);
+                $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), $param["processamento"]["nuAnoExercicio"],$param);
 
             }catch (\Exception $e)            {
                 $this->addFlash("error", "Algum error ocorreu a tentar registrar o Instrumento");
                 throw $e;
             }
         }else{
-           // $atividadePlanoUso = $this->getDoctrine()->getRepository(AtividadePlanoUso::class)->listarAtividade($id, $param);
+//            $listaAcaoOrcamentaria = $acaoOrcamentaria->listarAcaoOrcamentaria($this->getUser()->getCoDepartamento(), date('Y'));
         }
 
 
