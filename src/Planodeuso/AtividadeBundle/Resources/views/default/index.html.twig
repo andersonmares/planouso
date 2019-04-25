@@ -65,14 +65,6 @@
 
         <div class="box-body">
             <div class="table-responsive" >
-            {#<label>Ano de Exercício:</label>#}
-            {#<select name="nuAnoExercicio" id="IdAnoExercicio">#}
-                {#<option value="">Selecione o Ano</option>#}
-                {#{% for ano in anoExercicio %}#}
-                    {#<option value="{{ ano.nuAnoExercicio }}"{% if nuAno == ano.nuAnoExercicio %} selected="selected"{% endif %}>{{ ano.labelAnoExercicio }}</option>#}
-                {#{% endfor %}#}
-            {#</select>#}
-
             <table id="lista" class="table table-bordered table-hover">
                 <thead>
                 <tr>
@@ -91,7 +83,7 @@
                 {% for a in atividadePlanoUso %}
                     <tr>
 
-                        <td>{{ a.id }}</td> <!-- Apenas para teste para popular a grid-->
+                        <td>{{ a.nuAcaoOrcamentaria }}</td> <!-- Apenas para teste para popular a grid-->
                         <td >{{ a.dsDenominacao }}</td>
                         <td >{{ a.dsTipoDespesa }}</td>
                         <td >{{ a.vlAtualizado|number_format(2, ',', '.') }}</td>

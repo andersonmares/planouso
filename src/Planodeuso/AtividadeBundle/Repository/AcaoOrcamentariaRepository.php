@@ -76,7 +76,6 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                 }
 
 
-
                 if(isset($param['processamento']['nuProposta']) && !empty($param['processamento']['nuProposta'])){
                     $rs->andWhere('a.nuProposta like :nuProposta' )
                         ->setParameter('nuProposta','%'.$param['processamento']['nuProposta'].'%');
@@ -89,6 +88,11 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
                 if(isset($param['processamento']['coDepartamento'])  && !empty($param['processamento']['coDepartamento']) ){
                     $rs->andWhere('e.coDepartamento = :coDepartamento' )
                         ->setParameter('coDepartamento',$param['processamento']['coDepartamento']);
+                }
+
+              if(isset($param['processamento']['nuPlanoOrcamentario'])  && !empty($param['processamento']['nuPlanoOrcamentario']) ){
+                    $rs->andWhere('a.nuAcaoOrcamentaria = :nuPlanoOrcamentario' )
+                        ->setParameter('nuPlanoOrcamentario',$param['processamento']['nuPlanoOrcamentario']);
                 }
 
 

@@ -60,15 +60,6 @@ class DefaultController extends Controller
                 'form' => $form->createView()
             ]
         );
-
-
-
-        return $this->render('@Atividade/default/index.html.twig', [
-                'listaAcaoOrcamentaria' => $listaAcaoOrcamentaria,
-                'anoExercicio' => $anoExercicio,
-                'nuAno' => $nuAno
-            ]
-        );
     }
 
     /**

@@ -52,7 +52,7 @@ class ProcessamentoType extends AbstractType
             'label' => 'Ano Exercicio',
             'choices' => $this->getAnoExercicio(),
             'placeholder' => 'Selecione'
-        ))->add('nuPlanoOrcamentario', IntegerType::class, array(
+        ))->add('nuPlanoOrcamentario', TextType::class, array(
             'label' => 'PO',
             'required' => false,
         ))->add('dsTipoDespesa', EntityType::class, array(

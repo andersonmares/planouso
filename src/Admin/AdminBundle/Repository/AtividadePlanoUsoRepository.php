@@ -46,6 +46,12 @@ class AtividadePlanoUsoRepository extends \Doctrine\ORM\EntityRepository
 		}
 
 
+		if(isset($param['processamentoFilter']['nuPlanoOrcamentario'])  && !empty($param['processamentoFilter']['nuPlanoOrcamentario']) ){
+			$result->andWhere('a.nuPlanoOrcamentario like :nuPlanoOrcamentario' )
+				->setParameter('nuPlanoOrcamentario','%'.$param['processamentoFilter']['nuPlanoOrcamentario'].'%');
+		}
+
+
 		return $result->getQuery()->getResult();
 
 	}

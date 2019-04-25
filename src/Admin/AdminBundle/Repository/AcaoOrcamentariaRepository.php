@@ -359,7 +359,7 @@ class AcaoOrcamentariaRepository extends \Doctrine\ORM\EntityRepository
         }
 
         if(!empty($data['processamento']['nuPlanoOrcamentario'])){
-            $sql .=' and acao.NU_PLANO_ORCAMENTARIO like \'%'. $data['processamento']['nuPlanoOrcamentario']. '%\'';
+            $sql .=' and acao.NU_ACAO_ORCAMENTARIA like \'%'. $data['processamento']['nuPlanoOrcamentario']. '%\'';
         }
 
         $sql .= '
